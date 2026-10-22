@@ -1,0 +1,138 @@
+{
+  "main_commit": "b6247d30433edb3798a504d9260c69c90c810f1d",
+  "tree_sha": "be1aaf22e817e56c8b3743e5b5ee34a312628e66",
+  "pr2_merged": true,
+  "pr2_merge_commit": "ab3c061b48fff7204ef0aead7ad94e6f872136fa",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha": "67fe0b60834caa5e2cc5fde402294d69d047e515",
+      "size": 32
+    },
+    {
+      "path": "README.md",
+      "sha": "905d57d6aa451d74491d0578c695c68e58d6599c",
+      "size": 8451
+    },
+    {
+      "path": "output/三级职业能力指标体系.xlsx",
+      "sha": "8b45bdfd098e7e33c5950c4eb32d2adbc0f6b976",
+      "size": 13638
+    },
+    {
+      "path": "output/处理报告.json",
+      "sha": "68e69d0463f14dc53e0813011b09df3e306669a3",
+      "size": 2539
+    },
+    {
+      "path": "output/岗位任务编码表.xlsx",
+      "sha": "8da98bef9e7c279160908e17382570f8d0664193",
+      "size": 16774
+    },
+    {
+      "path": "output/岗位任务能力关系表.xlsx",
+      "sha": "47e4e35208e8ec7baae6fb4128deba744ffda50e",
+      "size": 30093
+    },
+    {
+      "path": "output/岗位数据质量检查.xlsx",
+      "sha": "a3c713583c60bab78f949e9d0ce08fa925a52650",
+      "size": 45683
+    },
+    {
+      "path": "output/来源快照.json",
+      "sha": "750118780bd674efe003ce5de096fcfe52a7e742",
+      "size": 300
+    },
+    {
+      "path": "output/测试结果.txt",
+      "sha": "ff12d0582c62db19d4dc89aa14e7bff79334e48e",
+      "size": 1512
+    },
+    {
+      "path": "phase2/README.md",
+      "sha": "a1954f464e7bc88c1c8d42b0f7cbe8e73416069a",
+      "size": 5997
+    },
+    {
+      "path": "phase2/input_snapshot.json",
+      "sha": "22501773c5c5a911e3f6af522186e63db747785a",
+      "size": 1564
+    },
+    {
+      "path": "phase2/output/三级职业能力体系_优化建议版.xlsx",
+      "sha": "3c14602f147e629fe20f4b1228590d0379d79b49",
+      "size": 31409
+    },
+    {
+      "path": "phase2/output/人工审核问题清单.xlsx",
+      "sha": "7e869dbb666f1f39e62143b5f3e155921e4caddc",
+      "size": 52386
+    },
+    {
+      "path": "phase2/output/任务能力关系_复核表.xlsx",
+      "sha": "a9a68f2d93acec64e9852d7be7b6eb170a0e9db4",
+      "size": 102278
+    },
+    {
+      "path": "phase2/output/测试结果.txt",
+      "sha": "75589dcd560fe42bf92ef8226cb58502c23e6fdb",
+      "size": 2163
+    },
+    {
+      "path": "phase2/output/第二阶段优化报告.md",
+      "sha": "99b41940134bbda18933a0f07b43de7c6d4f393f",
+      "size": 11827
+    },
+    {
+      "path": "phase2/output/职业能力体系_优化对照表.xlsx",
+      "sha": "2a89d803874564013777f01005e615e5540b436a",
+      "size": 25957
+    },
+    {
+      "path": "phase2/output/运行统计.json",
+      "sha": "0a03a11d7851cf19c284f4635ffb1e0ad9fdecca",
+      "size": 2382
+    },
+    {
+      "path": "phase2/review.py",
+      "sha": "05af198f75ac57c7465261d26d7c061b33c01546",
+      "size": 40341
+    },
+    {
+      "path": "phase2/rules.json",
+      "sha": "232ea1d52459b953b4bbe368cf133d09b6119394",
+      "size": 14665
+    },
+    {
+      "path": "phase2/test_review.py",
+      "sha": "e0e5100405a551b63b3f5c8fedc57d3e20d771ce",
+      "size": 10766
+    },
+    {
+      "path": "requirements.txt",
+      "sha": "61d784562e38423f56f13dda4057cbe5540e4546",
+      "size": 16
+    },
+    {
+      "path": "scripts/phase1.py",
+      "sha": "03821cc8e52b233729989ab312864edc863267ce",
+      "size": 23766
+    },
+    {
+      "path": "tests/test_phase1.py",
+      "sha": "e147edfb8ac2af84e2696a6b10f6be7b23453aaf",
+      "size": 7218
+    },
+    {
+      "path": "旅游行业招聘岗位样本库_50条候选_待核验.xlsx",
+      "sha": "70703acaaee66da225c8fd85bc97ddec98d77366",
+      "size": 21498
+    },
+    {
+      "path": "课标0913.pdf",
+      "sha": "8e7b5c9669b5ab0345d74b25e924085f7f9185c6",
+      "size": 254286
+    }
+  ]
+}

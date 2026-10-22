@@ -1,0 +1,700 @@
+{
+  "version": "3.1",
+  "method": "完整工作行为与课程技术子环节分开复核；全部为AI辅助研究建议，未模拟专家审核",
+  "abilities": [
+    {
+      "ability": "N111",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "课标的数据插入是写入记录，不等于外部业务数据采集与来源整理。",
+      "gap": "可讨论数据来源与采集记录训练；这是改进建议，非原课标内容。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见可直接对应的采集与来源整理技术任务",
+      "uncovered_behavior": "外部业务数据采集、来源记录及整理产出",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "本课程潜在改进方向",
+      "gap_category_reason": "可讨论来源记录与基础整理案例，是否纳入仍需课程边界论证",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N112",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "MySQL连接与数据库操作不能直接证明业务数据接入或接口集成训练。",
+      "gap": "若课程定位需要，可另行论证数据接入实践；不补写为现行内容。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见业务数据接入的明确技术任务；数据库连接不等于数据接入",
+      "uncovered_behavior": "接口或平台接入、接入结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "其他专业课程可能承担",
+      "gap_category_reason": "接入与接口集成可由数据集成类课程讨论；未核查实际开课或承担情况",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N113",
+      "status": "直接支撑",
+      "refs": [
+        {
+          "knowledge": "K05-01",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K05-02",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K05-03",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K05-04",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K05-06",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K06-02",
+          "practice": "EP06",
+          "status": "部分支撑",
+          "reason": "项目六明确视图查询技术分项，单独不能据此认定完整查询工作行为；课程整体直接支撑判断主要依据项目五独立业务复杂查询任务。",
+          "supported_behavior": "视图创建和查询技术分项"
+        }
+      ],
+      "reason": "课标要求独立完成业务场景复杂查询、运行查询并查看结果，与本项已定义的查询提取并呈现结果行为相符，因此保留直接支撑的研究建议。直接仅限该项查询行为，不含岗位真实性、真实旅游业务迁移或额外跨系统行为的确认。",
+      "gap": "直接支撑限数据库查询技术层；不据此证明旅游场景迁移或学习成效。",
+      "before_status": "直接支撑",
+      "supported_behavior": "按业务场景编写SELECT条件、多表、子查询、分组及视图查询，运行并查看查询结果",
+      "uncovered_behavior": "未明确真实旅游业务口径验证、跨系统取数与岗位现场结果交付；这些边界不作为该项已定义查询行为的已确认扩展",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "课标要求独立完成业务场景复杂查询、运行查询并查看结果，与本项已定义的查询提取并呈现结果行为相符，因此保留直接支撑的研究建议。直接仅限该项查询行为，不含岗位真实性、真实旅游业务迁移或额外跨系统行为的确认。"
+    },
+    {
+      "ability": "N121",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "列定义与关系设计不等同于业务指标口径或数据字典维护，未找到对应明确条目。",
+      "gap": "可讨论指标字典文档，但须另行审批课程改进方案。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见指标口径或数据字典维护的明确任务",
+      "uncovered_behavior": "指标定义、字段含义、计算口径维护及字典记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "本课程潜在改进方向",
+      "gap_category_reason": "可讨论字段与指标字典文档，不宣称原标准已规定",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N122",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K03-02",
+          "practice": "EP03"
+        },
+        {
+          "knowledge": "K03-03",
+          "practice": "EP03"
+        }
+      ],
+      "reason": "完整性约束可支撑数据规则校验部分；课标未明确跨来源汇总核对或差异记录工作流程。",
+      "gap": "补证或审议业务核对任务；不能把完整性约束等同于全部数据质量管理。",
+      "before_status": "部分支撑",
+      "supported_behavior": "用完整性约束检查数据库记录的规则一致性",
+      "uncovered_behavior": "跨来源核对、汇总差异分析及质量问题记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N123",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K04-02",
+          "practice": "EP04"
+        },
+        {
+          "knowledge": "K06-03",
+          "practice": "EP06"
+        }
+      ],
+      "reason": "条件更新与视图数据操作支撑记录维护更新；岗位行为中的数据同步和平台业务规则未获完整支撑。",
+      "gap": "区分SQL记录操作与平台同步，后者作为课程改进讨论而非既有教学。",
+      "before_status": "部分支撑",
+      "supported_behavior": "用条件更新和视图操作维护数据库记录",
+      "uncovered_behavior": "平台业务规则落实、跨系统同步及完整业务维护结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N124",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "E-R建模为数据结构设计，不能据此确认会员标签与画像业务方法。",
+      "gap": "如需旅游案例，可另议会员数据案例；不得虚构现行画像知识点。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见会员标签或画像制作任务；E-R设计不能替代画像方法",
+      "uncovered_behavior": "会员业务标签组织、画像含义及结果说明",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "其他专业课程可能承担",
+      "gap_category_reason": "会员画像方法可能涉及用户分析等课程；不是实际课程承担证明",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N125",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K03-02",
+          "practice": "EP03"
+        },
+        {
+          "knowledge": "K03-03",
+          "practice": "EP03"
+        },
+        {
+          "knowledge": "K04-02",
+          "practice": "EP04"
+        }
+      ],
+      "reason": "约束与条件更新为规则一致性提供基础；课标未明确缺失异常处理、格式标准化及清洗说明。",
+      "gap": "补原文或讨论清洗案例；不把数据完整性直接当作完整清洗流程。",
+      "before_status": "部分支撑",
+      "supported_behavior": "用约束和条件更新支持部分数据规则一致性处理",
+      "uncovered_behavior": "缺失异常识别、格式标准化、清洗过程与结果说明",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N211",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K05-05",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K05-06",
+          "practice": "EP05"
+        }
+      ],
+      "reason": "聚合与分组可支撑指标计算环节，但指标定义、业务用途和体系结构未明确教学。",
+      "gap": "需补充指标定义或审议是否在单门课程范围内。",
+      "before_status": "部分支撑",
+      "supported_behavior": "聚合函数与分组统计完成指标计算子环节",
+      "uncovered_behavior": "指标业务定义、用途分析和指标体系结构设计",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N212",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K05-05",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K05-06",
+          "practice": "EP05"
+        }
+      ],
+      "reason": "分组统计直接支撑统计结果形成；持续指标监测和异常标记机制未见明确实操。",
+      "gap": "可讨论统计结果核查任务；不能宣称已有监测平台训练。",
+      "before_status": "部分支撑",
+      "supported_behavior": "查询与分组统计形成统计结果",
+      "uncovered_behavior": "持续监测过程、变化或异常标记及业务记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N213",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K05-05",
+          "practice": "EP05"
+        },
+        {
+          "knowledge": "K05-06",
+          "practice": "EP05"
+        }
+      ],
+      "reason": "SQL汇总为业务分析提供数据基础，但经营解释与业务分析成果的方法不明确。",
+      "gap": "将查询结果与业务解释区分，是否增加解释环节待审。",
+      "before_status": "部分支撑",
+      "supported_behavior": "查询与汇总提供业务分析所需的部分数据结果",
+      "uncovered_behavior": "围绕旅游经营问题作解释、归因并形成分析成果",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N221",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "课标的数据建模指E-R及关系模式，不是岗位中的数据分析模型。",
+      "gap": "在现有材料范围无法确定分析模型对象，不将E-R设计等同于分析模型；本轮不开展或要求招聘原文核验。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见明确数据分析模型训练；E-R模型属于数据库结构设计",
+      "uncovered_behavior": "岗位所称分析模型的对象、输入、用途及模型结果仍需招聘原文澄清",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "证据不足无法判断",
+      "gap_category_reason": "既有摘要中的分析模型对象不明确，在当前证据范围无法判断；不新增招聘核验任务。",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N222",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "未找到预测对象、预测模型或预测结果训练条目。",
+      "gap": "预测任务是否超出单课程范围，需专业课程体系层面审议。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见业务预测模型的明确教学技术任务",
+      "uncovered_behavior": "预测对象、模型输入、预测结果及用途说明",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "其他专业课程可能承担",
+      "gap_category_reason": "预测建模可能由分析建模类课程讨论，未证实实际课程设置",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N223",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "用数据说话和依事实决策的思政表述，不足以确认经营改进建议的技术训练及评价。",
+      "gap": "可保留行业背景需求，由研究者判断课程边界。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见经营改进建议形成的明确技术任务",
+      "uncovered_behavior": "依据分析提出成本收益或运营建议并说明依据",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "旅游业务背景能力",
+      "gap_category_reason": "经营建议属于业务决策情境，不应强行扩为数据库核心内容",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N224",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "未找到产品转化或用户增长行动及效果评价的明确教学条目。",
+      "gap": "按旅游业务背景保留，勿强行加入数据库知识点。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见转化或增长改进行动的明确技术任务",
+      "uncovered_behavior": "执行运营改进行动并记录增长或转化结果",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "旅游业务背景能力",
+      "gap_category_reason": "增长执行属于旅游业务运营情境，需专业层面讨论",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N231",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "查询结果集与统计汇总不等于报表报告编制，课标未明确报表文档产出规范。",
+      "gap": "如拟增加统计报告，应标课程改进建议并明确评价要求。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见报表报告编制规范；查询结果集不等于报表成果",
+      "uncovered_behavior": "报表报告编制、口径来源标注与可检查文档产出",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "本课程潜在改进方向",
+      "gap_category_reason": "可讨论查询结果的基础报表交付，但须审批任务及评价要求",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N232",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "课标图形化数据库管理工具和E-R绘图，不等于业务可视化看板制作。",
+      "gap": "不把工具“可视化”一词作为看板能力的依据。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见业务可视化看板制作任务；数据库GUI不是业务看板",
+      "uncovered_behavior": "业务指标可视化呈现、看板制作及含义说明",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "其他专业课程可能承担",
+      "gap_category_reason": "业务看板可由可视化类课程讨论，不等于已由其他课程覆盖",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N311",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K01-03",
+          "practice": "EP01"
+        }
+      ],
+      "reason": "MySQL环境安装配置提供数据库环境维护基础，但不覆盖票务、CRM、POS等旅游业务系统运维。",
+      "gap": "需明确岗位系统对象；不扩大为完整旅游系统维护训练。",
+      "before_status": "部分支撑",
+      "supported_behavior": "MySQL环境安装配置与连接",
+      "uncovered_behavior": "旅游业务系统的日常维护、配置变更和维护结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N312",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K01-03",
+          "practice": "EP01"
+        }
+      ],
+      "reason": "项目一明确安装错误排查的教学难点，可支撑数据库环境故障处理基础；业务系统故障范围更广。",
+      "gap": "是否安排可评价的故障任务及标准仍需核验。",
+      "supplementary_quote": {
+        "page": 4,
+        "quote": "安装过程中错误排查与环境变量配置：不同电脑环境差异大，学生常遇到错误无法自行诊断。"
+      },
+      "before_status": "部分支撑",
+      "supported_behavior": "MySQL安装中的环境错误排查与连接问题处理基础",
+      "uncovered_behavior": "其他业务系统故障定位、完整处理过程及结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N313",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K01-03",
+          "practice": "EP01"
+        },
+        {
+          "knowledge": "K06-02",
+          "practice": "EP06"
+        },
+        {
+          "knowledge": "K07-03",
+          "practice": "EP07"
+        },
+        {
+          "knowledge": "K08-01",
+          "practice": "EP08"
+        }
+      ],
+      "reason": "修订为部分支撑：课标明确基础数据库操作及若干维护技术，但未明确完整运行维护对象界定、工作过程与操作结果记录产出。不能由视图、索引、备份等技术子环节推定完整数据库或数据库应用系统运行维护能力。",
+      "gap": "仅能表述课标有基本支撑，不代表培养效果或高级运维能力已验证。",
+      "before_status": "直接支撑",
+      "supported_behavior": "MySQL安装连接、视图索引操作及数据库备份恢复的基础操作",
+      "uncovered_behavior": "数据库或数据库应用系统运行维护对象的完整界定、连续工作过程及维护操作结果记录；课标未明确形成完整运维工作产出",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "修订为部分支撑：课标明确基础数据库操作及若干维护技术，但未明确完整运行维护对象界定、工作过程与操作结果记录产出。不能由视图、索引、备份等技术子环节推定完整数据库或数据库应用系统运行维护能力。"
+    },
+    {
+      "ability": "N321",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K08-01",
+          "practice": "EP08"
+        }
+      ],
+      "reason": "修订为部分支撑：课标明确数据库备份流程及实操，支撑备份技术环节；未明确业务范围的备份对象确认和备份产物记录，不能扩大为完整业务数据备份工作。",
+      "gap": "仅确认数据库备份技术环节；业务范围及产物记录未明确覆盖，历史岗位证据状态保留。",
+      "before_status": "直接支撑",
+      "supported_behavior": "数据库工具或命令的基本备份流程与独立备份实操",
+      "uncovered_behavior": "备份对象的业务范围确认及备份产物记录要求；不能把数据库备份实验扩大为全部业务数据备份工作",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "修订为部分支撑：课标明确数据库备份流程及实操，支撑备份技术环节；未明确业务范围的备份对象确认和备份产物记录，不能扩大为完整业务数据备份工作。"
+    },
+    {
+      "ability": "N322",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K08-02",
+          "practice": "EP08"
+        }
+      ],
+      "reason": "修订为部分支撑：课标明确数据库恢复实验，未明确具体业务恢复任务的对象确认及恢复结果记录要求；实验技术环节不等同完整业务数据恢复工作行为。",
+      "gap": "不将有备份证据的岗位自动视为要求恢复。",
+      "before_status": "直接支撑",
+      "supported_behavior": "数据库基本恢复流程和备份恢复实操",
+      "uncovered_behavior": "依据具体业务恢复任务确定对象、实施恢复并形成结果记录的完整要求；不能从恢复实验推定完整业务恢复行为",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "修订为部分支撑：课标明确数据库恢复实验，未明确具体业务恢复任务的对象确认及恢复结果记录要求；实验技术环节不等同完整业务数据恢复工作行为。"
+    },
+    {
+      "ability": "N331",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "KG-01",
+          "practice": ""
+        },
+        {
+          "knowledge": "KG-02",
+          "practice": ""
+        }
+      ],
+      "reason": "维持部分支撑：可见目标层提及权限与DCL，但缺少访问对象、权限配置变更及结果记录的具体实操落点，不能认定完整访问权限工作行为直接支撑。",
+      "gap": "需核验目标到教学实施的落点；不自行补写GRANT/REVOKE知识点。",
+      "before_status": "部分支撑",
+      "supported_behavior": "目标层提出权限管理和DCL基础",
+      "uncovered_behavior": "访问对象确认、具体权限配置变更与结果记录；未明确对应授权实操",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "维持部分支撑：可见目标层提及权限与DCL，但缺少访问对象、权限配置变更及结果记录的具体实操落点，不能认定完整访问权限工作行为直接支撑。"
+    },
+    {
+      "ability": "N332",
+      "status": "待人工审核",
+      "refs": [
+        {
+          "knowledge": "KI-01",
+          "practice": ""
+        }
+      ],
+      "reason": "维持待人工审核：思政层的用户权限、加密与审计提及不能证明安全检查、审计记录核查及问题记录训练；需教师核对完整可见课标与实施资料，未模拟专家确认。",
+      "gap": "不能仅因“审计”关键词确认培养；需教师核对原课标完整版本。",
+      "before_status": "待人工审核",
+      "supported_behavior": "思政段落提及用户权限、加密与审计，尚不能确认技术训练",
+      "uncovered_behavior": "安全检查步骤、审计记录核查与问题记录的技术任务和评价要求",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "维持待人工审核：思政层的用户权限、加密与审计提及不能证明安全检查、审计记录核查及问题记录训练；需教师核对完整可见课标与实施资料，未模拟专家确认。"
+    },
+    {
+      "ability": "N341",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K07-02",
+          "practice": "EP07"
+        },
+        {
+          "knowledge": "K07-04",
+          "practice": "EP07"
+        }
+      ],
+      "reason": "修订为部分支撑：课标明确索引操作与有无索引效果对比，仅能确认索引优化技术环节；未明确围绕具体查询性能问题说明完整优化操作和结果的工作产出，不能扩成全面查询性能优化。",
+      "gap": "不扩展为执行计划、调优工具或高级优化技术。",
+      "before_status": "直接支撑",
+      "supported_behavior": "索引创建删除与维护、比较有无索引的查询效果",
+      "uncovered_behavior": "围绕具体查询性能问题说明优化操作及优化结果的完整工作产出；课标明确的是索引技术与效果对比，不是所有查询性能优化工作",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "修订为部分支撑：课标明确索引操作与有无索引效果对比，仅能确认索引优化技术环节；未明确围绕具体查询性能问题说明完整优化操作和结果的工作产出，不能扩成全面查询性能优化。"
+    },
+    {
+      "ability": "N411",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K02-01",
+          "practice": "EP02"
+        },
+        {
+          "knowledge": "K02-02",
+          "practice": "EP02"
+        }
+      ],
+      "reason": "业务场景的实体关系识别和模式转换支撑数据需求梳理部分，完整系统功能与约束文档不明确。",
+      "gap": "不得把数据模型设计等同完整业务系统需求工程。",
+      "before_status": "部分支撑",
+      "supported_behavior": "识别实体联系并完成E-R设计与关系模式转换",
+      "uncovered_behavior": "系统业务场景、功能约束的完整需求梳理及需求记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N412",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K03-01",
+          "practice": "EP03"
+        },
+        {
+          "knowledge": "K04-02",
+          "practice": "EP04"
+        },
+        {
+          "knowledge": "K05-03",
+          "practice": "EP05"
+        }
+      ],
+      "reason": "库表、数据操作和查询可支撑应用数据层；课标未明确应用程序连接、端到端业务功能开发。",
+      "gap": "只能说明数据层基础支撑，不能宣称已培养完整应用开发。",
+      "before_status": "部分支撑",
+      "supported_behavior": "库表DDL、数据记录操作与查询等应用数据层操作",
+      "uncovered_behavior": "应用功能实现和可运行业务应用成果；未明确程序连接及端到端业务实现",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N421",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "查询运行、测试数据表与SQL练习不等同于业务系统功能测试方法及测试记录。",
+      "gap": "如拟增加软件测试任务，应独立论证课程适配性。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见业务系统功能测试方法；SQL运行练习不是软件功能测试",
+      "uncovered_behavior": "功能测试对象、测试过程及测试结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "其他专业课程可能承担",
+      "gap_category_reason": "系统测试可能由软件测试或项目课程讨论，未检查具体课程标准",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N422",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K01-03",
+          "practice": "EP01"
+        }
+      ],
+      "reason": "MySQL安装部署支撑环境部署基础，但业务系统上线与升级步骤未明确。",
+      "gap": "区分数据库环境部署与业务系统发布升级。",
+      "before_status": "部分支撑",
+      "supported_behavior": "MySQL安装部署及基本连接",
+      "uncovered_behavior": "旅游业务系统上线、升级对象及完整步骤和结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N511",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "未找到游客、市场或业务调研及调查记录的明确教学任务。",
+      "gap": "保留行业背景，勿推断课标已有旅游调研内容。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见游客市场或业务调查任务",
+      "uncovered_behavior": "确定调研问题、执行调查及形成调研记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "旅游业务背景能力",
+      "gap_category_reason": "游客市场调研属于行业业务背景，不以数据库关键词强配",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N512",
+      "status": "部分支撑",
+      "refs": [],
+      "reason": "素质目标提出团队协作，但未明确跨部门业务需求沟通与支持结果的实践任务。",
+      "gap": "目标层关联需人工确认，不能推定已有跨部门项目训练。",
+      "goal": "G-Q03",
+      "before_status": "部分支撑",
+      "supported_behavior": "素质目标层提出团队协作意识",
+      "uncovered_behavior": "跨部门需求沟通、业务数据支持过程及支持结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N521",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "E-R图等设计成果不等同于系统或操作技术文档，未找到明确技术说明文档任务。",
+      "gap": "若拟增加操作文档，须单列改进建议及评价要求。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见系统或操作技术说明文档编制要求",
+      "uncovered_behavior": "编制和维护技术说明、操作记录或系统文档",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "本课程潜在改进方向",
+      "gap_category_reason": "可讨论数据库操作文档交付，不能反写为现行要求",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N522",
+      "status": "部分支撑",
+      "refs": [
+        {
+          "knowledge": "K04-04",
+          "practice": "EP04"
+        }
+      ],
+      "reason": "SQL操作顺序与事务逻辑可支撑操作流程意识；未明确完整数据处理流程梳理与流程说明文档。",
+      "gap": "不等同ETL流程建设；是否增加流程说明任务待审。",
+      "before_status": "部分支撑",
+      "supported_behavior": "SQL操作顺序和事务逻辑等操作流程基础",
+      "uncovered_behavior": "数据处理步骤的完整梳理、衔接关系及流程说明产出",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "不适用（本项非未见明确支撑）",
+      "gap_category_reason": "仅对未见明确支撑项分类；其余仍说明未覆盖行为",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    },
+    {
+      "ability": "N531",
+      "status": "未见明确支撑",
+      "refs": [],
+      "reason": "未找到游客服务问题整改、进度跟踪与结果记录的明确课程任务。",
+      "gap": "保持行业背景分类，不强配数据库知识点。",
+      "before_status": "未见明确支撑",
+      "supported_behavior": "未见游客服务整改任务",
+      "uncovered_behavior": "服务问题记录、整改进度跟踪和处理结果记录",
+      "full_behavior_review": "按第二阶段既有可观察行为复核，未修改职业能力定义；本项结论仍为AI辅助研究建议",
+      "gap_category": "旅游业务背景能力",
+      "gap_category_reason": "游客服务整改属于行业业务流程背景",
+      "category_nature": "研究建议，非课程标准证明，也非已核实的其他课程承担事实",
+      "revision_reason": "逐项复核后维持原支撑等级，补充具体技术行为与未明确覆盖的工作行为"
+    }
+  ],
+  "revision_of": "2aec6d909ab7b87799c2ce97f4dbdf1f354d2320"
+}
