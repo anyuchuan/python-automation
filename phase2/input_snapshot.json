@@ -1,0 +1,57 @@
+{
+  "main_commit": "6f7744db427f8c80ede754bb112e5974d4cc71a9",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha": "67fe0b60834caa5e2cc5fde402294d69d047e515"
+    },
+    {
+      "path": "README.md",
+      "sha": "905d57d6aa451d74491d0578c695c68e58d6599c"
+    },
+    {
+      "path": "output/三级职业能力指标体系.xlsx",
+      "sha": "8b45bdfd098e7e33c5950c4eb32d2adbc0f6b976"
+    },
+    {
+      "path": "output/处理报告.json",
+      "sha": "68e69d0463f14dc53e0813011b09df3e306669a3"
+    },
+    {
+      "path": "output/岗位任务编码表.xlsx",
+      "sha": "8da98bef9e7c279160908e17382570f8d0664193"
+    },
+    {
+      "path": "output/岗位任务能力关系表.xlsx",
+      "sha": "47e4e35208e8ec7baae6fb4128deba744ffda50e"
+    },
+    {
+      "path": "output/岗位数据质量检查.xlsx",
+      "sha": "a3c713583c60bab78f949e9d0ce08fa925a52650"
+    },
+    {
+      "path": "output/来源快照.json",
+      "sha": "750118780bd674efe003ce5de096fcfe52a7e742"
+    },
+    {
+      "path": "output/测试结果.txt",
+      "sha": "ff12d0582c62db19d4dc89aa14e7bff79334e48e"
+    },
+    {
+      "path": "requirements.txt",
+      "sha": "61d784562e38423f56f13dda4057cbe5540e4546"
+    },
+    {
+      "path": "scripts/phase1.py",
+      "sha": "03821cc8e52b233729989ab312864edc863267ce"
+    },
+    {
+      "path": "tests/test_phase1.py",
+      "sha": "e147edfb8ac2af84e2696a6b10f6be7b23453aaf"
+    },
+    {
+      "path": "旅游行业招聘岗位样本库_50条候选_待核验.xlsx",
+      "sha": "70703acaaee66da225c8fd85bc97ddec98d77366"
+    }
+  ]
+}
