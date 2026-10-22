@@ -4,7 +4,7 @@
 
 ## 启动
 
-从仓库根目录运行，建议 Python 3.11 或 3.12：
+从仓库根目录运行，部署基线为 Python 3.12：
 
 ```bash
 python -m venv .venv
@@ -15,6 +15,10 @@ python -m streamlit run app/main.py --browser.gatherUsageStats=false
 ```
 
 浏览器访问终端显示的地址，通常为 http://localhost:8501 。首次安装依赖需要网络，启动后图谱不需要外部脚本或云服务。必须保留完整仓库中的 `phase3/output/`，不能只下载 app 文件夹。
+
+## Streamlit Community Cloud部署
+
+仓库 `anyuchuan/python-automation`，分支 `main`（PR审核合并后），主程序 `app/main.py`；在 Advanced settings 明确选择 **Python 3.12**。已有3.14实例需要按平台说明重新部署才能更换解释器，单纯Reboot或修改requirements不能切换Python。完整设置、临时测试分支、日志排查及验证限制见 [中文部署说明](部署说明.md)。
 
 ## 数据与版本
 
