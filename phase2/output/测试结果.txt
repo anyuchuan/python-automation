@@ -1,0 +1,21 @@
+test_actual_counts_and_snapshot (test_review.ReviewTests.test_actual_counts_and_snapshot) ... ok
+test_all_four_workbooks_open_and_cells_nonformula (test_review.ReviewTests.test_all_four_workbooks_open_and_cells_nonformula) ... ok
+test_all_old_codes_and_relations_preserved (test_review.ReviewTests.test_all_old_codes_and_relations_preserved) ... ok
+test_course_suggestions_have_zero_links_and_frequencies (test_review.ReviewTests.test_course_suggestions_have_zero_links_and_frequencies) ... ok
+test_every_node_has_required_fields_and_valid_parent (test_review.ReviewTests.test_every_node_has_required_fields_and_valid_parent) ... ok
+test_every_relation_traces_to_original_task_job_and_ability (test_review.ReviewTests.test_every_relation_traces_to_original_task_job_and_ability) ... ok
+test_first_stage_inputs_unchanged (test_review.ReviewTests.test_first_stage_inputs_unchanged) ... ok
+test_flow_and_report_not_database_application_or_document (test_review.ReviewTests.test_flow_and_report_not_database_application_or_document) ... ok
+test_generic_analysis_and_statistics_do_not_imply_sql_or_design (test_review.ReviewTests.test_generic_analysis_and_statistics_do_not_imply_sql_or_design) ... ok
+test_invalid_relation_or_rules_fail (test_review.ReviewTests.test_invalid_relation_or_rules_fail) ... ok
+test_merge_deduplicates_support_counts (test_review.ReviewTests.test_merge_deduplicates_support_counts) ... ok
+test_no_original_evidence_or_approval_fabricated (test_review.ReviewTests.test_no_original_evidence_or_approval_fabricated) ... ok
+test_parent_frequencies_are_id_unions_not_sum_of_children (test_review.ReviewTests.test_parent_frequencies_are_id_unions_not_sum_of_children) ... ok
+test_repeat_run_same_cells_and_stats (test_review.ReviewTests.test_repeat_run_same_cells_and_stats) ... ok
+test_split_does_not_invent_restore_from_backup (test_review.ReviewTests.test_split_does_not_invent_restore_from_backup) ... ok
+test_suspected_relations_and_manual_questions_exist (test_review.ReviewTests.test_suspected_relations_and_manual_questions_exist) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.453s
+
+OK
