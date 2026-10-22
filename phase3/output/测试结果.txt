@@ -1,24 +1,28 @@
 test_109_suspect_relations_never_promoted_to_confirmed (test_build.Phase3Tests.test_109_suspect_relations_never_promoted_to_confirmed) ... ok
 test_34_ability_partition_and_explicit_denominators (test_build.Phase3Tests.test_34_ability_partition_and_explicit_denominators) ... ok
+test_34_by_8_project_review_complete (test_build.Phase3Tests.test_34_by_8_project_review_complete) ... ok
 test_actual_inputs_and_pr2_merged (test_build.Phase3Tests.test_actual_inputs_and_pr2_merged) ... ok
 test_all_prior_stage_files_and_pdf_preserved (test_build.Phase3Tests.test_all_prior_stage_files_and_pdf_preserved) ... ok
-test_all_six_workbooks_open_with_no_formulas (test_build.Phase3Tests.test_all_six_workbooks_open_with_no_formulas) ... ok
+test_all_seven_workbooks_open_with_no_formulas (test_build.Phase3Tests.test_all_seven_workbooks_open_with_no_formulas) ... ok
 test_ambiguous_pdf_needs_review_not_guess (test_build.Phase3Tests.test_ambiguous_pdf_needs_review_not_guess) ... ok
 test_course_suggestions_are_separate_from_34_and_have_no_job_evidence (test_build.Phase3Tests.test_course_suggestions_are_separate_from_34_and_have_no_job_evidence) ... ok
+test_current_scope_does_not_require_recruitment_checks (test_build.Phase3Tests.test_current_scope_does_not_require_recruitment_checks) ... ok
 test_every_course_quote_resolves_to_pdf_page_and_coordinates (test_build.Phase3Tests.test_every_course_quote_resolves_to_pdf_page_and_coordinates) ... ok
 test_graph_unique_nodes_valid_endpoints_and_mapping (test_build.Phase3Tests.test_graph_unique_nodes_valid_endpoints_and_mapping) ... ok
-test_hidden_table_detected_and_visually_covered (test_build.Phase3Tests.test_hidden_table_detected_and_visually_covered) ... ok
+test_historical_candidate_evidence_not_promoted (test_build.Phase3Tests.test_historical_candidate_evidence_not_promoted) ... ok
 test_isolated_edges_keep_invalid_migrations_out_of_default_graph (test_build.Phase3Tests.test_isolated_edges_keep_invalid_migrations_out_of_default_graph) ... ok
 test_manual_review_is_not_simulated (test_build.Phase3Tests.test_manual_review_is_not_simulated) ... ok
 test_matching_is_many_to_many_and_ids_valid (test_build.Phase3Tests.test_matching_is_many_to_many_and_ids_valid) ... ok
 test_no_added_knowledge_without_pdf_quote (test_build.Phase3Tests.test_no_added_knowledge_without_pdf_quote) ... ok
-test_original_typo_and_missing_assessment_not_repaired (test_build.Phase3Tests.test_original_typo_and_missing_assessment_not_repaired) ... ok
 test_pdf_discovery_uses_content_not_name (test_build.Phase3Tests.test_pdf_discovery_uses_content_not_name) ... ok
+test_project_and_graph_level_not_copy_whole_course_grade (test_build.Phase3Tests.test_project_and_graph_level_not_copy_whole_course_grade) ... ok
 test_project_hours_are_inclusive_and_candidate_table_separate (test_build.Phase3Tests.test_project_hours_are_inclusive_and_candidate_table_separate) ... ok
 test_semantic_results_repeat_without_overwriting_inputs (test_build.Phase3Tests.test_semantic_results_repeat_without_overwriting_inputs) ... ok
+test_unseen_14_recommendations_not_standard_facts (test_build.Phase3Tests.test_unseen_14_recommendations_not_standard_facts) ... ok
 test_unseen_does_not_make_positive_support_edge (test_build.Phase3Tests.test_unseen_does_not_make_positive_support_edge) ... ok
+test_work_behavior_boundaries_and_four_downgrades (test_build.Phase3Tests.test_work_behavior_boundaries_and_four_downgrades) ... ok
 
 ----------------------------------------------------------------------
-Ran 19 tests in 8.251s
+Ran 23 tests in 7.884s
 
 OK

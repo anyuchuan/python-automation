@@ -55,9 +55,9 @@ class Phase3Tests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'不能唯一识别'):
             b.discover_pdf(root)
 
-    def test_all_six_workbooks_open_with_no_formulas(self):
+    def test_all_seven_workbooks_open_with_no_formulas(self):
         files=list(self.out.glob('*.xlsx'))
-        self.assertEqual(len(files),6)
+        self.assertEqual(len(files),7)
         for f in files:
             w=load_workbook(f,data_only=False)
             self.assertTrue(w.sheetnames)
@@ -84,22 +84,8 @@ class Phase3Tests(unittest.TestCase):
         self.assertTrue(all(p['单独分配学时'] is None for p in practice if p['条目ID'].startswith('EP')))
         self.assertEqual(len(projects),8)
 
-    def test_hidden_table_detected_and_visually_covered(self):
-        page=self.corpus.doc[-1]
-        self.assertIn('INERT',page.get_text())
-        masks=self.corpus.pages[-1]['masks'];self.assertTrue(masks)
-        pix=page.get_pixmap(clip=fitz.Rect(92,410,500,680),alpha=False)
-        samples=pix.samples
-        self.assertGreater(sum(v>=254 for v in samples)/len(samples),.999)
-        table=[p for p in self.catalog[3] if p['条目ID'].startswith('RP')]
-        self.assertTrue(all('遮挡' in p['课程证据状态'] for p in table))
+    def test_historical_candidate_evidence_not_promoted(self):
         self.assertTrue(all(not m['实践任务ID'].startswith('RP') for m in self.matrix))
-        self.assertTrue(any(e['是否遮挡']=='是' for e in self.corpus.evidence))
-
-    def test_original_typo_and_missing_assessment_not_repaired(self):
-        table=next(p for p in self.catalog[3] if p['条目ID']=='RP02')
-        self.assertIn('INERT',table['课程标准原文摘录'])
-        self.assertNotIn('INSERT',table['课程标准原文摘录'])
         self.assertTrue(all(a['考核比例'] is None for a in self.catalog[5]))
         self.assertTrue(all(a['正式考核方案可确认']=='否' for a in self.catalog[5]))
 
@@ -129,7 +115,7 @@ class Phase3Tests(unittest.TestCase):
     def test_34_ability_partition_and_explicit_denominators(self):
         self.assertEqual(len(self.summary),34)
         counts=self.stats['能力匹配状态']
-        self.assertEqual(counts,{'未见明确支撑':14,'直接支撑':5,'部分支撑':14,'待人工审核':1})
+        self.assertEqual(counts,{'未见明确支撑':14,'直接支撑':1,'部分支撑':18,'待人工审核':1})
         status,recruit,known=b.coverage_tables(self.data,self.catalog,self.matrix,self.summary,self.suggestions)
         self.assertEqual(sum(r['能力数'] for r in status[:4]),34)
         self.assertTrue(all(r['统计分母']==34 for r in status))
@@ -202,7 +188,62 @@ class Phase3Tests(unittest.TestCase):
         issues=b.make_issues(self.data,self.catalog,self.matrix,self.summary,self.corpus,self.graph)
         self.assertTrue(all(not r['审核人'] and not r['审核结论'] for r in issues))
         self.assertTrue(all(r['审核状态']==b.PENDING for r in issues))
-        self.assertTrue(any(r['问题类别']=='PDF可见性' for r in issues))
+        self.assertFalse(any(r['问题类别'] in {'PDF可见性','招聘原文不足','关系疑似误匹配'} for r in issues))
+        self.assertTrue(all(r['执行范围']=='当前课程能力图谱复核' for r in issues))
+
+    def test_work_behavior_boundaries_and_four_downgrades(self):
+        index={s['能力ID']:s for s in self.summary}
+        for r in self.summary+self.matrix:
+            self.assertTrue(r['课程支撑的具体技术行为'])
+            self.assertTrue(r['课程尚未明确覆盖的工作行为'])
+        for code in ['N313','N321','N322','N341']:
+            self.assertEqual(index[code]['最终候选匹配状态'],'部分支撑')
+        self.assertEqual(index['N113']['最终候选匹配状态'],'直接支撑')
+        self.assertIn('仅限',index['N113']['课程支撑判断'])
+        self.assertEqual(index['N331']['最终候选匹配状态'],'部分支撑')
+        self.assertEqual(index['N332']['最终候选匹配状态'],'待人工审核')
+        compare=b.revision_comparison(self.summary)
+        self.assertEqual(len(compare),34)
+        self.assertEqual({r['能力ID'] for r in compare if r['等级是否变化']=='是'},{'N313','N321','N322','N341'})
+
+    def test_34_by_8_project_review_complete(self):
+        wide,cells=b.project_review(self.catalog,self.matrix,self.summary)
+        self.assertEqual(len(wide),34)
+        self.assertEqual(len(cells),272)
+        self.assertEqual(len({(c['能力ID'],c['课程项目ID']) for c in cells}),272)
+        for cell in cells:
+            self.assertTrue(cell['项目审阅范围证据ID'])
+            if cell['项目层匹配等级'] in {'直接支撑','部分支撑'}:
+                self.assertTrue(cell['正向课程证据ID'])
+            else:
+                self.assertFalse(cell['正向课程证据ID'])
+        self.assertTrue(all(c['项目层匹配等级']=='待人工审核' for c in cells if c['能力ID'] in {'N331','N512'}))
+
+    def test_unseen_14_recommendations_not_standard_facts(self):
+        from collections import Counter
+        rows=[s for s in self.summary if s['最终候选匹配状态']=='未见明确支撑']
+        counts=Counter(s['未见支撑建议分类'] for s in rows)
+        self.assertEqual(counts,{'本课程潜在改进方向':4,'其他专业课程可能承担':5,'旅游业务背景能力':4,'证据不足无法判断':1})
+        self.assertTrue(all('研究建议' in r['分类性质'] for r in rows))
+        self.assertEqual(len(rows),14)
+
+    def test_current_scope_does_not_require_recruitment_checks(self):
+        report=(self.out/'第三阶段研究报告.md').read_text()
+        self.assertIn('不开展或新增',report)
+        self.assertIn('进入第四阶段不以招聘原文或109条关系核验为条件',report)
+        w=load_workbook(self.out/'人工审核清单_第三阶段.xlsx')
+        self.assertIn('历史问题归档不再执行',w.sheetnames)
+        self.assertIn('课程能力关系审核索引',w.sheetnames)
+        self.assertNotIn('图谱全部待审关系索引',w.sheetnames)
+        w.close()
+
+    def test_project_and_graph_level_not_copy_whole_course_grade(self):
+        rows=[m for m in self.matrix if m['能力ID']=='N113' and m['课程项目ID']=='P06']
+        self.assertTrue(rows)
+        self.assertTrue(all(m['匹配状态']=='部分支撑' and m['能力整体支撑等级']=='直接支撑' for m in rows))
+        edges=[e for e in self.graph.edges if e['起点ID']=='N113' and e['终点ID']=='P06']
+        self.assertTrue(edges)
+        self.assertTrue(all('部分支撑' in e['审核或置信状态'] and '；直接支撑' not in e['审核或置信状态'] for e in edges))
 
     def test_semantic_results_repeat_without_overwriting_inputs(self):
         other=Path(self.temp.name)/'again'

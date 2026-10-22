@@ -305,6 +305,9 @@ def match_course(data,plan,catalog,corpus):
     matrix=[];summaries=[]
     for item in plan['abilities']:
         cap=caps[item['ability']]
+        for field in ['supported_behavior','uncovered_behavior','gap_category','gap_category_reason','category_nature','full_behavior_review','revision_reason']:
+            if not item.get(field):
+                raise ValueError('34项复核字段缺失：'+item['ability']+'/'+field)
         if item['status'] not in STATUSES:
             raise ValueError('无效匹配状态')
         refs=item['refs'] or [{'knowledge':'','practice':''}]
@@ -313,6 +316,9 @@ def match_course(data,plan,catalog,corpus):
             s=item['supplementary_quote'];supplemental=corpus.cite(s['quote'],[s['page']])
         all_ids=[]
         for ref in refs:
+            link_status=ref.get('status',item['status'])
+            if link_status not in STATUSES:
+                raise ValueError('无效逐条关系支撑状态')
             kid,pid=ref['knowledge'],ref['practice'];goalid=item.get('goal','');ids=[]
             project=''
             if kid:
@@ -333,9 +339,12 @@ def match_course(data,plan,catalog,corpus):
                 raise ValueError('直接或部分支撑不能使用无引文或遮挡证据')
             matrix.append({'匹配ID':f'M-{len(matrix)+1:04d}','能力ID':cap['新编码'],'能力名称':cap['能力名称'],
                 '可观察工作行为':cap['可观察的工作行为'],'课程项目ID':project,'知识点ID':kid,
-                '实践任务ID':pid,'课程目标ID':goalid,'匹配状态':item['status'],**fields,
+                '实践任务ID':pid,'课程目标ID':goalid,'匹配状态':link_status,'能力整体支撑等级':item['status'],**fields,
                 '查阅范围':f'PDF物理页1—{len(corpus.pages)}；遮挡文本层仅作候选，不作为正向确认',
-                '匹配理由':item['reason'],'课程支撑边界或改进建议':item['gap'],
+                '匹配理由':ref.get('reason',item['reason']),'课程支撑边界或改进建议':item['gap'],
+                '课程支撑的具体技术行为':ref.get('supported_behavior',item['supported_behavior']),'课程尚未明确覆盖的工作行为':item['uncovered_behavior'],
+                '未见支撑建议分类':item['gap_category'],'分类理由':item['gap_category_reason'],'分类性质':item['category_nature'],
+                '完整工作行为复核说明':item['full_behavior_review'],
                 '招聘证据类型':cap['证据类型'],'招聘证据状态':'候选岗位全部待核验；无招聘原文明示',
                 '原课程适配类别（不等同培养）':cap['课程适配类别'],
                 '关系性质':'逐项行为比较形成的研究推断，不是培养效果验证','人工审核状态':PENDING})
@@ -346,7 +355,10 @@ def match_course(data,plan,catalog,corpus):
             '实践任务ID':';'.join(dict.fromkeys(r['practice'] for r in refs if r['practice'])),
             '课程证据ID':';'.join(dict.fromkeys(all_ids)),
             '课程支撑判断':item['reason'],'课程标准支撑不足或边界':item['gap'],
-            '岗位需求证据不足':'全部来源岗位未核验；摘要支持不是招聘原文明示',
+            '课程支撑的具体技术行为':item['supported_behavior'],'课程尚未明确覆盖的工作行为':item['uncovered_behavior'],
+            '未见支撑建议分类':item['gap_category'],'分类理由':item['gap_category_reason'],'分类性质':item['category_nature'],
+            '完整工作行为复核说明':item['full_behavior_review'],'本轮修订理由':item['revision_reason'],
+            '历史岗位证据状态（非当前任务）':'原候选及推断状态保留；不再开展逐条核验，不作为后续阶段前置条件',
             '来源岗位ID':cap['来源岗位ID'],'对应任务ID':cap['对应任务ID'],
             '摘要支持候选岗位数（非独立需求频次）':cap['摘要支持岗位数（含疑似重复）'],
             '涉及疑似原关系ID':';'.join(sorted(suspected)),'涉及疑似原关系数':len(suspected),
@@ -394,7 +406,12 @@ def build_graph(data,catalog,matrix,corpus):
         g.node(t['任务编码'],'典型工作任务（摘要）',t['典型工作任务'],'output/岗位任务编码表.xlsx',t)
         g.edge(t['岗位ID'],t['任务编码'],'岗位摘要包含任务','output/岗位任务编码表.xlsx',t['任务编码'],recruit='岗位摘要支持',state='岗位待核验；摘要不等于招聘原文')
     for c in data['caps']+data['suggestions']:
-        g.node(c['新编码'],'职业能力建议' if c in data['caps'] else '课程建议能力（无招聘证据）',c['能力名称'],'phase2/output/三级职业能力体系_优化建议版.xlsx',c)
+        details=next((m for m in matrix if m['能力ID']==c['新编码']),None)
+        attrs=dict(c)
+        if details:
+            attrs.update({k:details[k] for k in ['课程支撑的具体技术行为','课程尚未明确覆盖的工作行为','未见支撑建议分类','分类理由','分类性质']})
+            attrs['课程支撑等级']=details['匹配状态']
+        g.node(c['新编码'],'职业能力建议' if c in data['caps'] else '课程建议能力（无招聘证据）',c['能力名称'],'phase2/output/三级职业能力体系_优化建议版.xlsx',attrs)
         if c['父编码']:
             g.edge(c['父编码'],c['新编码'],'建议能力层级包含','phase2/output/三级职业能力体系_优化建议版.xlsx',c['新编码'])
     for c in data['old_nodes']:
@@ -520,28 +537,19 @@ def write_book(path,sheets):
 
 
 def make_issues(data,catalog,matrix,summaries,corpus,g):
+    """当前任务仅限课程；历史招聘与推断关系状态在档案页保留。"""
     issues=[]
-    def add(kind,priority,question,ref='',page='',evidence=''):
-        issues.append({'第三阶段问题ID':f'P3-Q{len(issues)+1:04d}','问题类别':kind,'优先级':priority,
-            '关联条目或匹配ID':ref,'PDF页码':page,'课程证据ID':evidence,
-            '待人工核验事项':question,'审核人':'','审核结论':'','补证链接或位置':'','审核状态':PENDING})
-    add('PDF可见性','高','第13页文本层实训表及考核标题被后绘制白色矩形覆盖；核验课程发布原稿，不能据此确认可见有效内容。','RP01;RP02;RP03;AS02',13,
-        ';'.join(e['证据ID'] for e in corpus.evidence if e['是否遮挡']=='是'))
-    add('学时口径','高','可见8项目64学时内含32实践；单列表32仅遮挡文本层候选。确认是否同一实践分配，禁止直接相加为96或重复累计。','H64;H32-CAND',13)
-    add('文本笔误','高','遮挡文本层保留INERT INTO原字；不能静默纠正为INSERT INTO并声称课程原文已核验。','RP02',13)
-    add('正式考核方案不足','高','未提取到可确认的考核组成、比例或评价细则；课堂即时操作检查不是完整考核方案，需补完整有效版本。','AS01;AS02','3;13')
-    add('目标与实施落点','高','目标提及DCL与权限，思政提及加密审计，但具体技术项目和实训落点不明；不能据关键词推定完整培养。','KG-01;KG-02;KI-01','2;3;13')
-    add('技术表述核验','中','第8页课程思政中DELETE与TRUNCATE的可回滚/不可逆表述应由教师核对适用条件；本阶段保留原文，不据常识改写标准。','P04',8)
-    add('文本乱码','中','部分章节标题文本层出现乱码；项目标题与内容可解析，但章节名和末页结构须对照原始发布文件核验。','COURSE-PDF','1;2;3;13')
-    for project in catalog[1]:
-        if ';' in project['项目跨页范围']:
-            add('跨页结构','中','该项目跨PDF物理页；核对内容、学生要求、思政及下一项目边界，已分证据保存页码。',project['条目ID'],project['项目跨页范围'],project['课程证据ID'])
+    def add(kind,ref,question,evidence=''):
+        issues.append({'第三阶段问题ID':f'P3-RQ{len(issues)+1:04d}','问题类别':kind,
+            '关联条目或匹配ID':ref,'课程证据ID':evidence,'待人工核验事项':question,
+            '执行范围':'当前课程能力图谱复核','审核人':'','审核结论':'','审核状态':PENDING})
     for s in summaries:
-        add('能力课程匹配','高' if s['最终候选匹配状态'] in {'待人工审核','未见明确支撑'} else '中',
-            s['课程支撑判断']+'；'+s['课程标准支撑不足或边界'],s['能力ID'],evidence=s['课程证据ID'])
-    add('招聘原文不足','高','50条岗位全部待核验；摘要不能当招聘原文。第二阶段50条原文核验问题及109条疑似关系继续继承，不能被课程证据替代。','50岗位;109疑似原关系')
-    add('图谱候选关系','高','图谱含研究映射与候选语义边；未人工确认的路径不能作为已核验需求—培养成效链。隔离关系不进入默认候选边集。','候选边及隔离边')
-    add('统计解释','高','34项能力状态不按招聘频次加权；含部分支撑的文本关联比例不是培养达成率。岗位证据不足与课程标准支撑不足分别报告。','能力状态统计')
+        add('完整行为与技术环节边界',s['能力ID'],s['课程支撑判断']+'；尚未明确覆盖：'+s['课程尚未明确覆盖的工作行为'],s['课程证据ID'])
+    for project in catalog[1]:
+        add('教学项目课程证据',project['条目ID'],'核对项目教学内容、知识条目与实操要求的一致性，不推断学生已达到能力。',project['课程证据ID'])
+    add('知识点课程关系','37条知识条目','区分项目知识、目标提及和思政提及，不将提及自动认定完整技术训练。')
+    add('统计解释','34能力及272项目单元','能力状态分母34，项目单元分母34×8；文本支撑判断不是学生达成率或已核验行业需求覆盖率。')
+    add('目标与项目落点','N331;N332;N512','目标或思政提及但项目实施不清时保留待审核或部分支撑，不凭关键词确认实践。')
     return issues
 
 
@@ -569,98 +577,115 @@ def coverage_tables(data,catalog,matrix,summaries,course_suggestions):
     return stats,recruit,known
 
 
+
+def project_review(catalog,matrix,summaries):
+    """全量34×8复核；无正向证据单元不产生图谱支撑关系。"""
+    details=[];wide=[]
+    for ability in summaries:
+        row={'能力ID':ability['能力ID'],'能力名称':ability['能力名称'],'能力整体支撑等级':ability['最终候选匹配状态']}
+        matches=[m for m in matrix if m['能力ID']==ability['能力ID']]
+        goal_only=any(m['课程目标ID'] or m['知识点ID'].startswith('KG') for m in matches) and not any(m['课程项目ID'] for m in matches)
+        for project in catalog[1]:
+            cells=[m for m in matches if m['课程项目ID']==project['条目ID']]
+            # 部分正向环节不反推整个项目完整培养职业行为。
+            state=cells[0]['匹配状态'] if cells else '待人工审核' if goal_only else '未见明确支撑'
+            if ability['能力ID']=='N113' and project['条目ID']=='P06':
+                state='部分支撑' # 视图项目仅对应查询技术分项，不复制课程整体直接支撑判断。
+            row[project['条目ID']+' '+project['教学项目名称']]=state
+            details.append({'能力ID':ability['能力ID'],'能力名称':ability['能力名称'],'课程项目ID':project['条目ID'],
+                '教学项目名称':project['教学项目名称'],'项目层匹配等级':state,
+                '知识点ID':';'.join(dict.fromkeys(m['知识点ID'] for m in cells if m['知识点ID'])),
+                '实践任务ID':';'.join(dict.fromkeys(m['实践任务ID'] for m in cells if m['实践任务ID'])),
+                '正向课程证据ID':';'.join(dict.fromkeys(e for m in cells for e in m['课程证据ID'].split(';') if e)) if state in {'直接支撑','部分支撑'} else '',
+                '待审课程提及证据ID':';'.join(dict.fromkeys(e for m in cells for e in m['课程证据ID'].split(';') if e)) if state=='待人工审核' else '',
+                '项目审阅范围证据ID':project['课程证据ID'],'项目审阅范围PDF页码':project['PDF页码'],
+                '等级说明':('项目六仅明确视图查询子环节，项目层部分支撑不等同课程整体N113判断' if ability['能力ID']=='N113' and project['条目ID']=='P06' else ability['课程支撑判断']) if cells else '目标层有提及，但未落实到具体教学项目，待审核' if goal_only else '本项目未见足以对应完整行为的明确证据；项目内容引文仅说明查阅范围，不作为正向支撑',
+                '课程支撑的具体技术行为':ability['课程支撑的具体技术行为'] if cells else '本项目未确认对应技术行为',
+                '课程尚未明确覆盖的工作行为':ability['课程尚未明确覆盖的工作行为'],'人工审核状态':PENDING})
+        wide.append(row)
+    return wide,details
+
+
+def revision_comparison(summaries):
+    baseline=HERE/'revisions/pr3_initial'
+    old=keyed(read_rows(baseline/'职业能力课程匹配矩阵.xlsx','34项能力汇总'),'能力ID')
+    result=[]
+    for s in summaries:
+        before=old[s['能力ID']]
+        result.append({'能力ID':s['能力ID'],'能力名称':s['能力名称'],'修订前等级':before['最终候选匹配状态'],
+            '修订后等级':s['最终候选匹配状态'],'等级是否变化':'是' if before['最终候选匹配状态']!=s['最终候选匹配状态'] else '否',
+            '修订前判断':before['课程支撑判断'],'修订后判断':s['课程支撑判断'],
+            '课程支撑的具体技术行为':s['课程支撑的具体技术行为'],'课程尚未明确覆盖的工作行为':s['课程尚未明确覆盖的工作行为'],
+            '未见支撑建议分类':s['未见支撑建议分类'],'分类理由':s['分类理由'],'分类性质':s['分类性质'],
+            '修订理由':s['本轮修订理由'],'修订前提交':'2aec6d909ab7b87799c2ce97f4dbdf1f354d2320','审核状态':PENDING})
+    return result
+
 def render_report(stats,summary,catalog,corpus):
-    status=stats['能力匹配状态'];den=stats['三级候选能力数']
-    table='\n'.join(f"| {s} | {status.get(s,0)} | {status.get(s,0)}/{den}（{status.get(s,0)/den:.2%}） |" for s in ['直接支撑','部分支撑','未见明确支撑','待人工审核'])
-    cases='\n'.join(f"- {s['能力ID']} {s['能力名称']}：{s['最终候选匹配状态']}。{s['课程支撑判断']}" for s in summary if s['能力ID'] in {'N113','N123','N221','N232','N331','N332','N341'})
-    return f'''# 第三阶段研究报告
+    counts=stats['能力匹配状态'];den=len(summary)
+    table='\n'.join(f"| {x} | {counts.get(x,0)} | {counts.get(x,0)}/{den} | {counts.get(x,0)/den:.2%} |" for x in ['直接支撑','部分支撑','未见明确支撑','待人工审核'])
+    classes='\n'.join(f"| {k} | {v} | {v}/14（{v/14:.2%}） |" for k,v in stats['未见支撑建议分类数量'].items())
+    focus='\n'.join(f"### {s['能力ID']} {s['能力名称']}\n\n等级：{s['最终候选匹配状态']}。{s['课程支撑判断']}\n\n课程支撑的具体技术行为：{s['课程支撑的具体技术行为']}。\n\n课程尚未明确覆盖的工作行为：{s['课程尚未明确覆盖的工作行为']}。" for s in summary if s['能力ID'] in {'N113','N313','N321','N322','N341','N331','N332'})
+    return f'''# 第三阶段研究报告（PR #3课程能力图谱修订）
 
-## 一、研究目标与边界
+## 一、当前研究范围
 
-面向高职大数据技术专业《数据库原理及应用》单门课程，形成“岗位候选样本—典型工作任务—职业能力建议—教学项目—知识条目—实操要求”的可追溯数据。本阶段只提交矩阵及结构化候选图谱，不开发网页，不宣称岗位已核验、关系已确认或学生已达到职业能力。
+按最新任务调整，本轮仅聚焦《数据库原理及应用》课程能力图谱：复核34项三级职业能力与8个教学项目、课程文本、知识点及课程能力关系。50条招聘样本、79条任务、109条疑似推断关系及既有职业能力体系保留原数据与证据状态，不开展或新增逐条招聘原文核验及109条关系核验任务，也不将其核验设为后续阶段或第四阶段前置条件。课程匹配不升级历史证据状态，不伪称经过专家审定。
 
-课程依据唯一来自仓库实际PDF《{stats['课程PDF']}》，{stats['PDF物理页数']}个物理页。课程名称来自文件正文，非由文件名推测；自动遍历PDF并依据正文识别，没有假定文件名或位置。课程条目、引用、页码及坐标保留，未用教材常识补内容。条目ID及知识粒度由研究者结构化赋予，非标准自带编码。本文由AI辅助研究形成，全部匹配待人工审核。
+PDF第13页相关历史标记保留，但本轮不再将遮挡内容作为研究重点或新增核验任务；历史候选内容未被提升为已确认正向证据。前两阶段数据不覆盖。本轮在现有PR #3修订，不创建新阶段、不自动合并。
 
-## 二、输入与版本核对
+## 二、输入与修订基线
 
-基准main提交：`{stats['main提交']}`。PR #2合并状态：{stats['PR2合并状态']}，合并提交记录在phase3/input_snapshot.json。前置研究及PDF共{stats['原文件数']}个源文件在运行前后核对Git blob/SHA256，未修改。输入快照差异数{stats['输入快照差异数']}；若后续输入变化，应重新审阅规则与引文。
+原输入main版本 `{stats['main提交']}`，PR #2已合并。读取50条岗位候选、79条任务、188条原关系、34项三级能力与8个课程教学项目。课程依据仍为仓库实际《{stats['课程PDF']}》，{stats['PDF物理页数']}个物理页；所有课程引文、知识点与页码逐次校验，未补写通用教材内容。26个原文件指纹未变化。
 
-实际读取：岗位{stats['岗位数']}条、任务{stats['任务数']}条、原关系{stats['原关系数']}条；第二阶段三级能力{den}项、全层级能力{stats['优化全层级能力数']}项、新旧映射{stats['原新映射行数']}行、人工问题{stats['继承第二阶段问题数']}条、迁移判定{stats['第二阶段迁移判定数']}条。疑似原任务能力关系{stats['疑似原关系数']}条与人工问题清单互相核对一致。没有以26项第一阶段能力代替34项优化库；原能力仅作归档节点及映射端点。
+修订基线为PR #3原提交 `2aec6d909ab7b87799c2ce97f4dbdf1f354d2320`。修订前两份核心Excel、研究报告、规则、说明及统计已存入 phase3/revisions/pr3_initial/，标记为历史结果，不代表当前结论。当前输出提供34项逐项前后对照，包含原等级、新等级、原判断、新判断、修订理由与行为边界。
 
-实际文件、工作表、字段、记录数、各字段空值及版本指纹详见“课程标准结构化解析.xlsx”的输入盘点与缺失统计页。空值包含设计上留空的审核人、无正向匹配及无招聘来源等，不能一概判为数据错误。岗位原文摘录缺失{stats['原文摘录缺失岗位数']}条，原职位状态与初评等级完整保留，未升级为已核验。
+## 三、复核规则：完整工作行为与技术子环节分开
 
-## 三、课程解析与关键疑点
+直接支撑仅在课标内容、相应实践要求与本项已定义的核心工作动作和产出相符时提出；不能因存在某个技术词或工具即认定完整职业行为直接支撑。部分支撑表示课标仅涉及基础技术、子环节、目标或局部产出，未明确完整工作过程。未见明确支撑只描述本标准证据范围，不能表述为课程绝对不涉及；待人工审核用于目标与实施落点或语义层次无法可靠确定的情形。四类均是研究建议，不是专家结论。
 
-提取目标{stats['课程目标数']}条（知识、能力、素质分列）、教学项目{stats['教学项目数']}项、项目学生要求{stats['项目要求数']}条；知识条目共{stats['知识条目总数']}条，其中教学项目知识条目{stats['教学项目知识条目数']}条、目标层提及2条、思政层提及1条。知识项命名和细分是研究者对原文的结构化，不是新增教学内容，也不表示课标正式认定这些知识点编号。
+所有34项能力与54行知识/实操匹配均补充“课程支撑的具体技术行为”和“课程尚未明确覆盖的工作行为”。未覆盖行为按第二阶段既有定义与其宽泛名称审慎说明，不修改原职业能力定义，不额外创造岗位要求。对名称范围宽而行为表述仍抽象的能力，不以几个课程实验替代完整工作过程。
 
-实操条目{stats['实操条目总数']}条包括8条可见项目内实操要求和3条被遮挡文本层实训表候选，不能把11条当成独立实训项目数。目标和实操原文跨页时分别保留每个PDF物理页的摘录。共登记{stats['课程证据摘录数']}条证据，其中{stats['遮挡证据摘录数']}条被标记为遮挡候选。
+建立34×8项目矩阵及{stats['项目复核单元数']}行项目单元复核，逐单元记录项目、知识/实操引用、正向证据ID、项目审阅范围与理由。项目审阅范围引文不等于正向支撑证据；无匹配单元不产生正向图谱边。目标提及但未落实到项目的能力，各项目暂标待人工审核，而非强配项目或将目标层部分支撑推广为项目已培养。
 
-### 学时口径
+## 四、等级数量与分母
 
-可见8项目学时依次为4、8、12、12、16、4、4、4，总计64学时，其中理论32、项目内实践32。实践已经在64总数中，不得另加。
-
-第13页文本层还能提取实训一“数据定义”10学时、实训二“数据操作”12学时、实训三“数据查询”10学时及合计32；但是该区域位于后绘制白色矩形下，实际渲染不可见。它只是遮挡文本层候选内容，不能视为发布版可见正文已确认。原PDF未明确说明这32是否对应前述内含实践；既不能相加为96，也不能断言其完全等同于前述32。表内引文保留单元格坐标和遮挡状态，未用于确认34项能力的实训支撑。
-
-可见性核对图见“课程PDF末页可见性核对.png”。脚本用PDF绘制顺序及后绘制不透明白矩形检测遮挡，并保留原PDF不做去遮挡处理。PDF文本可提取不等于发布页面可见。
-
-### 原文问题与考核边界
-
-被遮挡实训表中“INERT INTO”按原字保留并列问题，未静默改成INSERT INTO。第8页DELETE/TRUNCATE的技术概括及部分乱码标题由人工核对，不依据外部知识改写课程标准。
-
-第13页考核章节标题也被遮挡；未提取到可确认的考核组成、比例与评分细则。第3页可见课堂即时反馈和操作检查，作为教学方式条目保存，不冒充正式考核方案。目标层提及DCL与权限，思政提及用户权限、加密与审计，但具体技术实训落点不清，列为人工核验项。
-
-## 四、逐项能力匹配原则
-
-以34项三级能力的可观察工作行为为候选库，分别比较动作、对象、工作产出与课程实践要求。匹配方案显式记录在matching_plan.json，课程条目引用在course_specs.json；运行只校验和重建这些研究判断，未用关键词算法自动定级。
-
-- 直接支撑：可见课程内容及相应项目实操明确对应核心技术行为；仅限文本支撑，不等同培养效果。
-- 部分支撑：课程明确涉及某个子环节、基础技术或目标，但缺少完整业务对象、过程或成果。
-- 未见明确支撑：本PDF可见内容范围内未找到足够对应证据；不等于课程绝对不涉及，也不能凭缺失新增虚构知识点。
-- 待人工审核：表述层次或实施落点不足以可靠判定，如思政提及审计不能直接证明技术检查训练。
-
-同一能力可有多个知识条目，同一知识条目可对应多项能力。矩阵每行保留匹配ID、能力、项目、知识、实践或目标ID、引文、PDF页、理由与审核状态；目标层或未见支撑的项目/知识/实践ID可有意留空，不造占位节点。未见支撑不生成正向图谱支撑边。被遮挡的32学时表不用于直接/部分支撑。
-
-招聘原文明示、岗位摘要支持、研究推断、无招聘证据的课程建议分开。课程PDF原文不是招聘原文；PDF能证实课程表述，不能补足岗位真实性。原109条疑似关系及全部未审关系继续待审，不能因为能力与课程相近而自动确认岗位需求。
-
-## 五、匹配结果与两类证据缺口
-
-矩阵{stats['匹配矩阵行数']}行，按唯一能力ID归并为34项判断：
-
-| 候选状态 | 能力数 | 比例与分母 |
-| --- | ---: | --- |
+| 支撑等级 | 能力数 | 分母表达 | 比例 |
+| --- | ---: | --- | ---: |
 {table}
 
-直接或部分文本支撑共{status.get('直接支撑',0)+status.get('部分支撑',0)}/{den}（{(status.get('直接支撑',0)+status.get('部分支撑',0))/den:.2%}），只能称候选文本关联比例，不是完整能力覆盖率或学生培养达成率。上述分母仅34项建议版职业能力，未混入3项课程建议，也未按可能重复的岗位频次加权。
+较修订前，{stats['等级修订数量']}项等级变化：N313、N321、N322、N341由直接支撑降为部分支撑。修订前为5/14/14/1，修订后为1/18/14/1（顺序：直接、部分、未见、待审）。直接或部分文本对应仍为19/34（55.88%），但直接支撑建议下降，不能用未变化的并集掩盖支撑深度差异。
 
-{cases}
+所有能力状态比例分母均为34项三级候选能力，不混入3项课程建议，不按岗位频次加权。项目单元统计分母为34×8=272，不能与34项能力分母混用。文本支撑比例不是学生能力达成率、实际教学效果、完整职业能力覆盖率或经核验的行业需求覆盖率。
 
-### 岗位需求证据不足
+## 五、七项重点复核
 
-全部{stats['岗位数']}/{stats['岗位数']}岗位仍待核验；已核验招聘原文明示0/{stats['岗位数']}。原任务能力关系中{stats['疑似原关系数']}/{stats['原关系数']}为疑似待审，疑似不等于确认错误。不同量的分母分别是岗位数和原关系数，不能与课程匹配分母混用。摘要支持候选岗位频次仍包含未解决的重复风险，不能解释成全国独立真实需求分布。
+{focus}
 
-### 课程标准支撑不足
+## 六、14项未见明确支撑能力的建议分类
 
-{status.get('未见明确支撑',0)}项能力在本PDF范围内未见明确支撑、{status.get('部分支撑',0)}项仅有部分环节、{status.get('待人工审核',0)}项需进一步判读。{status.get('直接支撑',0)}项直接支撑也只说明标准中存在基本技术内容与实操要求。旅游业务情境、实施深度、学生表现及考核证据尚不充分。教学项目知识条目中有{stats['有34能力正向关联的项目知识条目数']}/{stats['教学项目知识条目数']}项建立了34能力库的直接或部分候选关联；未关联条目不意味着无用，它们可能服务基础教学或单列课程建议。
+| 研究建议类别 | 项数 | 分母与比例 |
+| --- | ---: | --- |
+{classes}
 
-### 反向证据缺口
+逐项分类及理由见两份核心Excel和修订对照表：潜在改进方向为N111、N121、N231、N521；其他专业课程可能承担为N112、N124、N222、N232、N421；旅游业务背景为N223、N224、N511、N531；证据不足无法判断为N221。N221的“分析模型”不能直接当作E-R模型，保留对象不明确的判断，不新增原文核验任务。
 
-第二阶段单列的S111关系数据库结构、S112建表改表、S113明确SQL增删改在本PDF确有相应内容；但它们仍无具体招聘证据，不属于34项岗位能力。另表列示而不纳入岗位频次，不能从课程已教反推岗位需要。这类缺口与“岗位有摘要、课程未见明确支撑”方向相反，必须分开处理。
+以上分类全部为研究建议，不是课程标准证明，也不是已核实的其他课程实际设置或承担结论。潜在改进项必须另行论证课程边界与评价要求；不直接加入现行知识点。其他专业课程“可能承担”不表示已由其他课程覆盖。
 
-所有课程改进建议只是研究讨论项，不是原课标内容。建议先审定岗位证据和单门课程边界，再决定是否需要增加或调整案例、实操与评价；不因旅游背景需求而把全部经营能力强行纳入数据库课程。
+## 七、课程文本、知识点与图谱关系检查
 
-## 六、图谱数据与人工审核
+沿用14条课程目标、8个项目、37条结构化知识条目、8条可见项目内实操要求等课程数据。条目命名与粒度是研究结构化，不是标准自带编码。引文按原PDF物理页与坐标校验；项目、知识点、实操的ID与归属相互核对。目标层和思政层提及不自动等于具体技术训练。
 
-节点{stats['图谱节点数']}个、候选关系{stats['图谱候选关系数']}行、隔离关系{stats['图谱隔离关系数']}行。原能力归档节点与新能力节点独立，旧→新映射可追溯。岗位与任务ID保留原编码，课程条目采用P/K/EP/RP/G/CR/AS前缀，所有节点ID唯一、关系端点有效。合并同端点同类型证据边保留源记录ID并集，不能以边行数作为需求频次。
+图谱仍为{stats['图谱节点数']}个节点、{stats['图谱候选关系数']}条候选关系及{stats['图谱隔离关系数']}条历史隔离关系。节点ID唯一、端点与编码映射有效。课程匹配边同步反映新的支撑等级与边界；所有关系仍未标记为人工确认。历史招聘与推断关系仅保留，不作为当前执行清单。当前人工清单仅新增{stats['新增第三阶段问题数']}条课程匹配、项目证据、知识点和统计问题；第二阶段266条问题另页历史归档，标注不再执行及非前置条件。
 
-隔离关系包含第二阶段不建议迁移的匹配以及被遮挡课程条目的结构边，不进入默认候选关系集。候选边也不是已确认事实；任务到能力、能力到课程均为待审研究联系。所有边“已人工确认”为否、不能用于已确认招聘频次。课程匹配边的方向为能力→项目/知识/实操，知识→实操可接续查询；关系名称注明候选语义，不能把一次多跳路径当成已验证培养链。
+课程有内容但无具体招聘证据的S111/S112/S113继续单列，不混入34项职业能力分母，不改变已有证据状态。课程证据不能反向证明岗位需求；这只作为研究解释边界，不据此新增招聘核验任务。
 
-人工清单继承第二阶段{stats['继承第二阶段问题数']}条未决问题，新增{stats['新增第三阶段问题数']}条课程与匹配问题，并单列{stats['图谱全部待审关系数']}条全部待审关系索引（其中{stats['图谱语义待审关系数']}条为新能力映射或课程匹配等语义联系）。三张清单有交叉，不能简单相加作为独立问题数量。审核人和结论均留空，没有模拟人工审定。
+## 八、成果、复现与后续
 
-## 七、复现、测试与局限
+更新第三阶段六份原Excel，新增《课程匹配修订前后对照.xlsx》，核心矩阵含34×8视图、272单元复核、34项前后对照和54行知识/实操明细。更新图谱节点属性与课程关系理由、中文README、报告、统计及自动化测试。当前成果位于phase3/output/，修订前结果在revisions/pr3_initial/。
 
-从仓库根目录运行 `python phase3/build.py`，再运行 `python -m unittest discover -s phase3 -p 'test_*.py' -v`。依赖、路径发现、规则边界及输出说明见phase3/README.md，实际测试结果见测试结果.txt。程序只在独立第三阶段目录写文件；检查原文件指纹、引用原文与页码、编码映射、节点唯一和端点有效，重复运行保证单元格及统计一致，不要求Excel ZIP元数据相同。
+复现：`python phase3/build.py`；测试：`python -m unittest discover -s phase3 -p 'test_*.py' -v`。测试检验课程引用、行为边界、272单元完整性、14项分类、统计分母、等级迁移、图谱端点、历史数据状态不变及重复运行。测试不证明专家有效性或培养成效。
 
-本研究只有一个PDF版本；部分内容被覆盖、缺少正式考核细则。职业样本仍为候选，摘要与疑似关系限制了需求结论。知识粒度和34项匹配是AI辅助研究判断，未经教师、行业专家和学习评价验证。输出是可审阅的结构化研究数据，而非已核验行业能力标准或课程培养成效证据。后续先取得完整可见课程标准、补招聘原文、逐条审核109项疑问及34项匹配，再开展教学项目改进和实际评价验证。
+后续只需围绕课程项目、知识点、课程能力关系和教学评价继续建设；进入第四阶段不以招聘原文或109条关系核验为条件。若需验证学生实际能力，应另行设计并实施学习评价，不能由本轮文本匹配率替代。
 '''
 
 
@@ -684,6 +709,8 @@ def run(input_root=ROOT,output_dir=None,pdf=None):
     specs=json.loads((HERE/'course_specs.json').read_text());plan=json.loads((HERE/'matching_plan.json').read_text())
     catalog=parse_course(corpus,specs)
     matrix,summaries=match_course(data,plan,catalog,corpus)
+    wide,project_cells=project_review(catalog,matrix,summaries)
+    comparison=revision_comparison(summaries)
     graph,suggestions=build_graph(data,catalog,matrix,corpus)
     validate(corpus,data,catalog,matrix,summaries,graph)
     issues=make_issues(data,catalog,matrix,summaries,corpus,graph)
@@ -700,7 +727,9 @@ def run(input_root=ROOT,output_dir=None,pdf=None):
            '课程目标数':len(catalog[0]),'教学项目数':len(catalog[1]),'项目要求数':len(catalog[4]),'知识条目总数':len(catalog[2]),
            '教学项目知识条目数':sum(k['课程条目定位']=='教学项目知识条目' for k in catalog[2]),
            '实操条目总数':len(catalog[3]),'课程证据摘录数':len(corpus.evidence),'遮挡证据摘录数':sum(e['是否遮挡']=='是' for e in corpus.evidence),
-           '匹配矩阵行数':len(matrix),'能力匹配状态':dict(Counter(s['最终候选匹配状态'] for s in summaries)),
+           '匹配矩阵行数':len(matrix),'项目复核单元数':len(project_cells),'项目复核单元等级':dict(Counter(c['项目层匹配等级'] for c in project_cells)),
+           '未见支撑建议分类数量':dict(Counter(s['未见支撑建议分类'] for s in summaries if s['最终候选匹配状态']=='未见明确支撑')),
+           '等级修订数量':sum(r['等级是否变化']=='是' for r in comparison),'本轮范围':'仅课程能力图谱；不新增招聘或109条关系核验任务；不以其核验作为后续阶段前置条件','能力匹配状态':dict(Counter(s['最终候选匹配状态'] for s in summaries)),
            '图谱节点数':len(graph.nodes),'图谱节点类型':dict(Counter(n['节点类型'] for n in graph.nodes)),
            '图谱候选关系数':len(graph.edges),'图谱隔离关系数':len(graph.quarantine),'图谱语义待审关系数':len(semantic),'图谱全部待审关系数':len(graph.edges)+len(graph.quarantine),
            '新增第三阶段问题数':len(issues),
@@ -708,7 +737,7 @@ def run(input_root=ROOT,output_dir=None,pdf=None):
            '可见教学项目学时':catalog[-1][0], '遮挡实践表候选学时':catalog[-1][1],
            '已核验招聘原文明示数':0,'已人工批准图谱关系数':0,
            '方法文件SHA256':{str(p.relative_to(root)):sha(p) for p in [HERE/'build.py',HERE/'course_specs.json',HERE/'matching_plan.json']}}
-    notes=[{'事项':'研究状态','说明':'岗位全部待核验，课程匹配及图谱语义联系全部待人工审核；文本支撑不等同实际培养'},
+    notes=[{'事项':'研究状态','说明':'历史招聘及关系证据状态保留但不再新增核验任务；当前仅课程能力图谱复核，文本支撑不等同实际培养'},
            {'事项':'证据区分','说明':'招聘原文明示本批0；岗位摘要支持、研究推断、无招聘证据课程建议分开。课程PDF原文不能替代招聘原文。'},
            {'事项':'课程范围','说明':'仅取实际PDF；知识点ID和粒度为研究结构化，无通用教材补写'},
            {'事项':'遮挡内容','说明':'第13页实践表及考核标题被白色矩形遮挡；可提取文本层仅作待核验候选，不用于确认实训支撑'},
@@ -722,12 +751,13 @@ def run(input_root=ROOT,output_dir=None,pdf=None):
     write_book(out/'课程标准结构化解析.xlsx',[('课程目标',goals),('教学项目',projects),('知识点',knowledge),('实训任务',practice),
          ('课程能力要求',requirements),('考核相关要求',assessment),('学时口径',hours_info),('PDF原文证据',corpus.evidence),
          ('输入文件工作表盘点',inv),('输入字段缺失统计',missing),('说明',notes)])
-    write_book(out/'职业能力课程匹配矩阵.xlsx',[('34项能力汇总',summaries),('多对多匹配明细',matrix),('PDF原文证据',corpus.evidence),('说明',notes)])
-    write_book(out/'课程能力覆盖与缺口分析.xlsx',[('能力状态统计',coverage),('逐项支撑与缺口',summaries),('岗位需求证据不足',recruit),
+    write_book(out/'职业能力课程匹配矩阵.xlsx',[('34项能力汇总',summaries),('34×8项目矩阵',wide),('272项目单元复核',project_cells),('修订前后对照',comparison),('多对多匹配明细',matrix),('PDF原文证据',corpus.evidence),('说明',notes)])
+    write_book(out/'课程能力覆盖与缺口分析.xlsx',[('能力状态统计',coverage),('逐项支撑与缺口',summaries),('历史岗位证据状态非任务',recruit),('未见支撑项建议分类',[s for s in summaries if s['最终候选匹配状态']=='未见明确支撑']),('修订前后对照',comparison),
          ('知识条目关联情况',known),('课程有内容但招聘证据不足',suggestions),('说明',notes)])
     write_book(out/'知识图谱节点表.xlsx',[('全部节点',graph.nodes),('节点类型统计',[{'节点类型':k,'节点数':v} for k,v in stats['图谱节点类型'].items()]),('说明',notes)])
     write_book(out/'知识图谱关系表.xlsx',[('候选图谱关系',graph.edges),('隔离关系不作确认',graph.quarantine),('PDF原文证据',corpus.evidence),('说明',notes)])
-    write_book(out/'人工审核清单_第三阶段.xlsx',[('新增第三阶段问题',issues),('继承第二阶段未决问题',data['inherited']),('图谱全部待审关系索引',graph.edges+graph.quarantine),('说明',notes)])
+    write_book(out/'人工审核清单_第三阶段.xlsx',[('新增第三阶段问题',issues),('历史问题归档不再执行',[dict(r,本轮执行范围='仅历史保留；不作为本轮任务或后续阶段前置条件') for r in data['inherited']]),('课程能力关系审核索引',[e for e in graph.edges if e['关系类型'].startswith('能力候选')]),('说明',notes)])
+    write_book(out/'课程匹配修订前后对照.xlsx',[('34能力逐项对照',comparison),('未见支撑项建议分类',[s for s in summaries if s['最终候选匹配状态']=='未见明确支撑'])])
     (out/'运行统计.json').write_text(json.dumps(stats,ensure_ascii=False,indent=2))
     (out/'第三阶段研究报告.md').write_text(render_report(stats,summaries,catalog,corpus))
     (out/'PDF逐页文本.json').write_text(json.dumps([{'PDF页码':p['page'],'文本层原始文本':p['raw'],'后绘制白色遮挡矩形':p['masks'],
