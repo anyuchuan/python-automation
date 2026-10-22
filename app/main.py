@@ -1,5 +1,6 @@
 """启动：streamlit run app/main.py"""
-import hashlib
+import platform
+from time import perf_counter
 import html
 import sys
 from collections import Counter
@@ -11,6 +12,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+from streamlit.logger import get_logger
 from app.data import (DataError,Options,MAIN_TYPES,STATUS_ORDER,load_bundle,filter_graph,search_nodes,visible_data,detail,csv_bytes)
 from app.graph import build_html,STATUS_COLORS
 
@@ -20,9 +22,13 @@ st.markdown('''<style>
 </style>''',unsafe_allow_html=True)
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner='正在读取第三阶段已生成的图谱数据…',max_entries=2)
 def cached_bundle(signature):
-    return load_bundle(ROOT)
+    started=perf_counter()
+    get_logger('course_graph').info('Course graph: loading existing Excel on Python %s; no research pipeline',platform.python_version())
+    data=load_bundle(ROOT)
+    get_logger('course_graph').info('Course graph data ready: %s nodes, %s candidate edges, %s isolated edges in %.3fs',len(data.nodes),len(data.edges),len(data.isolated),perf_counter()-started)
+    return data
 
 
 def load():
