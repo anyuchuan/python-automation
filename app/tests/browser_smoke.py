@@ -1,50 +1,78 @@
-"""可选真实浏览器检查。先启动8501端口应用，再运行本文件。"""
+"""第五阶段真实浏览器检查；先启动应用。APP_URL/CHROMIUM_PATH可配置。"""
 import csv
-import io
 import os
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright,expect
 
-out=Path('app/artifacts');out.mkdir(exist_ok=True)
-Path('work').mkdir(exist_ok=True)
+out=Path('app/artifacts/phase5');out.mkdir(parents=True,exist_ok=True);Path('work').mkdir(exist_ok=True)
 with sync_playwright() as p:
  browser=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium'),args=['--no-sandbox'])
- page=browser.new_page(viewport={'width':1440,'height':1050},accept_downloads=True)
+ page=browser.new_page(viewport={'width':1440,'height':1000},accept_downloads=True)
  errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
  page.goto(os.environ.get('APP_URL','http://127.0.0.1:8501'))
- page.get_by_text('课程文本匹配快照',exact=True).wait_for()
- page.screenshot(path=str(out/'overview.png'),full_page=True)
- page.get_by_text('图谱探索',exact=True).click()
- frame=page.frame_locator('iframe[data-testid="stIFrame"]')
- frame.locator('.node[data-id="N113"]').wait_for()
- assert frame.locator('.node').count()==20
- assert frame.locator('.edge').count()==39
+ page.get_by_text('树状层级',exact=True).wait_for()
+ frame=page.frame_locator('iframe[title="app.visuals.course_platform"]')
+ expect(frame.locator('.node')).to_have_count(5)
+ page.locator('[data-testid="stMain"]').evaluate('(e)=>e.scrollTo(0,0)');page.screenshot(path=str(out/'01-首页能力树.png'))
+ frame.get_by_role('button',name='展开N1',exact=True).click()
+ frame.locator('.node[data-id="N11"]').wait_for();expect(frame.locator('.node')).to_have_count(7)
+ frame.get_by_role('button',name='展开N11',exact=True).click()
  frame.locator('.node[data-id="N113"]').click()
- assert '课程尚未明确覆盖的工作行为' in frame.locator('#detail').inner_text()
- before=frame.locator('#graph').get_attribute('viewBox')
- frame.locator('#zoom-in').click();assert frame.locator('#graph').get_attribute('viewBox')!=before
- frame.locator('#fit').click();assert frame.locator('#graph').get_attribute('viewBox')==before
- frame.locator('.node').first.focus();frame.locator('.node').first.press('Enter')
- assert frame.locator('#detail h2').inner_text()
- # 路径位于节点下方，DOM点击验证其事件及证据面板。
- frame.locator('.edge').first.dispatch_event('click')
- assert '关系证据' in frame.locator('#detail').inner_text()
- page.screenshot(path=str(out/'graph.png'),full_page=True)
- with page.expect_download() as event:page.get_by_text('下载当前视图节点 CSV',exact=True).click()
- downloaded=event.value;downloaded.save_as('work/phase4_download.csv')
- with open('work/phase4_download.csv',encoding='utf-8-sig',newline='') as f:assert len(list(csv.DictReader(f)))==20
- page.get_by_text('研究探索模式',exact=True).click()
- page.get_by_text('显示高风险推断（未核验）',exact=True).click()
- page.get_by_text('研究探索视图包含未核验或隔离数据。',exact=False).wait_for()
- page.get_by_text('研究探索模式',exact=True).click()
- page.get_by_text('支撑分析',exact=True).click()
- page.get_by_text('未见明确支撑：14项建议分类',exact=True).wait_for()
- page.screenshot(path=str(out/'analysis.png'),full_page=True)
+ expect(page.locator('.detail-name')).to_have_text('查询并提取业务数据')
+ page.locator('[data-testid="stMain"]').evaluate('(e)=>e.scrollTo(0,0)');page.screenshot(path=str(out/'02-能力选中与详情.png'))
+ frame.get_by_role('button',name='全部展开',exact=True).click();expect(frame.locator('.node')).to_have_count(53)
+ frame.get_by_role('button',name='全部折叠',exact=True).click();expect(frame.locator('.node')).to_have_count(5)
+ search=page.get_by_role('textbox',name='搜索能力编号或名称',exact=True);search.fill('N313');search.press('Enter')
+ frame.locator('.node[data-id="N313"]').wait_for();expect(page.locator('.detail-name')).to_have_text('执行数据库运行维护')
+ search.fill('N113');search.press('Enter');expect(page.locator('.detail-name')).to_have_text('查询并提取业务数据')
+ page.get_by_text('网络关系',exact=True).click()
+ frame.locator('.gnode[data-id="N113"]').wait_for()
+ assert 'N113' in page.get_by_text('当前子图（非全量）',exact=False).inner_text()
+ original=frame.locator('#network').get_attribute('viewBox');frame.locator('#zoom-in').click()
+ assert frame.locator('#network').get_attribute('viewBox')!=original
+ frame.locator('#fit').click();assert frame.locator('#network').get_attribute('viewBox')==original
+ # 点击新能力并定位回树，验证真实的iframe→Python→另一视图联动。
+ candidate=frame.locator('.gnode[data-id="N11"]');candidate.click()
+ expect(page.locator('.detail-name')).to_have_text('数据获取与查询')
+ frame.locator('#tree-locate').click();frame.locator('.node[data-id="N11"].selected').wait_for()
+ expect(page.get_by_role('radio',name='树状层级',exact=True)).to_be_checked()
+ search.fill('N113');search.press('Enter');expect(page.locator('.detail-name')).to_have_text('查询并提取业务数据')
+ page.get_by_text('网络关系',exact=True).click();frame.locator('.gnode[data-id="N113"]').wait_for()
+ frame.locator('.edge').first.dispatch_event('click');page.get_by_text('选中关系的证据',exact=True).wait_for()
+ # 局部展开只查询新中心的既有邻域。
+ frame.locator('.gnode[data-id="P05"]').click();frame.locator('#local-expand').click()
+ page.get_by_text('中心 P05',exact=False).wait_for()
+ frame.locator('.gnode[data-id="N113"]').click();expect(page.locator('.detail-name')).to_have_text('查询并提取业务数据')
+ page.locator('[data-testid="stMain"]').evaluate('(e)=>e.scrollTo(0,0)');page.screenshot(path=str(out/'03-局部网络.png'))
+ with page.expect_download() as event:page.get_by_text('导出当前子图关系',exact=True).click()
+ event.value.save_as('work/phase5-graph.csv')
+ with open('work/phase5-graph.csv',encoding='utf-8-sig',newline='') as f:records=list(csv.DictReader(f))
+ assert records and all(not r['展示风险说明'] for r in records)
+ page.get_by_text('查看能力—教学内容映射',exact=True).click()
+ frame.locator('.cell').first.wait_for();expect(frame.locator('.cell')).to_have_count(272)
+ frame.locator('.cell[data-cap="N113"][data-project="P05"]').click()
+ page.get_by_text('当前项目单元 · P05',exact=False).wait_for()
+ expect(page.locator('.detail-name')).to_have_text('查询并提取业务数据')
+ expect(page.get_by_role('textbox',name='课程标准原文（保留原摘录）',exact=True)).not_to_have_value('')
+ page.locator('[data-testid="stMain"]').evaluate('(e)=>e.scrollTo(0,0)');page.screenshot(path=str(out/'04-交互映射矩阵.png'))
+ with page.expect_download() as event:page.get_by_text('导出当前映射单元',exact=True).click()
+ event.value.save_as('work/phase5-matrix.csv')
+ with open('work/phase5-matrix.csv',encoding='utf-8-sig',newline='') as f:assert len(list(csv.DictReader(f)))==272
+ page.get_by_text('查看课程支撑评价',exact=True).click();page.get_by_text('1 / 34',exact=True).first.wait_for()
+ assert page.get_by_text('18 / 34',exact=True).count()==1
+ page.locator('[data-testid="stMain"]').evaluate('(e)=>e.scrollTo(0,0)');page.screenshot(path=str(out/'05-课程支撑评价.png'))
+ page.get_by_text('课程教学优化',exact=True).click();page.get_by_text('研究发现',exact=True).wait_for()
+ page.get_by_text('岗位能力需求分析',exact=True).click();page.get_by_text('全量：50候选岗位',exact=False).wait_for()
+ page.get_by_text('研究依据与数据管理',exact=True).click();page.get_by_text('全量来源数据',exact=False).wait_for()
+ page.get_by_text('研究探索选项',exact=True).click();page.get_by_text('研究探索模式',exact=True).click()
+ page.get_by_text('显示高风险推断（未核验）',exact=True).click();page.get_by_text('显示隔离关系（未确认）',exact=True).click()
+ page.get_by_text('314节点 / 924关系',exact=False).wait_for()
+ page.get_by_text('研究探索模式',exact=True).click();page.get_by_text('259节点 / 450关系',exact=False).wait_for()
  assert not page.locator('[data-testid="stException"]').count()
- page.set_viewport_size({'width':390,'height':844})
- page.get_by_text('未见明确支撑：14项建议分类',exact=True).wait_for()
- page.screenshot(path='work/phase4_mobile.png',full_page=True)
- assert not page.locator('[data-testid="stException"]').count()
+ page.set_viewport_size({'width':1280,'height':800})
+ page.get_by_text('课程能力图谱',exact=True).click()
+ page.get_by_text('树状层级',exact=True).click();frame.locator('.node').first.wait_for()
+ page.screenshot(path='work/phase5-laptop.png')
  assert not errors,errors
  browser.close()
-print('PASS: 浏览器节点点击、键盘、缩放、连线证据、CSV下载、风险开关、统计页、移动视口；无JavaScript错误')
+print('PASS: 5/53节点、展开折叠、搜索定位、树网联动、节点/连线、局部展开、缩放、272矩阵与原文、评价、导出、六模块、风险开关、1280笔记本视口；无JS错误')
