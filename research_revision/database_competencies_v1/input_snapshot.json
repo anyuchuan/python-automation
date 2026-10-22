@@ -1,0 +1,347 @@
+{
+  "main_commit": "d01b26e33665b8f89018dd47597501e5547896f2",
+  "tree_sha": "5f85f077fb53905f9c9986f92c634ff79243276e",
+  "source_note": "最新main已合并PR #6；原始研究文件只读。核心候选不从课程标准或教学映射反推。",
+  "repository_files": [
+    {
+      "path": ".github/workflows/streamlit-smoke.yml",
+      "sha": "2c5da33729d42b07dd1171a10c00e68baf97bd6e"
+    },
+    {
+      "path": ".gitignore",
+      "sha": "67fe0b60834caa5e2cc5fde402294d69d047e515"
+    },
+    {
+      "path": ".streamlit/config.toml",
+      "sha": "7130f377c0056a8d425f1e2ad76b4a141470d28b"
+    },
+    {
+      "path": "README.md",
+      "sha": "905d57d6aa451d74491d0578c695c68e58d6599c"
+    },
+    {
+      "path": "app/.gitignore",
+      "sha": "43ae0e2a6c6d8fca34872506ca0f2e64194fec7c"
+    },
+    {
+      "path": "app/README.md",
+      "sha": "ca396117b2d7116929c1fb0df371303c51621450"
+    },
+    {
+      "path": "app/__init__.py",
+      "sha": "bacf6218d96abba484b248b67f99d14e77136b07"
+    },
+    {
+      "path": "app/artifacts/analysis.png",
+      "sha": "e047cf96e1f7917bafac2a1d20193e671706d00c"
+    },
+    {
+      "path": "app/artifacts/graph.png",
+      "sha": "10dbb38c70dbcd201b80b26861156288253e36a2"
+    },
+    {
+      "path": "app/artifacts/overview.png",
+      "sha": "68d5ed8a133fe97851431e30b9093ab0bfe6ba1a"
+    },
+    {
+      "path": "app/artifacts/phase5/01-首页能力树.png",
+      "sha": "2b4b7a30964b60647c834a6e4de679312dec8785"
+    },
+    {
+      "path": "app/artifacts/phase5/02-能力选中与详情.png",
+      "sha": "d637e43cf61e5be167d28261aed027ea9ea314eb"
+    },
+    {
+      "path": "app/artifacts/phase5/03-局部网络.png",
+      "sha": "ab5c5ba0aa8387c33cf22e997bbe739f334771c6"
+    },
+    {
+      "path": "app/artifacts/phase5/04-交互映射矩阵.png",
+      "sha": "1d1aa8f61437ff85d5b3b1014670860d6e5b7d25"
+    },
+    {
+      "path": "app/artifacts/phase5/05-课程支撑评价.png",
+      "sha": "600e10b5573a42c630afc76ebb35191e5f5db264"
+    },
+    {
+      "path": "app/artifacts/部署修复验证报告.md",
+      "sha": "3cd0ef789eb7adee9420b699004dbd9b9acc5e0c"
+    },
+    {
+      "path": "app/artifacts/验证报告.md",
+      "sha": "cbb95fade0a2d4b7c26737940ffdfaffaeac8448"
+    },
+    {
+      "path": "app/check_deployment.py",
+      "sha": "54af013dbc74947262b1407597a9c1929f137974"
+    },
+    {
+      "path": "app/controller.py",
+      "sha": "9c53995e6d3c2baa8bf10d45edc58ba071717a2f"
+    },
+    {
+      "path": "app/data.py",
+      "sha": "1f2d3f72f4e2ae2d814e7295b701e0cf9c01e0f1"
+    },
+    {
+      "path": "app/frontend/index.html",
+      "sha": "6d508b90532346ffd8e58b71683f3c2fea71d4bb"
+    },
+    {
+      "path": "app/graph.html",
+      "sha": "9a391865619f0421178a757ba2e218d66c7e311c"
+    },
+    {
+      "path": "app/graph.py",
+      "sha": "6bdd50093074be3ee4580ee1049fed34904aba45"
+    },
+    {
+      "path": "app/input_snapshot.json",
+      "sha": "e393b4b6a22159c95f35b04d7ca74c3b78a1018b"
+    },
+    {
+      "path": "app/main.py",
+      "sha": "2f0c7981dca426e1df5cb5304131f90abadb2d2f"
+    },
+    {
+      "path": "app/platform_model.py",
+      "sha": "36c7758d7cf9064c4697f34eec11fcccdfde8449"
+    },
+    {
+      "path": "app/requirements.txt",
+      "sha": "26f046a3685ffaac5c5da8efd3b1835e53961be2"
+    },
+    {
+      "path": "app/tests/browser_smoke.py",
+      "sha": "0ded71ffb771b5f9a1a4bb1280d5a7c3deaa6f94"
+    },
+    {
+      "path": "app/tests/test_data.py",
+      "sha": "e0a9039009aaf2d99dcab9c13ec76d21fca4c4f1"
+    },
+    {
+      "path": "app/tests/test_deployment.py",
+      "sha": "eafc9afea81c258f1ee903e894ffb60ca919d386"
+    },
+    {
+      "path": "app/tests/test_platform.py",
+      "sha": "0397a3aa13496f20a06782d41a3bbdfb524d9c12"
+    },
+    {
+      "path": "app/tests/test_ui.py",
+      "sha": "f42302df0990068548fa4cfcc9752720b086cab3"
+    },
+    {
+      "path": "app/visuals.py",
+      "sha": "27ed00fa4467be1b0fb7438f798c67ef5545a46a"
+    },
+    {
+      "path": "app/部署说明.md",
+      "sha": "569fe3e8890cd0394492f0a6f6a3b3f35bfd7b15"
+    },
+    {
+      "path": "app/阶段五实施与验证报告.md",
+      "sha": "6eb5e2cd573856e33dea67895fff19c07a7d8d6e"
+    },
+    {
+      "path": "output/三级职业能力指标体系.xlsx",
+      "sha": "8b45bdfd098e7e33c5950c4eb32d2adbc0f6b976"
+    },
+    {
+      "path": "output/处理报告.json",
+      "sha": "68e69d0463f14dc53e0813011b09df3e306669a3"
+    },
+    {
+      "path": "output/岗位任务编码表.xlsx",
+      "sha": "8da98bef9e7c279160908e17382570f8d0664193"
+    },
+    {
+      "path": "output/岗位任务能力关系表.xlsx",
+      "sha": "47e4e35208e8ec7baae6fb4128deba744ffda50e"
+    },
+    {
+      "path": "output/岗位数据质量检查.xlsx",
+      "sha": "a3c713583c60bab78f949e9d0ce08fa925a52650"
+    },
+    {
+      "path": "output/来源快照.json",
+      "sha": "750118780bd674efe003ce5de096fcfe52a7e742"
+    },
+    {
+      "path": "output/测试结果.txt",
+      "sha": "ff12d0582c62db19d4dc89aa14e7bff79334e48e"
+    },
+    {
+      "path": "phase2/README.md",
+      "sha": "a1954f464e7bc88c1c8d42b0f7cbe8e73416069a"
+    },
+    {
+      "path": "phase2/input_snapshot.json",
+      "sha": "22501773c5c5a911e3f6af522186e63db747785a"
+    },
+    {
+      "path": "phase2/output/三级职业能力体系_优化建议版.xlsx",
+      "sha": "3c14602f147e629fe20f4b1228590d0379d79b49"
+    },
+    {
+      "path": "phase2/output/人工审核问题清单.xlsx",
+      "sha": "7e869dbb666f1f39e62143b5f3e155921e4caddc"
+    },
+    {
+      "path": "phase2/output/任务能力关系_复核表.xlsx",
+      "sha": "a9a68f2d93acec64e9852d7be7b6eb170a0e9db4"
+    },
+    {
+      "path": "phase2/output/测试结果.txt",
+      "sha": "75589dcd560fe42bf92ef8226cb58502c23e6fdb"
+    },
+    {
+      "path": "phase2/output/第二阶段优化报告.md",
+      "sha": "99b41940134bbda18933a0f07b43de7c6d4f393f"
+    },
+    {
+      "path": "phase2/output/职业能力体系_优化对照表.xlsx",
+      "sha": "2a89d803874564013777f01005e615e5540b436a"
+    },
+    {
+      "path": "phase2/output/运行统计.json",
+      "sha": "0a03a11d7851cf19c284f4635ffb1e0ad9fdecca"
+    },
+    {
+      "path": "phase2/review.py",
+      "sha": "05af198f75ac57c7465261d26d7c061b33c01546"
+    },
+    {
+      "path": "phase2/rules.json",
+      "sha": "232ea1d52459b953b4bbe368cf133d09b6119394"
+    },
+    {
+      "path": "phase2/test_review.py",
+      "sha": "e0e5100405a551b63b3f5c8fedc57d3e20d771ce"
+    },
+    {
+      "path": "phase3/README.md",
+      "sha": "8d6f022c26686f855717c53c3c5a0cbd6135b7eb"
+    },
+    {
+      "path": "phase3/build.py",
+      "sha": "d705e079d80a24953c20c2cff0bf4468011a0431"
+    },
+    {
+      "path": "phase3/course_specs.json",
+      "sha": "e75725bd9f639ecbe11bbdf242d739774051a646"
+    },
+    {
+      "path": "phase3/input_snapshot.json",
+      "sha": "823198b0ef35c7e34c9e67af06cd5a7474b1382a"
+    },
+    {
+      "path": "phase3/matching_plan.json",
+      "sha": "ced33fd2d05301571bcbd9e9d3d527dce45e7e37"
+    },
+    {
+      "path": "phase3/output/PDF逐页文本.json",
+      "sha": "d015eea2c15d9bf551e3a9f376c5229913d2d9a1"
+    },
+    {
+      "path": "phase3/output/人工审核清单_第三阶段.xlsx",
+      "sha": "98c6352c1f2beac76e4ed40c5437c514be15afa7"
+    },
+    {
+      "path": "phase3/output/测试结果.txt",
+      "sha": "bb2f16de9b611f37f7cb9f24dd6b4d4b17efa858"
+    },
+    {
+      "path": "phase3/output/知识图谱关系表.xlsx",
+      "sha": "dbf7fd9b7adfdfd2d8277a6ac540e0901c148162"
+    },
+    {
+      "path": "phase3/output/知识图谱节点表.xlsx",
+      "sha": "5cf1da9c897885cd07a01a4ee624c5f4dab70aae"
+    },
+    {
+      "path": "phase3/output/第三阶段研究报告.md",
+      "sha": "6cc9e69b085f816c2abf32088ab3ab192383b7e5"
+    },
+    {
+      "path": "phase3/output/职业能力课程匹配矩阵.xlsx",
+      "sha": "ca36aa1b39404979a5ffe90efb4aa8439add8bed"
+    },
+    {
+      "path": "phase3/output/课程PDF末页可见性核对.png",
+      "sha": "c6ea859909c078d266ab3fd2b7cc8586c017a9be"
+    },
+    {
+      "path": "phase3/output/课程匹配修订前后对照.xlsx",
+      "sha": "76f8e5b4246ec55fea539fbe5a7cc4d3d7c0a8b7"
+    },
+    {
+      "path": "phase3/output/课程标准结构化解析.xlsx",
+      "sha": "2c1a77daf4eec96ee896be1ddee6845ae9f692d9"
+    },
+    {
+      "path": "phase3/output/课程能力覆盖与缺口分析.xlsx",
+      "sha": "9f492298ad420f39e7ec97f623c879ddc92a9dee"
+    },
+    {
+      "path": "phase3/output/运行统计.json",
+      "sha": "7479e8fd3f7ff7d6867fbca8fd95f265d0f72624"
+    },
+    {
+      "path": "phase3/requirements.txt",
+      "sha": "2776521731f6ab9228738d6907d83807d20ce963"
+    },
+    {
+      "path": "phase3/revisions/pr3_initial/README.md",
+      "sha": "0ccff3ab9ee00121969b2e3466e6455b1c05d744"
+    },
+    {
+      "path": "phase3/revisions/pr3_initial/matching_plan.json",
+      "sha": "760fed245569dd1e18d33c4d91dae213fe5d594b"
+    },
+    {
+      "path": "phase3/revisions/pr3_initial/snapshot.json",
+      "sha": "53db7df7acc45b48c95ec851c43b8180578a3c0a"
+    },
+    {
+      "path": "phase3/revisions/pr3_initial/第三阶段研究报告.md",
+      "sha": "1633591a123d9ba3bbab2ac5dfeef26bc628f1a1"
+    },
+    {
+      "path": "phase3/revisions/pr3_initial/职业能力课程匹配矩阵.xlsx",
+      "sha": "cb79227129969e691384093e3329ce31af57bba4"
+    },
+    {
+      "path": "phase3/revisions/pr3_initial/课程能力覆盖与缺口分析.xlsx",
+      "sha": "c4a8829d1b694efcb83d7aad5ed91163f0313c12"
+    },
+    {
+      "path": "phase3/revisions/pr3_initial/运行统计.json",
+      "sha": "d9ba872156098f5ffee2bcb851b142064ce261b5"
+    },
+    {
+      "path": "phase3/test_build.py",
+      "sha": "1747e15e9006cd23fda2a945fb08685fee70f00c"
+    },
+    {
+      "path": "requirements.txt",
+      "sha": "026fd49a16f02babaef779ede8165357f26092a5"
+    },
+    {
+      "path": "scripts/phase1.py",
+      "sha": "03821cc8e52b233729989ab312864edc863267ce"
+    },
+    {
+      "path": "tests/test_phase1.py",
+      "sha": "e147edfb8ac2af84e2696a6b10f6be7b23453aaf"
+    },
+    {
+      "path": "旅游行业招聘岗位样本库_50条候选_待核验.xlsx",
+      "sha": "70703acaaee66da225c8fd85bc97ddec98d77366"
+    },
+    {
+      "path": "课标0913.pdf",
+      "sha": "8e7b5c9669b5ab0345d74b25e924085f7f9185c6"
+    }
+  ]
+}
