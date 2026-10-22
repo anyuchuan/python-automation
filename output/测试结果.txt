@@ -1,0 +1,18 @@
+test_actual_input_and_missingness (test_phase1.Phase1Tests.test_actual_input_and_missingness) ... ok
+test_duplicates_do_not_remove_records (test_phase1.Phase1Tests.test_duplicates_do_not_remove_records) ... ok
+test_excel_evidence_is_text_not_formula (test_phase1.Phase1Tests.test_excel_evidence_is_text_not_formula) ... ok
+test_hierarchy_has_unique_parent_names (test_phase1.Phase1Tests.test_hierarchy_has_unique_parent_names) ... ok
+test_invalid_ids_fail_before_outputs (test_phase1.Phase1Tests.test_invalid_ids_fail_before_outputs) ... ok
+test_missing_schema_fails (test_phase1.Phase1Tests.test_missing_schema_fails) ... ok
+test_negated_sql_is_not_explicit (test_phase1.Phase1Tests.test_negated_sql_is_not_explicit) ... ok
+test_original_records_and_status_preserved (test_phase1.Phase1Tests.test_original_records_and_status_preserved) ... ok
+test_priority_is_local_to_clause (test_phase1.Phase1Tests.test_priority_is_local_to_clause) ... ok
+test_relations_have_real_foreign_keys_and_evidence (test_phase1.Phase1Tests.test_relations_have_real_foreign_keys_and_evidence) ... ok
+test_repeat_run_has_same_semantic_results (test_phase1.Phase1Tests.test_repeat_run_has_same_semantic_results) ... ok
+test_task_traceability_and_every_job_covered (test_phase1.Phase1Tests.test_task_traceability_and_every_job_covered) ... ok
+test_url_identity_and_tracking (test_phase1.Phase1Tests.test_url_identity_and_tracking) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.522s
+
+OK
