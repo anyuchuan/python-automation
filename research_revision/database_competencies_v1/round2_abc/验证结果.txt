@@ -1,0 +1,17 @@
+test_all_104_preexisting_files_unchanged (test_abc.ABCEvidenceTests.test_all_104_preexisting_files_unchanged) ... ok
+test_b_included_without_product_name (test_abc.ABCEvidenceTests.test_b_included_without_product_name) ... ok
+test_c_not_all_forced_and_x_excluded (test_abc.ABCEvidenceTests.test_c_not_all_forced_and_x_excluded) ... ok
+test_course_quotes_preserved_and_page_evidence_not_claimed_practice (test_abc.ABCEvidenceTests.test_course_quotes_preserved_and_page_evidence_not_claimed_practice) ... ok
+test_course_reserve_independent_of_pool (test_abc.ABCEvidenceTests.test_course_reserve_independent_of_pool) ... ok
+test_hierarchy_all_abc_and_valid_edges (test_abc.ABCEvidenceTests.test_hierarchy_all_abc_and_valid_edges) ... ok
+test_invalid_a_detail_claim_rejected (test_abc.ABCEvidenceTests.test_invalid_a_detail_claim_rejected) ... ok
+test_link_tier_not_upgraded_from_goal_to_method (test_abc.ABCEvidenceTests.test_link_tier_not_upgraded_from_goal_to_method) ... ok
+test_reproducible_content_and_old_output_protection (test_abc.ABCEvidenceTests.test_reproducible_content_and_old_output_protection) ... ok
+test_task_classification_and_supplement_quotes (test_abc.ABCEvidenceTests.test_task_classification_and_supplement_quotes) ... ok
+test_unique_pool_keeps_multi_evidence_not_duplicate_nodes (test_abc.ABCEvidenceTests.test_unique_pool_keeps_multi_evidence_not_duplicate_nodes) ... ok
+test_workbooks_open_and_class_views_have_correct_rows (test_abc.ABCEvidenceTests.test_workbooks_open_and_class_views_have_correct_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.901s
+
+OK
