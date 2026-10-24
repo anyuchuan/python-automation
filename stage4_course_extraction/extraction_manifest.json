@@ -1,0 +1,1210 @@
+{
+  "knowledge_occurrences": [
+    {
+      "project": "P01",
+      "page": 3,
+      "name": "数据库核心概念",
+      "tag": "基础理论与概念",
+      "quote": "理解数据、数据库、数据库管理系统（DBMS）、数据库系统的概念。",
+      "knowledge_id": "CK001",
+      "occurrence_id": "KO001"
+    },
+    {
+      "project": "P01",
+      "page": 3,
+      "name": "数据库技术发展",
+      "tag": "基础理论与概念",
+      "quote": "了解数据库技术的发展及SQL 语言的基本作用。",
+      "knowledge_id": "CK002",
+      "occurrence_id": "KO002"
+    },
+    {
+      "project": "P01",
+      "page": 3,
+      "name": "SQL语言作用",
+      "tag": "基础理论与概念",
+      "quote": "SQL 语言的基本作用",
+      "knowledge_id": "CK003",
+      "occurrence_id": "KO003"
+    },
+    {
+      "project": "P01",
+      "page": 3,
+      "name": "MySQL安装配置与连接",
+      "tag": "数据库管理与安全",
+      "quote": "掌握MySQL 安装、配置及基本连接方法。",
+      "knowledge_id": "CK004",
+      "occurrence_id": "KO004"
+    },
+    {
+      "project": "P01",
+      "page": 4,
+      "name": "数据库系统层次结构",
+      "tag": "基础理论与概念",
+      "quote": "数据库系统结构的理解",
+      "knowledge_id": "CK005",
+      "occurrence_id": "KO005"
+    },
+    {
+      "project": "P01",
+      "page": 4,
+      "name": "安装错误排查与环境变量配置",
+      "tag": "数据库管理与安全",
+      "quote": "安装过程中错误排查与环境变量配置",
+      "knowledge_id": "CK006",
+      "occurrence_id": "KO006"
+    },
+    {
+      "project": "P01",
+      "page": 4,
+      "name": "规范操作与数据安全意识",
+      "tag": "综合实践与职业规范",
+      "quote": "树立规范操作与数据安全意识",
+      "knowledge_id": "CK007",
+      "occurrence_id": "KO007"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "name": "概念模型与E-R图设计",
+      "tag": "关系数据库设计",
+      "quote": "概念模型、E-R 图、掌握概念模型、E-R 图设计及关系模式转换方法。",
+      "knowledge_id": "CK008",
+      "occurrence_id": "KO008"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "name": "关系模式转换",
+      "tag": "关系数据库设计",
+      "quote": "关系模式转换方法",
+      "knowledge_id": "CK009",
+      "occurrence_id": "KO009"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "name": "关系数据库规范化",
+      "tag": "关系数据库设计",
+      "quote": "数据库设计规范化理论(1NF、2NF、3NF)。",
+      "knowledge_id": "CK010",
+      "occurrence_id": "KO010"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "name": "数据加工与数据模型",
+      "tag": "关系数据库设计",
+      "quote": "数据加工、数据模型、概念模型和关系模型的理论",
+      "knowledge_id": "CK011",
+      "occurrence_id": "KO011"
+    },
+    {
+      "project": "P02",
+      "page": 5,
+      "name": "实体属性联系识别",
+      "tag": "关系数据库设计",
+      "quote": "实体、属性、联系的识别与设计方法",
+      "knowledge_id": "CK012",
+      "occurrence_id": "KO012"
+    },
+    {
+      "project": "P02",
+      "page": 5,
+      "name": "规范化与性能权衡",
+      "tag": "关系数据库设计",
+      "quote": "在实际设计中如何平衡规范化与性能",
+      "knowledge_id": "CK013",
+      "occurrence_id": "KO013"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "CREATE DATABASE创建数据库",
+      "tag": "SQL数据定义与操作",
+      "quote": "CREATE DATABASE",
+      "knowledge_id": "CK014",
+      "occurrence_id": "KO014"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "CREATE TABLE创建数据表",
+      "tag": "SQL数据定义与操作",
+      "quote": "CREATE TABLE",
+      "knowledge_id": "CK015",
+      "occurrence_id": "KO015"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "ALTER TABLE修改表结构",
+      "tag": "SQL数据定义与操作",
+      "quote": "ALTER TABLE",
+      "knowledge_id": "CK016",
+      "occurrence_id": "KO016"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "DROP TABLE删除数据表",
+      "tag": "SQL数据定义与操作",
+      "quote": "DROP TABLE",
+      "knowledge_id": "CK017",
+      "occurrence_id": "KO017"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "数据完整性概念及分类",
+      "tag": "SQL数据定义与操作",
+      "quote": "数据完整性概念及分类（实体完整性、参照完整性、用户自定义完整性）",
+      "knowledge_id": "CK018",
+      "occurrence_id": "KO018"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "PRIMARY KEY主键约束",
+      "tag": "SQL数据定义与操作",
+      "quote": "主键（PRIMARY KEY）",
+      "knowledge_id": "CK019",
+      "occurrence_id": "KO019"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "UNIQUE唯一约束",
+      "tag": "SQL数据定义与操作",
+      "quote": "唯一键（UNIQUE）",
+      "knowledge_id": "CK020",
+      "occurrence_id": "KO020"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "FOREIGN KEY外键约束",
+      "tag": "SQL数据定义与操作",
+      "quote": "外键（FOREIGN KEY）",
+      "knowledge_id": "CK021",
+      "occurrence_id": "KO021"
+    },
+    {
+      "project": "P03",
+      "page": 5,
+      "name": "CHECK检查约束",
+      "tag": "SQL数据定义与操作",
+      "quote": "检查约束（CHECK）",
+      "knowledge_id": "CK022",
+      "occurrence_id": "KO022"
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "name": "数据库管理规范",
+      "tag": "综合实践与职业规范",
+      "quote": "数据库管理基本原则：包括命名规范、结构设计与数据安全。",
+      "knowledge_id": "CK023",
+      "occurrence_id": "KO023"
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "name": "SQL与图形化操作对应",
+      "tag": "SQL数据定义与操作",
+      "quote": "命令行与图形化操作的对应关系",
+      "knowledge_id": "CK024",
+      "occurrence_id": "KO024"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "INSERT INTO插入数据",
+      "tag": "SQL数据定义与操作",
+      "quote": "INSERT INTO 语句的基本语法与变体（插入完整行、指定列插入、批量插入）",
+      "knowledge_id": "CK025",
+      "occurrence_id": "KO025"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "UPDATE更新数据",
+      "tag": "SQL数据定义与操作",
+      "quote": "UPDATE 语句的语法结构与执行逻辑",
+      "knowledge_id": "CK026",
+      "occurrence_id": "KO026"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "WHERE范围控制与条件过滤",
+      "tag": "SQL数据定义与操作;SQL查询与数据应用",
+      "quote": "WHERE 子句在精确控制更新范围中的关键作用",
+      "knowledge_id": "CK027",
+      "occurrence_id": "KO027"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "DELETE删除数据",
+      "tag": "SQL数据定义与操作",
+      "quote": "DELETE",
+      "knowledge_id": "CK028",
+      "occurrence_id": "KO028"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "TRUNCATE TABLE清空数据",
+      "tag": "SQL数据定义与操作",
+      "quote": "TRUNCATE TABLE",
+      "knowledge_id": "CK029",
+      "occurrence_id": "KO029"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "DELETE与TRUNCATE区别",
+      "tag": "SQL数据定义与操作",
+      "quote": "对比DELETE 与TRUNCATE 核心区别",
+      "knowledge_id": "CK030",
+      "occurrence_id": "KO030"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "数据操作顺序与安全",
+      "tag": "综合实践与职业规范",
+      "quote": "强调数据操作顺序、事务逻辑及操作安全性。",
+      "knowledge_id": "CK031",
+      "occurrence_id": "KO031"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "SELECT查询结构",
+      "tag": "SQL查询与数据应用",
+      "quote": "SELECT 语句的基本结构",
+      "knowledge_id": "CK032",
+      "occurrence_id": "KO032"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "查询列别名与表达式",
+      "tag": "SQL查询与数据应用",
+      "quote": "列选择（包括使用别名、表达式）",
+      "knowledge_id": "CK033",
+      "occurrence_id": "KO033"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "WHERE范围控制与条件过滤",
+      "tag": "SQL数据定义与操作;SQL查询与数据应用",
+      "quote": "WHERE 子句中使用比较运算符、逻辑运算符及模糊匹配（LIKE）进行条件过滤。",
+      "knowledge_id": "CK027",
+      "occurrence_id": "KO034"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "LIKE模糊匹配",
+      "tag": "SQL查询与数据应用",
+      "quote": "模糊匹配（LIKE）",
+      "knowledge_id": "CK034",
+      "occurrence_id": "KO035"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "多表内外连接查询",
+      "tag": "SQL查询与数据应用",
+      "quote": "连接查询（内连接、外连接）的原理与语法",
+      "knowledge_id": "CK035",
+      "occurrence_id": "KO036"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "子查询",
+      "tag": "SQL查询与数据应用",
+      "quote": "子查询的概念与应用场景",
+      "knowledge_id": "CK036",
+      "occurrence_id": "KO037"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "聚合函数",
+      "tag": "SQL查询与数据应用",
+      "quote": "常用聚合函数（COUNT, SUM, AVG, MAX, MIN）的作用",
+      "knowledge_id": "CK037",
+      "occurrence_id": "KO038"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "GROUP BY分组",
+      "tag": "SQL查询与数据应用",
+      "quote": "GROUP BY 子句与HAVING 子句的配合使用",
+      "knowledge_id": "CK038",
+      "occurrence_id": "KO039"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "HAVING分组过滤",
+      "tag": "SQL查询与数据应用",
+      "quote": "HAVING 子句的配合使用",
+      "knowledge_id": "CK039",
+      "occurrence_id": "KO040"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "ORDER BY排序",
+      "tag": "SQL查询与数据应用",
+      "quote": "ORDER BY 子句排序规则",
+      "knowledge_id": "CK040",
+      "occurrence_id": "KO041"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "LIMIT分页与行数限制",
+      "tag": "SQL查询与数据应用",
+      "quote": "LIMIT 子句对结果集进行分页或限定行数",
+      "knowledge_id": "CK041",
+      "occurrence_id": "KO042"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "联合查询",
+      "tag": "SQL查询与数据应用",
+      "quote": "讲解多表查询方法：JOIN、子查询、联合查询。",
+      "knowledge_id": "CK042",
+      "occurrence_id": "KO043"
+    },
+    {
+      "project": "P05",
+      "page": 9,
+      "name": "WHERE与HAVING区别",
+      "tag": "SQL查询与数据应用",
+      "quote": "WHERE vs HAVING 的区别与选用",
+      "knowledge_id": "CK043",
+      "occurrence_id": "KO044"
+    },
+    {
+      "project": "P05",
+      "page": 9,
+      "name": "查询子句执行顺序",
+      "tag": "SQL查询与数据应用",
+      "quote": "分析语句执行顺序",
+      "knowledge_id": "CK044",
+      "occurrence_id": "KO045"
+    },
+    {
+      "project": "P05",
+      "page": 9,
+      "name": "数据隐私与合规使用",
+      "tag": "综合实践与职业规范",
+      "quote": "强调数据隐私保护意识",
+      "knowledge_id": "CK045",
+      "occurrence_id": "KO046"
+    },
+    {
+      "project": "P06",
+      "page": 9,
+      "name": "视图概念作用与虚拟表",
+      "tag": "基础理论与概念;数据库管理与安全",
+      "quote": "视图的概念、作用与虚拟表的本质",
+      "knowledge_id": "CK046",
+      "occurrence_id": "KO047"
+    },
+    {
+      "project": "P06",
+      "page": 9,
+      "name": "CREATE VIEW创建视图",
+      "tag": "SQL数据定义与操作",
+      "quote": "创建视图（CREATE VIEW）的语法与选项",
+      "knowledge_id": "CK047",
+      "occurrence_id": "KO048"
+    },
+    {
+      "project": "P06",
+      "page": 9,
+      "name": "视图与基表查询区别",
+      "tag": "SQL查询与数据应用",
+      "quote": "查询视图与查询基表的异同",
+      "knowledge_id": "CK048",
+      "occurrence_id": "KO049"
+    },
+    {
+      "project": "P06",
+      "page": 9,
+      "name": "视图数据操作条件与限制",
+      "tag": "SQL数据定义与操作",
+      "quote": "通过视图进行数据插入、更新与删除的条件与限制",
+      "knowledge_id": "CK049",
+      "occurrence_id": "KO050"
+    },
+    {
+      "project": "P06",
+      "page": 9,
+      "name": "ALTER VIEW修改视图定义",
+      "tag": "SQL数据定义与操作",
+      "quote": "修改（ALTER VIEW）",
+      "knowledge_id": "CK050",
+      "occurrence_id": "KO051"
+    },
+    {
+      "project": "P06",
+      "page": 9,
+      "name": "DROP VIEW删除视图定义",
+      "tag": "SQL数据定义与操作",
+      "quote": "删除（DROP VIEW）视图定义的语法及其对数据的影响",
+      "knowledge_id": "CK051",
+      "occurrence_id": "KO052"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "索引概念类型与适用场景",
+      "tag": "数据库管理与安全",
+      "quote": "索引的概念、作用。常见索引类型（如普通索引、唯一索引、主键索引等）及其适用场景。",
+      "knowledge_id": "CK052",
+      "occurrence_id": "KO053"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "CREATE INDEX创建索引",
+      "tag": "数据库管理与安全",
+      "quote": "使用 CREATE INDEX 语句创建索引",
+      "knowledge_id": "CK053",
+      "occurrence_id": "KO054"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "ALTER TABLE索引添加",
+      "tag": "数据库管理与安全",
+      "quote": "使用 ALTER TABLE 语句添加索引",
+      "knowledge_id": "CK054",
+      "occurrence_id": "KO055"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "CREATE TABLE创建数据表",
+      "tag": "SQL数据定义与操作",
+      "quote": "在 CREATE TABLE 时通过约束或指定索引方式创建索引。",
+      "knowledge_id": "CK015",
+      "occurrence_id": "KO056"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "索引删除与维护",
+      "tag": "数据库管理与安全",
+      "quote": "索引删除及维护",
+      "knowledge_id": "CK055",
+      "occurrence_id": "KO057"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "索引查询效果对比",
+      "tag": "数据库管理与安全;SQL查询与数据应用",
+      "quote": "引导学生对比有无索引的查询效果",
+      "knowledge_id": "CK056",
+      "occurrence_id": "KO058"
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "name": "数据库备份与恢复",
+      "tag": "数据库管理与安全",
+      "quote": "数据备份与恢复的必要性。使用数据库工具或命令进行备份与恢复的基本操作流程。",
+      "knowledge_id": "CK057",
+      "occurrence_id": "KO059"
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "name": "事务概念与ACID",
+      "tag": "数据库管理与安全",
+      "quote": "事务的概念、ACID 特性（原子性、一致性、隔离性、持久性）",
+      "knowledge_id": "CK058",
+      "occurrence_id": "KO060"
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "name": "事务控制语句",
+      "tag": "SQL数据定义与操作;数据库管理与安全",
+      "quote": "事务控制语句（BEGIN, COMMIT, ROLLBACK）的使用。",
+      "knowledge_id": "CK059",
+      "occurrence_id": "KO061"
+    }
+  ],
+  "other_level_knowledge": [
+    {
+      "page": 2,
+      "level": "知识目标",
+      "name": "DDL、DML、DCL语言范围",
+      "quote": "掌握SQL 语言（包括DDL、DML、DCL）以及视图、索引的使用。"
+    },
+    {
+      "page": 2,
+      "level": "知识目标",
+      "name": "权限管理基础目标",
+      "quote": "了解数据安全（权限管理、数据备份与恢复和事务）的基础知识。"
+    },
+    {
+      "page": 13,
+      "level": "P08课程思政",
+      "name": "用户权限加密与审计提及",
+      "quote": "通过学习用户权限、加密与审计等手段"
+    }
+  ],
+  "activities": [
+    {
+      "project": "P01",
+      "page": 3,
+      "actor": "教师",
+      "kind": "讲授/案例/演示",
+      "name": "概念案例讲授与可视化讲解",
+      "quote": "讲授+示例演示：通过案例引导学生理解抽象概念",
+      "independent": "不适用（教师活动）",
+      "id": "CA001"
+    },
+    {
+      "project": "P01",
+      "page": 3,
+      "actor": "教师",
+      "kind": "操作演示",
+      "name": "安装配置连接演示",
+      "quote": "演示示范+学生同步操作：针对MySQL 安装、配置、连接等内容",
+      "independent": "不适用（教师活动）",
+      "id": "CA002"
+    },
+    {
+      "project": "P01",
+      "page": 3,
+      "actor": "学生",
+      "kind": "同步操作",
+      "name": "安装配置连接同步操作",
+      "quote": "演示示范+学生同步操作：针对MySQL 安装、配置、连接等内容",
+      "independent": "否，仅明确同步操作",
+      "id": "CA003"
+    },
+    {
+      "project": "P01",
+      "page": 3,
+      "actor": "学生",
+      "kind": "课后独立任务",
+      "name": "独立安装并连接服务器",
+      "quote": "学生必须在课后完成MySQL 的独立安装，并能使用图形化工具成功连接服务器。",
+      "independent": "是，原文明示",
+      "id": "CA004"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "actor": "教师",
+      "kind": "理论讲授/案例分析",
+      "name": "概念模型案例讲解",
+      "quote": "理论讲授+案例分析",
+      "independent": "不适用（教师活动）",
+      "id": "CA005"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "actor": "教师",
+      "kind": "图示演示",
+      "name": "E-R图工具展示及转换指导",
+      "quote": "图示演示+实践操作：使用E-R 图绘制工具展示实体、属性和联系的可视化设计",
+      "independent": "不适用（教师活动）",
+      "id": "CA006"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "actor": "学生",
+      "kind": "课堂参与与实操",
+      "name": "案例分析与实操练习",
+      "quote": "主动参与课堂案例分析与实操练习",
+      "independent": "未说明该活动独立完成",
+      "id": "CA007"
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "actor": "学生",
+      "kind": "独立作业",
+      "name": "E-R图模式转换与规范化作业",
+      "quote": "独立完成指定业务场景的 E-R 图设计、模式转换与规范化优化作业",
+      "independent": "是，原文明示",
+      "id": "CA008"
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "actor": "教师",
+      "kind": "讲授/实操演示",
+      "name": "库表与完整性约束演示",
+      "quote": "教师通过演示MySQL 创建数据库、管理数据库、创建数据表及设置完整性约束等操作",
+      "independent": "不适用（教师活动）",
+      "id": "CA009"
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "actor": "学生",
+      "kind": "独立任务驱动实践",
+      "name": "库表创建修改管理",
+      "quote": "学生通过独立完成数据库及数据表的创建、修改和管理任务",
+      "independent": "是，原文明示",
+      "id": "CA010"
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "actor": "学生",
+      "kind": "操作任务",
+      "name": "完整性约束设置",
+      "quote": "设置完整性约束任务：如主键、替代键、参照完整性、CHECK 约束",
+      "independent": "该句未说明独立；教学要求另有明示",
+      "id": "CA011"
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "actor": "学生",
+      "kind": "独立课后任务",
+      "name": "业务场景库表搭建",
+      "quote": "课后独立完成业务场景库表搭建任务",
+      "independent": "是，原文明示",
+      "id": "CA012"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "actor": "教师",
+      "kind": "理论讲授/命令演示",
+      "name": "数据插入修改删除演示",
+      "quote": "演示INSERT、UPDATE、DELETE、TRUNCATE 等语句的使用方法及区别。",
+      "independent": "不适用（教师活动）",
+      "id": "CA013"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "actor": "学生",
+      "kind": "同步实操",
+      "name": "跟随演示数据操作",
+      "quote": "跟随课堂演示同步实操",
+      "independent": "否，仅明确同步操作",
+      "id": "CA014"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "actor": "学生",
+      "kind": "独立操作任务",
+      "name": "插入条件更新与删除",
+      "quote": "独立完成单条、批量插入及条件更新、删除任务",
+      "independent": "是，原文明示",
+      "id": "CA015"
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "actor": "学生",
+      "kind": "课后实训",
+      "name": "业务数据操作实训",
+      "quote": "课后完成业务数据操作实训",
+      "independent": "未说明该活动独立完成",
+      "id": "CA016"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "actor": "教师",
+      "kind": "理论讲授/命令演示",
+      "name": "查询与多表方法讲解",
+      "quote": "理论讲授+命令演示：讲解SELECT 基本语法、WHERE 条件、聚合函数、分组、排序及LIMIT。",
+      "independent": "不适用（教师活动）",
+      "id": "CA017"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "actor": "学生",
+      "kind": "任务驱动实践",
+      "name": "业务查询实验",
+      "quote": "学生根据实际业务需求编写查询语句完成实验任务。",
+      "independent": "未说明该活动独立完成",
+      "id": "CA018"
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "actor": "学生",
+      "kind": "独立复杂任务",
+      "name": "业务场景复杂查询",
+      "quote": "独立完成业务场景复杂查询任务",
+      "independent": "是，原文明示",
+      "id": "CA019"
+    },
+    {
+      "project": "P06",
+      "page": 10,
+      "actor": "教师",
+      "kind": "理论讲授/演示",
+      "name": "视图全流程演示",
+      "quote": "演示通过视图进行数据操作、修改视图定义与删除视图。",
+      "independent": "不适用（教师活动）",
+      "id": "CA020"
+    },
+    {
+      "project": "P06",
+      "page": 10,
+      "actor": "学生",
+      "kind": "独立实验",
+      "name": "创建查询及操作视图",
+      "quote": "学生独立完成创建视图、查询视图及操作视图的实验任务。",
+      "independent": "是，原文明示",
+      "id": "CA021"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "actor": "教师",
+      "kind": "讲授/演示",
+      "name": "多种索引创建演示",
+      "quote": "演示 CREATE INDEX、ALTER TABLE、表创建时添加索引。",
+      "independent": "不适用（教师活动）",
+      "id": "CA022"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "actor": "学生",
+      "kind": "独立实验",
+      "name": "索引创建与删除",
+      "quote": "学生独立完成索引的创建与删除实验",
+      "independent": "是，原文明示",
+      "id": "CA023"
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "actor": "学生",
+      "kind": "教师引导操作比较",
+      "name": "有无索引查询效果对比",
+      "quote": "引导学生对比有无索引的查询效果",
+      "independent": "未说明该活动独立完成",
+      "id": "CA024"
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "actor": "教师",
+      "kind": "理论讲授/实操演示",
+      "name": "备份恢复及事务讲解演示",
+      "quote": "完整演示数据库备份恢复、事务控制全流程操作",
+      "independent": "不适用（教师活动）",
+      "id": "CA025"
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "actor": "学生",
+      "kind": "独立实验",
+      "name": "备份恢复和事务操作",
+      "quote": "学生独立完成备份、恢复和事务操作实验",
+      "independent": "是，原文明示",
+      "id": "CA026"
+    }
+  ],
+  "outcomes": [
+    {
+      "project": "P01",
+      "page": 3,
+      "name": "独立部署并连接的数据库环境",
+      "nature": "原文明示技术结果",
+      "quote": "学生必须在课后完成MySQL 的独立安装，并能使用图形化工具成功连接服务器。",
+      "submission": "未规定提交文件",
+      "id": "CO001",
+      "activity_ids": [
+        "CA004"
+      ]
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "name": "E-R图、关系模式及规范化优化作业",
+      "nature": "原文明示设计成果/作业",
+      "quote": "独立完成指定业务场景的 E-R 图设计、模式转换与规范化优化作业",
+      "submission": "作业明确；文件格式未规定",
+      "id": "CO002",
+      "activity_ids": [
+        "CA008"
+      ]
+    },
+    {
+      "project": "P02",
+      "page": 5,
+      "name": "绘图工具输出的设计成果",
+      "nature": "原文明示输出",
+      "quote": "练使用至少一种绘图工具输出合规设计成果。",
+      "submission": "输出明确；提交渠道格式未规定",
+      "id": "CO003",
+      "additional_evidence": [
+        {
+          "page": 4,
+          "quote": "独立完成指定业务场景的 E-R 图设计、模式转换与规范化优化作业，熟"
+        }
+      ],
+      "activity_ids": [
+        "CA008"
+      ]
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "name": "已创建修改的库表及约束",
+      "nature": "活动可直接确认的技术结果",
+      "quote": "能独立完成库表创建修改、约束设置操作",
+      "submission": "未规定正式提交物",
+      "id": "CO004",
+      "activity_ids": [
+        "CA010",
+        "CA011",
+        "CA012"
+      ]
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "name": "库表操作SQL记录及结构对照",
+      "nature": "研究推断潜在产物",
+      "quote": "课后独立完成业务场景库表搭建任务",
+      "submission": "仅潜在成果，非原文提交要求",
+      "id": "CO005",
+      "activity_ids": [
+        "CA012"
+      ]
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "已完成插入更新删除的数据",
+      "nature": "活动可直接确认的技术结果",
+      "quote": "独立完成单条、批量插入及条件更新、删除任务",
+      "submission": "未规定正式提交物",
+      "id": "CO006",
+      "activity_ids": [
+        "CA015"
+      ]
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "name": "数据操作SQL脚本与前后对照",
+      "nature": "研究推断潜在产物",
+      "quote": "课后完成业务数据操作实训",
+      "submission": "仅潜在成果，非原文提交要求",
+      "id": "CO007",
+      "activity_ids": [
+        "CA016"
+      ]
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "name": "业务查询语句",
+      "nature": "原文明示技术成果",
+      "quote": "学生根据实际业务需求编写查询语句完成实验任务。",
+      "submission": "编写明确；提交文件未规定",
+      "id": "CO008",
+      "activity_ids": [
+        "CA018",
+        "CA019"
+      ]
+    },
+    {
+      "project": "P05",
+      "page": 9,
+      "name": "查询执行结果记录",
+      "nature": "研究推断潜在产物",
+      "quote": "支持实时运行查询语句查看结果",
+      "submission": "环境支持不等于学生必须提交记录",
+      "id": "CO009",
+      "activity_ids": [
+        "CA018",
+        "CA019"
+      ]
+    },
+    {
+      "project": "P06",
+      "page": 10,
+      "name": "已创建查询及操作的视图",
+      "nature": "活动可直接确认的技术结果",
+      "quote": "学生独立完成创建视图、查询视图及操作视图的实验任务。",
+      "submission": "未规定正式提交物",
+      "id": "CO010",
+      "activity_ids": [
+        "CA021"
+      ]
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "索引创建删除操作结果",
+      "nature": "活动可直接确认的技术结果",
+      "quote": "学生独立完成索引的创建与删除实验",
+      "submission": "未规定正式提交物",
+      "id": "CO011",
+      "activity_ids": [
+        "CA023"
+      ]
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "name": "有无索引效果对比记录",
+      "nature": "研究推断潜在产物",
+      "quote": "引导学生对比有无索引的查询效果",
+      "submission": "比较活动明确；记录产物未规定",
+      "id": "CO012",
+      "activity_ids": [
+        "CA024"
+      ]
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "name": "备份恢复与事务操作完成结果",
+      "nature": "活动可直接确认的技术结果",
+      "quote": "学生独立完成备份、恢复和事务操作实验",
+      "submission": "未规定正式提交物",
+      "id": "CO013",
+      "activity_ids": [
+        "CA026"
+      ]
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "name": "数据库备份文件及恢复核对记录",
+      "nature": "研究推断潜在产物",
+      "quote": "学生独立完成备份、恢复和事务操作实验",
+      "submission": "工具或命令产物形式未指定；不能称原文要求交备份文件",
+      "id": "CO014",
+      "activity_ids": [
+        "CA026"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "project": "P01",
+      "page": 3,
+      "kind": "课堂检查与反馈",
+      "quote": "课堂即时反馈与操作检查教师巡查学生安装与连接过程中的问题，及时纠错",
+      "limit": "检查反馈；无分值",
+      "id": "EC001",
+      "activity_ids": [
+        "CA003",
+        "CA004"
+      ]
+    },
+    {
+      "project": "P01",
+      "page": 3,
+      "kind": "课后任务完成要求",
+      "quote": "学生必须在课后完成MySQL 的独立安装",
+      "limit": "完成要求，不等同评分",
+      "id": "EC002",
+      "activity_ids": [
+        "CA004"
+      ]
+    },
+    {
+      "project": "P02",
+      "page": 4,
+      "kind": "独立作业要求",
+      "quote": "独立完成指定业务场景的 E-R 图设计、模式转换与规范化优化作业",
+      "limit": "作业明确；评分标准未规定",
+      "id": "EC003",
+      "activity_ids": [
+        "CA008"
+      ]
+    },
+    {
+      "project": "P02",
+      "page": 5,
+      "kind": "教师答疑反馈",
+      "quote": "同步指导课堂实操练习，及时答疑。",
+      "limit": "指导反馈；不等同正式评价",
+      "id": "EC004",
+      "activity_ids": [
+        "CA007",
+        "CA008"
+      ]
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "kind": "课后任务要求",
+      "quote": "课后独立完成业务场景库表搭建任务",
+      "limit": "完成要求；无评分细则",
+      "id": "EC005",
+      "activity_ids": [
+        "CA012"
+      ]
+    },
+    {
+      "project": "P03",
+      "page": 6,
+      "kind": "操作跟进与答疑",
+      "quote": "跟进学生实操并及时答疑。",
+      "limit": "操作指导；不等同正式评价",
+      "id": "EC006",
+      "activity_ids": [
+        "CA010",
+        "CA011",
+        "CA012"
+      ]
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "kind": "巡查纠错反馈",
+      "quote": "全程巡视指导、及时纠错答疑。",
+      "limit": "反馈；无分值",
+      "id": "EC007",
+      "activity_ids": [
+        "CA014",
+        "CA015"
+      ]
+    },
+    {
+      "project": "P04",
+      "page": 7,
+      "kind": "课后实训要求",
+      "quote": "课后完成业务数据操作实训",
+      "limit": "实训完成要求；无分值",
+      "id": "EC008",
+      "activity_ids": [
+        "CA016"
+      ]
+    },
+    {
+      "project": "P05",
+      "page": 8,
+      "kind": "实验任务完成要求",
+      "quote": "学生根据实际业务需求编写查询语句完成实验任务。",
+      "limit": "任务完成要求；无评分细则",
+      "id": "EC009",
+      "activity_ids": [
+        "CA018",
+        "CA019"
+      ]
+    },
+    {
+      "project": "P05",
+      "page": 9,
+      "kind": "随堂巡查答疑",
+      "quote": "随堂巡查并针对查询报错、多表关联难点答疑指导。",
+      "limit": "课堂检查反馈；无分值",
+      "id": "EC010",
+      "activity_ids": [
+        "CA018",
+        "CA019"
+      ]
+    },
+    {
+      "project": "P06",
+      "page": 10,
+      "kind": "专项实验完成要求",
+      "quote": "学生独立完成创建视图、查询视图及操作视图的实验任务。",
+      "limit": "实验要求；不等同正式考核",
+      "id": "EC011",
+      "activity_ids": [
+        "CA021"
+      ]
+    },
+    {
+      "project": "P06",
+      "page": 10,
+      "kind": "操作纠错反馈",
+      "quote": "及时针对学生实操问题答疑纠错。",
+      "limit": "反馈；无分值",
+      "id": "EC012",
+      "activity_ids": [
+        "CA021"
+      ]
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "kind": "独立实验完成要求",
+      "quote": "学生独立完成索引的创建与删除实验",
+      "limit": "实验要求；无评分细则",
+      "id": "EC013",
+      "activity_ids": [
+        "CA023"
+      ]
+    },
+    {
+      "project": "P07",
+      "page": 11,
+      "kind": "纠错反馈",
+      "quote": "及时纠正学生实操问题。",
+      "limit": "反馈；无分值",
+      "id": "EC014",
+      "activity_ids": [
+        "CA023",
+        "CA024"
+      ]
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "kind": "独立实验完成要求",
+      "quote": "学生独立完成备份、恢复和事务操作实验",
+      "limit": "实验要求；无评分细则",
+      "id": "EC015",
+      "activity_ids": [
+        "CA026"
+      ]
+    },
+    {
+      "project": "P08",
+      "page": 12,
+      "kind": "答疑纠错反馈",
+      "quote": "及时答疑纠错。",
+      "limit": "反馈；无分值",
+      "id": "EC016",
+      "activity_ids": [
+        "CA026"
+      ]
+    },
+    {
+      "project": "",
+      "page": 13,
+      "kind": "考核章节仅文本层标题",
+      "quote": "（一）课程考核组成与评价",
+      "limit": "仅隐藏文本层标题；可见评分内容缺失，权重与细则均无法确认",
+      "id": "EC017",
+      "activity_ids": []
+    }
+  ]
+}
