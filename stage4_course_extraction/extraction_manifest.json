@@ -133,7 +133,8 @@
       "tag": "SQL数据定义与操作",
       "quote": "CREATE TABLE",
       "knowledge_id": "CK015",
-      "occurrence_id": "KO015"
+      "occurrence_id": "KO015",
+      "context": "数据表创建：技术对象为表结构"
     },
     {
       "project": "P03",
@@ -241,7 +242,8 @@
       "tag": "SQL数据定义与操作;SQL查询与数据应用",
       "quote": "WHERE 子句在精确控制更新范围中的关键作用",
       "knowledge_id": "CK027",
-      "occurrence_id": "KO027"
+      "occurrence_id": "KO027",
+      "context": "数据操作条件范围控制；原文明确UPDATE，删除为条件删除任务语境，不能冒称该句明示DELETE WHERE"
     },
     {
       "project": "P04",
@@ -304,7 +306,8 @@
       "tag": "SQL数据定义与操作;SQL查询与数据应用",
       "quote": "WHERE 子句中使用比较运算符、逻辑运算符及模糊匹配（LIKE）进行条件过滤。",
       "knowledge_id": "CK027",
-      "occurrence_id": "KO034"
+      "occurrence_id": "KO034",
+      "context": "SELECT条件过滤：比较、逻辑与LIKE条件表达"
     },
     {
       "project": "P05",
@@ -498,11 +501,12 @@
     {
       "project": "P07",
       "page": 11,
-      "name": "CREATE TABLE创建数据表",
-      "tag": "SQL数据定义与操作",
+      "name": "建表时定义索引",
+      "tag": "数据库管理与安全",
       "quote": "在 CREATE TABLE 时通过约束或指定索引方式创建索引。",
-      "knowledge_id": "CK015",
-      "occurrence_id": "KO056"
+      "knowledge_id": "CK060",
+      "occurrence_id": "KO056",
+      "context": "建表语境中的索引定义；由原CK015出现记录迁移，不重复新增出现记录"
     },
     {
       "project": "P07",

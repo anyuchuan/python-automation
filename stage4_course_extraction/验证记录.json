@@ -1,11 +1,11 @@
 {
   "command": "python -m unittest discover -s stage4_course_extraction -p test_extraction.py -v",
   "python": "3.12.14",
-  "tests": 23,
-  "passed": 23,
+  "tests": 24,
+  "passed": 24,
   "failures": 0,
   "errors": 0,
   "failure_reason": "无",
-  "build_git_blob": "5f331cadc3715a7d388053a72ed43d7650d018c6",
-  "manifest_git_blob": "3e483adb530d595fc841925e614f10c56d291629"
+  "build_git_blob": "855d189801b68779715ed2b9828372f0dbf790ff",
+  "manifest_git_blob": "5bb526a083de3f533ad93edf63845afec5df5b93"
 }

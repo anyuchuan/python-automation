@@ -1,5 +1,4 @@
-命令：python -m unittest discover -s stage4_course_extraction -p test_extraction.py -v
-Python 3.12.14；PyMuPDF 1.26.6；openpyxl 3.1.5
+python -m unittest discover -s stage4_course_extraction -p test_extraction.py -v
 test_01_original_pdf_complete (test_extraction.ExtractionTests.test_01_original_pdf_complete) ... ok
 test_02_eight_projects_unique_actual_titles (test_extraction.ExtractionTests.test_02_eight_projects_unique_actual_titles) ... ok
 test_03_project_hours_from_pdf (test_extraction.ExtractionTests.test_03_project_hours_from_pdf) ... ok
@@ -23,10 +22,11 @@ test_20_multi_to_multi_activity_outputs_checks (test_extraction.ExtractionTests.
 test_21_method_has_complement_and_hours (test_extraction.ExtractionTests.test_21_method_has_complement_and_hours) ... ok
 test_22_workbooks_open_and_repeatable (test_extraction.ExtractionTests.test_22_workbooks_open_and_repeatable) ... ok
 test_23_invalid_evidence_rejected (test_extraction.ExtractionTests.test_23_invalid_evidence_rejected) ... ok
+test_24_review_interfaces_and_contexts (test_extraction.ExtractionTests.test_24_review_interfaces_and_contexts) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 0.966s
+Ran 24 tests in 0.945s
 
 OK
 
-23通过，0失败，0错误；无失败原因。已检查138历史文件哈希，原PDF、第三阶段体系及应用未变。
+24通过，0失败，0错误。

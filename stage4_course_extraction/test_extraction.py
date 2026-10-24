@@ -36,7 +36,7 @@ class ExtractionTests(unittest.TestCase):
   ks={r['知识点ID']:r for r in self.d['knowledge']};os=self.d['occurrences'];self.assertEqual(len(ks),len(self.d['knowledge']))
   self.assertTrue(all(re.fullmatch(r'CK\d{3}',k) for k in ks));self.assertTrue(all(re.fullmatch(r'KO\d{3}',r['出现记录ID']) for r in os))
   self.assertEqual(len({r['出现记录ID'] for r in os}),len(os));self.assertTrue(all(r['知识点ID'] in ks for r in os))
-  create=next(r['知识点ID'] for r in ks.values() if r['规范化名称']=='CREATE TABLE创建数据表');self.assertEqual({r['项目ID'] for r in os if r['知识点ID']==create},{'P03','P07'})
+  create=next(r['知识点ID'] for r in ks.values() if r['规范化名称']=='CREATE TABLE创建数据表');self.assertEqual({r['项目ID'] for r in os if r['知识点ID']==create},{'P03'})
  def test_07_project_and_entity_endpoints(self):
   ps={p['项目ID'] for p in self.d['projects']};ids={r['实体ID'] for r in self.d['entities']};self.assertEqual(len(ids),len(self.d['entities']))
   for table in ['occurrences','activities','outcomes','practice_project']:
@@ -110,5 +110,21 @@ class ExtractionTests(unittest.TestCase):
   with fitz.open(b.locate_pdf()) as doc:
    e=b.Evidence(doc,b.locate_pdf())
    with self.assertRaises(ValueError):e.add(1,'不存在的评分比例80%', 'bad','bad')
+
+ def test_24_review_interfaces_and_contexts(self):
+  d=self.d
+  self.assertEqual(len(d['knowledge']),60)
+  self.assertEqual(len(d['occurrences']),61)
+  ko={r['出现记录ID']:r for r in d['occurrences']}
+  self.assertEqual(ko['KO056']['知识点ID'],'CK060')
+  self.assertIn('操作',ko['KO027']['应用语境标签'])
+  self.assertIn('SELECT',ko['KO034']['应用语境标签'])
+  self.assertEqual({r['技术行为标签'] for r in d['technical_behavior_interfaces']},{'备份相关技术行为','恢复相关技术行为'})
+  self.assertTrue(all(r['支持等级']=='本轮不判定' for r in d['technical_behavior_interfaces']))
+  self.assertEqual({r['学习成果ID'] for r in d['outcomes'] if '推断' in r['成果证据性质']},{'CO005','CO007','CO009','CO012','CO014'})
+  self.assertEqual(len(d['issues']),12)
+  self.assertTrue(all(r['是否仍需研究者确认']=='是' for r in d['issues']))
+  w=load_workbook(self.out/'03_课程知识技能点规范化表.xlsx',read_only=True)
+  self.assertEqual(sum(1 for _ in w['规范化知识技能点'].values)-1,len(d['knowledge']));w.close()
 
 if __name__=='__main__':unittest.main()

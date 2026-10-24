@@ -130,7 +130,7 @@ def build(output=None):
   ces=[e.add(r['page'],r['quote'],id,r['project']+'知识技能点')];row=byname[name];row['证据ID集合']+=ces;row['对应项目集合'].append(r['project']);row['页码集合'].append(r['page'])
   oid=r['occurrence_id'];node(oid,'知识点项目出现记录',r['project']+' '+name);rel(r['project'],oid,'出现知识技能点');rel(oid,id,'规范化为同一知识点')
   for ce in ces:e.links.append({'实体ID':oid,'证据ID':ce,'所属章节或项目':r['project'],'使用性质':'原文出现记录','说明':'保留跨项目出现，不复制规范化实体','研究者审查状态':'待审查'})
-  occurrences.append({'出现记录ID':oid,'知识点ID':id,'项目ID':r['project'],'规范化名称':name,'项目语境原文':e.quote(r['page'],r['quote']),'知识点去重说明':'同一知识点跨项目共用CK，出现记录分别保留',**e.fields(ces)})
+  occurrences.append({'出现记录ID':oid,'知识点ID':id,'项目ID':r['project'],'规范化名称':name,'应用语境标签':r.get('context','沿用原文项目语境'),'项目语境原文':e.quote(r['page'],r['quote']),'知识点去重说明':'同一知识点跨项目共用CK，出现记录分别保留',**e.fields(ces)})
  for row in byname.values():
   knowledge.append({'知识点ID':row['知识点ID'],'规范化名称':row['规范化名称'],'原文说明':row['原文说明'],'课程功能标签':row['课程功能标签'],'功能标签依据':row['功能标签依据'],'多标签理由':row['多标签理由'],'对应项目ID':';'.join(dict.fromkeys(row['对应项目集合'])),'内容性质':row['内容性质'],**e.fields(row['证据ID集合'])})
  other=[]
@@ -174,12 +174,22 @@ def build(output=None):
  hours=[{'视角':'8项目','总学时':sum(p['总学时'] for p in projects),'理论学时':sum(p['理论学时'] for p in projects),'实践学时':sum(p['实践学时'] for p in projects),'来源':'PDF可见项目标题','口径规则':HOUR_RULE},{'视角':'3独立实训','总学时':None,'理论学时':None,'实践学时':sum(p['学时'] for p in practice),'来源':'PDF隐藏文本＋本轮研究者明确确认','口径规则':HOUR_RULE},{'视角':'课程去重总量','总学时':64,'理论学时':32,'实践学时':32,'来源':'PDF8项目合计＋研究者同源确认','口径规则':HOUR_RULE}]
  questions=[('PDF第13页','文本层实训与考核标题在页面渲染中不可见，不能作为已确认正向实践/考核证据','保留文本层与研究者确认学时分层；请求可读版本或研究者确认具体任务原文'),('PT01—PT03与P01—P08','精确逐项学时对应未明示','仅内容相关线索，不分摊学时'),('PT02','INERT INTO疑似拼写错误','原文保留，规范建议INSERT INTO另列'),('课程考核','末尾只有不可见标题，未提供可读评分细则或比例','不编造评分或成绩'),('目标与项目','权限管理/DCL在总体目标，P08技术实践正文主要备份恢复及事务','不由目标或思政提及认定已安排独立权限配置实训'),('P03','替代键/唯一键术语对照需审查','保留两种原文措辞，不擅自认为术语完全同义'),('P05','分组聚会疑似分组聚合笔误','原文保留，不作为新知识点'),('P07','索引分类与作疑似缺字','原文保留，规范化名称依上下文标注'),('P04','DELETE可回滚与TRUNCATE不可逆表述缺少存储引擎/事务条件','原文保留；教学解释条件待审，不添加教材论断作课程原文'),('学习成果','多数仅要求完成操作，未规定交付文件形式','潜在SQL脚本/备份文件/对比记录均标研究推断，非提交要求'),('知识规范化','CREATE TABLE在P03库表与P07建表索引语境、WHERE在操作和查询语境出现','共用规范化实体，出现记录分别保留；审查边界是否适当'),('课程定位/页眉','部分标题编码异常，P02教室需求疑似教师需求','保留提取原文，按可见章节及上下文组织，不静默替换')]
  issues=[{'问题ID':f'CQ{i:03}','对象':obj,'问题':q,'当前处理与所需审查':handling,'审查状态':'待研究者审查'} for i,(obj,q,handling) in enumerate(questions,1)]
+ interfaces=[]
+ for number,label in [(1,'备份相关技术行为'),(2,'恢复相关技术行为')]:
+  id=f'CTB{number:03}';node(id,'知识技能点技术行为接口',label);rel('CK057',id,'包含技术行为接口','研究组织标签，非能力支持等级')
+  quote='学生独立完成备份、恢复和事务操作实验'
+  ce=e.add(12,quote,id,'P08学生实践要求')
+  check=e.add(12,'及时答疑纠错。',id,'P08教师检查反馈',note='一般答疑纠错，不是单独备份或恢复评分规则')
+  interfaces.append({'接口ID':id,'知识点ID':'CK057','项目ID':'P08','技术行为标签':label,'学生操作要求':'独立完成'+('备份' if number==1 else '恢复')+'实验','明确独立操作':'是，原文明示','关联教学活动ID':'CA026','关联检查证据ID':'EC015;EC016','判断边界':'两标签来自同一组合句，未规定各自独立评分；不是同一岗位能力，也不构成教学先修','支持等级':'本轮不判定','标签来源':'研究组织；技术活动由原文支持',**e.fields([ce,check])})
+ for q in issues:
+  q.update({'原问题编号':q['问题ID'],'问题描述':q['问题'],'本次处理动作':'保留原问题，不自动关闭','证据依据':q['对象'],'当前状态':'待研究者确认','是否仍需研究者确认':'是'})
+  if q['问题ID']=='CQ011':q.update({'本次处理动作':'CK015保留P03；KO056迁移至新增CK060建表时定义索引；CK027共用实体，补充P04/P05应用语境；CK057新增两技术行为接口','证据依据':'PDF第5、7、8、11、12页；KO015/KO056/KO027/KO034；CTB001/CTB002','当前状态':'技术修订已落实，待研究者最终确认','当前处理与所需审查':'审查新增CK060边界及行为接口；不关闭其他11项问题'})
  output=Path(output or HERE/'output').resolve()
  if output.is_relative_to(ROOT) and not output.is_relative_to(HERE):raise ValueError('禁止覆盖历史成果目录')
  output.mkdir(parents=True,exist_ok=True)
  write_book(output/'01_课程标准基本信息与目标.xlsx',{'课程基本信息':info,'课程目标与设计原则':objectives})
  write_book(output/'02_八个教学项目结构化表.xlsx',{'教学项目':projects})
- write_book(output/'03_课程知识技能点规范化表.xlsx',{'规范化知识技能点':knowledge,'项目出现记录':occurrences,'目标及思政单列提及':other})
+ write_book(output/'03_课程知识技能点规范化表.xlsx',{'规范化知识技能点':knowledge,'项目出现记录':occurrences,'目标及思政单列提及':other,'技术行为接口':interfaces})
  write_book(output/'04_教学活动与学习成果表.xlsx',{'教学活动':activities,'学习成果与潜在产物':outcomes,'活动成果多对多关联':activity_outcome})
  write_book(output/'05_三项独立实训任务表.xlsx',{'独立实训任务':practice,'实训技术操作':practice_operations,'项目内容相关线索':practice_project})
  write_book(output/'06_课程评价与检查证据表.xlsx',{'检查反馈与完成要求':checks,'活动检查多对多关联':activity_checks})
@@ -188,16 +198,17 @@ def build(output=None):
  write_book(output/'08_课程学时双视角核对.xlsx',{'双视角学时核对':hours,'八项目学时分配':[{k:p[k] for k in ['项目ID','项目原文名称','总学时','理论学时','实践学时','证据ID','PDF实际页码']} for p in projects],'三实训学时分配':practice,'对应关系限制':practice_project})
  write_book(output/'10_课程标准人工审查问题清单.xlsx',{'人工审查问题':issues})
  summary={'输入PDF':str(pdf.relative_to(ROOT)),'页数':13,'PDFGitSHA':gitsha(pdf),'main提交':snapshot['main_commit'],'项目':len(projects),'知识技能点':len(knowledge),'项目出现记录':len(occurrences),'目标思政单列提及':len(other),'教学活动':len(activities),'教师活动':sum(a['活动主体']=='教师' for a in activities),'学生活动':sum(a['活动主体']=='学生' for a in activities),'学习成果或潜在产物':len(outcomes),'其中推断潜在产物':sum('推断' in r['成果证据性质'] for r in outcomes),'评价检查证据':len(checks),'独立实训':len(practice),'实训操作':len(practice_operations),'原文证据':len(records),'原文证据页码覆盖':sorted({r['PDF实际页码'] for r in records}),'隐藏文本证据':sum(r['来源证据层']=='隐藏文本候选' for r in records),'实体':len(entities),'关系':len(relations),'学时':hours,'人工问题':len(issues),'确认的能力课程支持关系':0,'学生评价结果':0}
- (output/'课程教学要素数据库.json').write_text(json.dumps({'summary':summary,'document':{'id':'DOC01','path':str(pdf.relative_to(ROOT)),'pages':13},'basic_info':info,'objectives':objectives,'projects':projects,'knowledge':knowledge,'occurrences':occurrences,'other_level_mentions':other,'activities':activities,'outcomes':outcomes,'checks':checks,'practice':practice,'practice_operations':practice_operations,'practice_project':practice_project,'activity_outcome':activity_outcome,'activity_check':activity_checks,'evidence':records,'evidence_links':evidence_links,'entities':entities,'relations':relations,'issues':issues},ensure_ascii=False,indent=2)+'\n')
+ (output/'课程教学要素数据库.json').write_text(json.dumps({'summary':summary,'document':{'id':'DOC01','path':str(pdf.relative_to(ROOT)),'pages':13},'basic_info':info,'objectives':objectives,'projects':projects,'knowledge':knowledge,'occurrences':occurrences,'other_level_mentions':other,'activities':activities,'outcomes':outcomes,'checks':checks,'practice':practice,'practice_operations':practice_operations,'practice_project':practice_project,'technical_behavior_interfaces':interfaces,'activity_outcome':activity_outcome,'activity_check':activity_checks,'evidence':records,'evidence_links':evidence_links,'entities':entities,'relations':relations,'issues':issues},ensure_ascii=False,indent=2)+'\n')
  (output/'processing_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
  # 全13页原生文本留档，说明可见性与文字层不等同，不作为第二个原始资料来源。
  (output/'PDF逐页文本_含隐藏文本警示.txt').write_text('注意：第13页末尾实训/考核为不可见文字层，不能视作已确认可见正文。\n'+ '\n'.join(f'=== PDF实际第{i+1}页 ===\n{s}' for i,s in enumerate(e.raw)))
  shutil.copyfile(HERE/'研究方法.md',output/'09_第四阶段第一轮研究方法说明.md')
  (output/'11_第四阶段第一轮执行总结.md').write_text(report(summary))
+ shutil.copyfile(HERE/'人工审查修订记录.md',output/'12_第四阶段第一轮人工审查修订记录.md')
  doc.close();return json.loads((output/'课程教学要素数据库.json').read_text())
 
 def dictionary():
- items=[('CKxxx','规范化知识点实体；固定ID来自人工清单，不因多项目出现而复制'),('KOxxx','知识点在具体项目的出现记录，独立于CK'),('CAxxx/COxxx/CExx-hash','活动/成果/证据；证据号为页码＋摘录哈希，页码相同但原文不同可区分'),('来源证据层','可见PDF原文与隐藏文本候选分开；课程目标不等于项目实践'),('成果证据性质','明确产物/可直接确认技术结果/研究推断潜在产物分开，均非学生实际表现'),('课程功能标签','课程内容组织标签，非岗位A/B/C等级或重要性排名'),('PRACTICE32同源组',HOUR_RULE),('关联状态','内容相关不等于精确学时对应；研究组织关联不等于原文明示评分绑定'),('评分规则','没有可读原文则标未提供或无法确认，不凭教学常识补写')]
+ items=[('应用语境标签','同一知识在不同项目的用途，非新岗位能力'),('CTBxxx','CK057备份/恢复技术行为接口；原文明示独立实验，标签为研究组织，不判支持等级'),('CKxxx','规范化知识点实体；固定ID来自人工清单，不因多项目出现而复制'),('KOxxx','知识点在具体项目的出现记录，独立于CK'),('CAxxx/COxxx/CExx-hash','活动/成果/证据；证据号为页码＋摘录哈希，页码相同但原文不同可区分'),('来源证据层','可见PDF原文与隐藏文本候选分开；课程目标不等于项目实践'),('成果证据性质','明确产物/可直接确认技术结果/研究推断潜在产物分开，均非学生实际表现'),('课程功能标签','课程内容组织标签，非岗位A/B/C等级或重要性排名'),('PRACTICE32同源组',HOUR_RULE),('关联状态','内容相关不等于精确学时对应；研究组织关联不等于原文明示评分绑定'),('评分规则','没有可读原文则标未提供或无法确认，不凭教学常识补写')]
  return [{'字段或编号':k,'定义及使用规则':v} for k,v in items]
 
 def report(s):
