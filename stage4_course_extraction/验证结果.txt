@@ -1,0 +1,32 @@
+python -m unittest discover -s stage4_course_extraction -p test_extraction.py -v
+test_01_original_pdf_complete (test_extraction.ExtractionTests.test_01_original_pdf_complete) ... ok
+test_02_eight_projects_unique_actual_titles (test_extraction.ExtractionTests.test_02_eight_projects_unique_actual_titles) ... ok
+test_03_project_hours_from_pdf (test_extraction.ExtractionTests.test_03_project_hours_from_pdf) ... ok
+test_04_three_practice_hours_have_separate_sources (test_extraction.ExtractionTests.test_04_three_practice_hours_have_separate_sources) ... ok
+test_05_no_double_count (test_extraction.ExtractionTests.test_05_no_double_count) ... ok
+test_06_knowledge_ids_and_occurrence_separation (test_extraction.ExtractionTests.test_06_knowledge_ids_and_occurrence_separation) ... ok
+test_07_project_and_entity_endpoints (test_extraction.ExtractionTests.test_07_project_and_entity_endpoints) ... ok
+test_08_evidence_verbatim_and_page_traceable (test_extraction.ExtractionTests.test_08_evidence_verbatim_and_page_traceable) ... ok
+test_09_entity_evidence_associations (test_extraction.ExtractionTests.test_09_entity_evidence_associations) ... ok
+test_10_teacher_demo_not_student_independent (test_extraction.ExtractionTests.test_10_teacher_demo_not_student_independent) ... ok
+test_11_practice_not_formal_scoring (test_extraction.ExtractionTests.test_11_practice_not_formal_scoring) ... ok
+test_12_outcomes_inference_separate (test_extraction.ExtractionTests.test_12_outcomes_inference_separate) ... ok
+test_13_multimodal_hidden_evidence_not_confirmed (test_extraction.ExtractionTests.test_13_multimodal_hidden_evidence_not_confirmed) ... ok
+test_14_typo_preserved (test_extraction.ExtractionTests.test_14_typo_preserved) ... ok
+test_15_goals_vs_project_practice (test_extraction.ExtractionTests.test_15_goals_vs_project_practice) ... ok
+test_16_no_unconfirmed_hour_mapping (test_extraction.ExtractionTests.test_16_no_unconfirmed_hour_mapping) ... ok
+test_17_old_138_files_including_stage3_and_app_unchanged (test_extraction.ExtractionTests.test_17_old_138_files_including_stage3_and_app_unchanged) ... ok
+test_18_no_ability_support_matrix_or_student_results (test_extraction.ExtractionTests.test_18_no_ability_support_matrix_or_student_results) ... ok
+test_19_crosspage_evidence_not_silently_joined (test_extraction.ExtractionTests.test_19_crosspage_evidence_not_silently_joined) ... ok
+test_20_multi_to_multi_activity_outputs_checks (test_extraction.ExtractionTests.test_20_multi_to_multi_activity_outputs_checks) ... ok
+test_21_method_has_complement_and_hours (test_extraction.ExtractionTests.test_21_method_has_complement_and_hours) ... ok
+test_22_workbooks_open_and_repeatable (test_extraction.ExtractionTests.test_22_workbooks_open_and_repeatable) ... ok
+test_23_invalid_evidence_rejected (test_extraction.ExtractionTests.test_23_invalid_evidence_rejected) ... ok
+test_24_review_interfaces_and_contexts (test_extraction.ExtractionTests.test_24_review_interfaces_and_contexts) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.945s
+
+OK
+
+24通过，0失败，0错误。
