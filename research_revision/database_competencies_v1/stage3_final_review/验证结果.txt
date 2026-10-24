@@ -1,0 +1,28 @@
+执行环境：Python 3.12；openpyxl 3.1.5。
+命令1：python -m unittest discover -s research_revision/database_competencies_v1/stage3_final_review -p test_final.py -v
+test_01_counts_and_stable_ids (test_final.FinalReview.test_01_counts_and_stable_ids) ... ok
+test_02_required_fields (test_final.FinalReview.test_02_required_fields) ... ok
+test_03_stable_parents (test_final.FinalReview.test_03_stable_parents) ... ok
+test_04_endpoints_and_quotes (test_final.FinalReview.test_04_endpoints_and_quotes) ... ok
+test_05_two_evidence_dimensions (test_final.FinalReview.test_05_two_evidence_dimensions) ... ok
+test_06_no_evidence_change (test_final.FinalReview.test_06_no_evidence_change) ... ok
+test_07_no_inherited_A (test_final.FinalReview.test_07_no_inherited_A) ... ok
+test_08_hierarchy_acyclic_connected (test_final.FinalReview.test_08_hierarchy_acyclic_connected) ... ok
+test_09_logic_semantics (test_final.FinalReview.test_09_logic_semantics) ... ok
+test_10_method_exact_principle (test_final.FinalReview.test_10_method_exact_principle) ... ok
+test_11_all_121_previous_files_unchanged (test_final.FinalReview.test_11_all_121_previous_files_unchanged) ... ok
+test_12_no_task_extraction_or_course_mapping (test_final.FinalReview.test_12_no_task_extraction_or_course_mapping) ... ok
+test_13_workbooks_and_reproducibility (test_final.FinalReview.test_13_workbooks_and_reproducibility) ... ok
+test_14_only_necessary_name_changes (test_final.FinalReview.test_14_only_necessary_name_changes) ... ok
+test_15_protect_output_boundary (test_final.FinalReview.test_15_protect_output_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.568s
+
+OK
+
+回归命令2：python -m unittest discover -s research_revision/database_competencies_v1/round2_abc -p test_abc.py -v
+12通过，0失败。
+回归命令3：python -m unittest discover -s research_revision/database_competencies_v1 -p test_revision.py -v
+12通过，0失败。
+合计39通过、0失败，无失败原因。历史121文件Git blob哈希一致，旧成果和应用未改。

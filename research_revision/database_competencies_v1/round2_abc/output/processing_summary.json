@@ -1,0 +1,59 @@
+{
+  "source_pr": 7,
+  "source_pr_head": "228dc134c3383fc868867ffd234ebc76ac7dc052",
+  "source_main": "d01b26e33665b8f89018dd47597501e5547896f2",
+  "source_jobs": 50,
+  "v1_fragments": 179,
+  "supplement_fragments": 2,
+  "all_fragments": 181,
+  "typical_tasks": 48,
+  "fragment_class_counts": {
+    "C": 100,
+    "X": 53,
+    "A": 16,
+    "B": 12
+  },
+  "unique_pool_capabilities": 17,
+  "overlapping_category_view_counts": {
+    "A": 5,
+    "B": 13,
+    "C": 8
+  },
+  "overlapping_views_must_not_be_summed": true,
+  "exclusive_count_by_strongest_existing_link": {
+    "A": 5,
+    "B": 10,
+    "C": 2
+  },
+  "pool_hierarchy_counts": {
+    "一级": 3,
+    "二级": 9,
+    "三级": 17
+  },
+  "task_capability_link_count": 65,
+  "link_class_counts": {
+    "A": 11,
+    "B": 27,
+    "C": 27
+  },
+  "course_knowledge_reserve": 37,
+  "teaching_reserve": 10,
+  "verified_recruitment_originals": 0,
+  "review_questions": 23,
+  "source_files": {
+    "任务片段": "research_revision/database_competencies_v1/output/02_典型工作任务修订与归纳表.xlsx",
+    "典型任务": "research_revision/database_competencies_v1/output/02_典型工作任务修订与归纳表.xlsx",
+    "旧核心": "research_revision/database_competencies_v1/output/04_新版候选三级能力体系表.xlsx",
+    "课程储备知识": "phase3/output/课程标准结构化解析.xlsx"
+  },
+  "outputs": [
+    "01_岗位任务ABC重分类与证据表.xlsx",
+    "02_A类明确支持候选能力.xlsx",
+    "03_B类数据库相关备选能力.xlsx",
+    "04_C类合理推断待审能力.xlsx",
+    "05_ABC合并候选三级能力体系.xlsx",
+    "06_任务能力多类证据关联.xlsx",
+    "07_课程知识与教学能力独立储备.xlsx",
+    "08_前后对照与研究审查.xlsx"
+  ]
+}

@@ -1,0 +1,17 @@
+test_all_relationship_endpoints_and_lineage (test_revision.RevisionTests.test_all_relationship_endpoints_and_lineage) ... ok
+test_core_has_explicit_summary_technical_actions (test_revision.RevisionTests.test_core_has_explicit_summary_technical_actions) ... ok
+test_duplicates_are_reported_not_dropped (test_revision.RevisionTests.test_duplicates_are_reported_not_dropped) ... ok
+test_exact_quotes_addresses_and_all_old_tasks_traced (test_revision.RevisionTests.test_exact_quotes_addresses_and_all_old_tasks_traced) ... ok
+test_hierarchy_derived_from_core_and_valid (test_revision.RevisionTests.test_hierarchy_derived_from_core_and_valid) ... ok
+test_inputs_detected_and_fields_missing (test_revision.RevisionTests.test_inputs_detected_and_fields_missing) ... ok
+test_no_unfounded_abilities_or_course_reverse_inference (test_revision.RevisionTests.test_no_unfounded_abilities_or_course_reverse_inference) ... ok
+test_old_new_full_coverage_and_no_automatic_migration (test_revision.RevisionTests.test_old_new_full_coverage_and_no_automatic_migration) ... ok
+test_original_files_unchanged_including_app (test_revision.RevisionTests.test_original_files_unchanged_including_app) ... ok
+test_semantic_reproducibility_and_forbidden_output (test_revision.RevisionTests.test_semantic_reproducibility_and_forbidden_output) ... ok
+test_task_ids_and_groups_cover_exactly (test_revision.RevisionTests.test_task_ids_and_groups_cover_exactly) ... ok
+test_workbooks_open_and_nonempty (test_revision.RevisionTests.test_workbooks_open_and_nonempty) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.859s
+
+OK

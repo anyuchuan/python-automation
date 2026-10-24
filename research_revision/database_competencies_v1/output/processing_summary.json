@@ -1,0 +1,98 @@
+{
+  "source_commit": "d01b26e33665b8f89018dd47597501e5547896f2",
+  "source_jobs": 50,
+  "historical_tasks": 79,
+  "source_descriptions": 100,
+  "extracted_task_fragments": 179,
+  "responsibility_fragments": 157,
+  "requirement_fragments": 22,
+  "typical_tasks": 48,
+  "db_relevance_counts": {
+    "间接相关": 20,
+    "直接相关": 10,
+    "不相关": 18
+  },
+  "levels": {
+    "一级": 2,
+    "二级": 4,
+    "三级": 5
+  },
+  "core_direct_summary_candidates": 5,
+  "core_research_inference_only": 0,
+  "pending_inference_clues": 6,
+  "verified_original_recruitment_evidence": 0,
+  "job_classification": {
+    "直接相关岗位": 43,
+    "关联岗位": 7
+  },
+  "job_quality_original": {
+    "B": 34,
+    "C": 11,
+    "A": 5
+  },
+  "original34_operations": {
+    "排除出核心（保留原始与外围任务）": 22,
+    "转待审线索": 5,
+    "保留并收窄": 5,
+    "任务保留待细化": 2
+  },
+  "original26_operations": {
+    "转待审线索": 2,
+    "保留并收窄": 2,
+    "合并并收窄": 2,
+    "排除出核心（保留原始与外围任务）": 17,
+    "拆分并收窄": 1,
+    "任务保留待细化": 2
+  },
+  "core_new_without_old_equivalent": 0,
+  "logical_relations": 3,
+  "hierarchy_edges": 9,
+  "old_suspect_relations": 109,
+  "questions": 56,
+  "duplicate_groups": {
+    "单位重复（不等于岗位重复）": 9,
+    "岗位名称重复（不等于样本重复）": 2,
+    "单位与岗位同时重复": 2
+  },
+  "input_roles": {
+    "jobs": {
+      "path": "旅游行业招聘岗位样本库_50条候选_待核验.xlsx",
+      "sheet": "招聘岗位主库"
+    },
+    "tasks": {
+      "path": "output/岗位任务编码表.xlsx",
+      "sheet": "任务编码"
+    },
+    "old26": {
+      "path": "output/三级职业能力指标体系.xlsx",
+      "sheet": "三级能力指标"
+    },
+    "old34": {
+      "path": "phase2/output/三级职业能力体系_优化建议版.xlsx",
+      "sheet": "三级岗位能力"
+    },
+    "old_all": {
+      "path": "phase2/output/三级职业能力体系_优化建议版.xlsx",
+      "sheet": "优化岗位能力全层级"
+    },
+    "old_course": {
+      "path": "phase2/output/三级职业能力体系_优化建议版.xlsx",
+      "sheet": "课程建议能力单列"
+    },
+    "review": {
+      "path": "phase2/output/任务能力关系_复核表.xlsx",
+      "sheet": "原关系逐条复核"
+    }
+  },
+  "outputs": [
+    "01_招聘信息数据检查.xlsx",
+    "02_典型工作任务修订与归纳表.xlsx",
+    "03_数据库相关典型工作任务筛选表.xlsx",
+    "04_新版候选三级能力体系表.xlsx",
+    "05_三级能力定义行为与初步评价指标表.xlsx",
+    "06_典型工作任务三级能力关联表.xlsx",
+    "07_三级能力逻辑关系表.xlsx",
+    "08_新旧能力体系对比表.xlsx",
+    "09_研究者人工审查问题清单.xlsx"
+  ]
+}
