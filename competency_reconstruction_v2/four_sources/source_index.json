@@ -1,0 +1,67 @@
+[
+  {
+    "id": "S1-001",
+    "category": "S1",
+    "title": "全国一体化政务大数据体系建设指南",
+    "publisher": "国务院办公厅",
+    "url": "https://app.www.gov.cn/govdata/gov/202210/28/493746/article.html",
+    "status": "公开正文已核对",
+    "version": "国办函〔2022〕102号；成文2022-09-13",
+    "locator": "一（三）3—5；二（二）",
+    "access_date": "2026-10-26",
+    "limits": "仅背景，不证明具体岗位SQL需求；大数据云AI内容排除",
+    "review": "待研究者审查"
+  },
+  {
+    "id": "S3-001",
+    "category": "S3",
+    "title": "数据库运行管理员S国家职业标准",
+    "publisher": "人力资源社会保障部、工业和信息化部",
+    "url": "https://www.osta.org.cn/api/sys/downloadFile/decrypt?fileName=4eNsZIOv3WFNDfbnldJHeA%2F2025%2F3%2F2%2F289d19d1c4d34aa296dad4a3a3e5020e.pdf",
+    "status": "官方线索已发现、正文未核验",
+    "version": "2025年版线索；职业编码4-04-05-04",
+    "locator": "封面及颁布通知仅搜索索引可见，条款未提取",
+    "access_date": "2026-10-26",
+    "limits": "网页工具返回不支持的Excel MIME；公开下载出口403；不得生成标准需求条目",
+    "review": "待研究者审查"
+  },
+  {
+    "id": "S3-PUB",
+    "category": "S3",
+    "title": "关于颁布数据库运行管理员等2个国家职业标准的通知",
+    "publisher": "人社部办公厅、工信部办公厅",
+    "url": "https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/rcrs_4225/jnrc/202504/t20250410_540193.html",
+    "status": "仅搜索索引；打开超时",
+    "version": "人社厅发〔2025〕12号；2025-03-20线索",
+    "locator": "通知及目录",
+    "access_date": "2026-10-26",
+    "limits": "仅证明存在官方发布线索，非标准技能条款",
+    "review": "待研究者审查"
+  },
+  {
+    "id": "S4-001",
+    "category": "S4",
+    "title": "数据库管理系统职业技能等级标准",
+    "publisher": "武汉达梦数据库股份有限公司",
+    "url": "https://pvc-e7031f9b-6522-11e9-883f-fa163e9e2c22.obs.cn-north-1.myhuaweicloud.com/prod%2Fimage%2F2021-03-31%2F6a710592ef5044239daf57a9d8c44085.pdf",
+    "status": "版本正文已核对；公开托管副本",
+    "version": "2021年1.0版；2021-03发布；未见单列标准编号",
+    "locator": "16页；封面、前言、6.2表1初级",
+    "access_date": "2026-10-26",
+    "limits": "非国家职业标准；封面发布主体可核对，尚缺发布机构官网直链，现行有效性未确认；只作候选标准依据",
+    "review": "待研究者审查"
+  },
+  {
+    "id": "S4-LEAD",
+    "category": "S4",
+    "title": "大数据分析与应用开发职业技能等级标准（征求意见稿）",
+    "publisher": "中国通信企业协会",
+    "url": "https://www.cace.org.cn/UpLoadFiles/File/20220120/6377827189188561241669243.pdf",
+    "status": "正文已核对但非正式标准",
+    "version": "T/CAICI XXXX—XXXX；日期占位",
+    "locator": "PDF封面及范围",
+    "access_date": "2026-10-26",
+    "limits": "征求意见稿不生成正式标准需求；大数据技术超范围",
+    "review": "待研究者审查"
+  }
+]

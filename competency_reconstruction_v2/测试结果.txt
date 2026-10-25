@@ -1,0 +1,22 @@
+test_advanced_jobs_excluded_despite_title (test_v2.V2Tests.test_advanced_jobs_excluded_despite_title) ... ok
+test_capabilities_have_jobs_or_course_basis (test_v2.V2Tests.test_capabilities_have_jobs_or_course_basis) ... ok
+test_course_evidence_valid_and_visible (test_v2.V2Tests.test_course_evidence_valid_and_visible) ... ok
+test_excel_json_consistency_and_openable (test_v2.V2Tests.test_excel_json_consistency_and_openable) ... ok
+test_knowledge_occurrences_not_collapsed (test_v2.V2Tests.test_knowledge_occurrences_not_collapsed) ... ok
+test_no_duplicate_edges (test_v2.V2Tests.test_no_duplicate_edges) ... ok
+test_no_false_full_support_or_import_claim (test_v2.V2Tests.test_no_false_full_support_or_import_claim) ... ok
+test_no_unchecked_sources_in_tasks (test_v2.V2Tests.test_no_unchecked_sources_in_tasks) ... ok
+test_old_comparison_correct (test_v2.V2Tests.test_old_comparison_correct) ... ok
+test_original_input_counts (test_v2.V2Tests.test_original_input_counts) ... ok
+test_original_inputs_and_app_unchanged (test_v2.V2Tests.test_original_inputs_and_app_unchanged) ... ok
+test_rebuild_deterministic_and_committed_json_matches (test_v2.V2Tests.test_rebuild_deterministic_and_committed_json_matches) ... ok
+test_relation_endpoints_and_separate_evidence_dimensions (test_v2.V2Tests.test_relation_endpoints_and_separate_evidence_dimensions) ... ok
+test_sources_required_and_distinct (test_v2.V2Tests.test_sources_required_and_distinct) ... ok
+test_summary_counts_computed (test_v2.V2Tests.test_summary_counts_computed) ... ok
+test_tourism_keeps_summary_status (test_v2.V2Tests.test_tourism_keeps_summary_status) ... ok
+test_unique_ids_and_acyclic_hierarchy (test_v2.V2Tests.test_unique_ids_and_acyclic_hierarchy) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.738s
+
+OK

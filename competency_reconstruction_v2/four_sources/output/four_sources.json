@@ -1,0 +1,1675 @@
+{
+  "summary": {
+    "source_counts": {
+      "S1": 1,
+      "S3": 2,
+      "S4": 2,
+      "S2": 23
+    },
+    "requirements": 28,
+    "excluded": 2,
+    "partial": 19,
+    "relations": 28,
+    "capabilities": 13,
+    "s3_verified_body": 0,
+    "s4_verified_version_body": 1,
+    "baseline_unchanged": true
+  },
+  "sources": [
+    {
+      "id": "S1-001",
+      "category": "S1",
+      "title": "全国一体化政务大数据体系建设指南",
+      "publisher": "国务院办公厅",
+      "url": "https://app.www.gov.cn/govdata/gov/202210/28/493746/article.html",
+      "status": "公开正文已核对",
+      "version": "国办函〔2022〕102号；成文2022-09-13",
+      "locator": "一（三）3—5；二（二）",
+      "access_date": "2026-10-26",
+      "limits": "仅背景，不证明具体岗位SQL需求；大数据云AI内容排除",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S3-001",
+      "category": "S3",
+      "title": "数据库运行管理员S国家职业标准",
+      "publisher": "人力资源社会保障部、工业和信息化部",
+      "url": "https://www.osta.org.cn/api/sys/downloadFile/decrypt?fileName=4eNsZIOv3WFNDfbnldJHeA%2F2025%2F3%2F2%2F289d19d1c4d34aa296dad4a3a3e5020e.pdf",
+      "status": "官方线索已发现、正文未核验",
+      "version": "2025年版线索；职业编码4-04-05-04",
+      "locator": "封面及颁布通知仅搜索索引可见，条款未提取",
+      "access_date": "2026-10-26",
+      "limits": "网页工具返回不支持的Excel MIME；公开下载出口403；不得生成标准需求条目",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S3-PUB",
+      "category": "S3",
+      "title": "关于颁布数据库运行管理员等2个国家职业标准的通知",
+      "publisher": "人社部办公厅、工信部办公厅",
+      "url": "https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/rcrs_4225/jnrc/202504/t20250410_540193.html",
+      "status": "仅搜索索引；打开超时",
+      "version": "人社厅发〔2025〕12号；2025-03-20线索",
+      "locator": "通知及目录",
+      "access_date": "2026-10-26",
+      "limits": "仅证明存在官方发布线索，非标准技能条款",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S4-001",
+      "category": "S4",
+      "title": "数据库管理系统职业技能等级标准",
+      "publisher": "武汉达梦数据库股份有限公司",
+      "url": "https://pvc-e7031f9b-6522-11e9-883f-fa163e9e2c22.obs.cn-north-1.myhuaweicloud.com/prod%2Fimage%2F2021-03-31%2F6a710592ef5044239daf57a9d8c44085.pdf",
+      "status": "版本正文已核对；公开托管副本",
+      "version": "2021年1.0版；2021-03发布；未见单列标准编号",
+      "locator": "16页；封面、前言、6.2表1初级",
+      "access_date": "2026-10-26",
+      "limits": "非国家职业标准；封面发布主体可核对，尚缺发布机构官网直链，现行有效性未确认；只作候选标准依据",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S4-LEAD",
+      "category": "S4",
+      "title": "大数据分析与应用开发职业技能等级标准（征求意见稿）",
+      "publisher": "中国通信企业协会",
+      "url": "https://www.cace.org.cn/UpLoadFiles/File/20220120/6377827189188561241669243.pdf",
+      "status": "正文已核对但非正式标准",
+      "version": "T/CAICI XXXX—XXXX；日期占位",
+      "locator": "PDF封面及范围",
+      "access_date": "2026-10-26",
+      "limits": "征求意见稿不生成正式标准需求；大数据技术超范围",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ001",
+      "category": "S2",
+      "title": "实施工程师",
+      "publisher": "hbzlsoft.com 人才招聘页（单位法定名称待确认）",
+      "url": "https://www.hbzlsoft.com/pages/g000023",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "实施工程师/职责1—4及要求1—2；页面行64—77",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ002",
+      "category": "S2",
+      "title": "医疗软件实施工程师",
+      "publisher": "麦迪斯顿官网",
+      "url": "https://www.medicalsystem.com.cn/join.html",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": "2025-03-03",
+      "locator": "医疗软件实施工程师/行320—365",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ003",
+      "category": "S2",
+      "title": "医疗实施工程师",
+      "publisher": "上海博馨通科技有限公司",
+      "url": "https://www.zhaopin.com/jobdetail/CCL1528105390J40884977109.htm",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "职位描述/职责1、3及任职要求1—2；行42",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ004",
+      "category": "S2",
+      "title": "初级/中级/高级WMS实施顾问",
+      "publisher": "通天晓软件官网",
+      "url": "https://www.ittx.com.cn/about/join",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "同名职位/行310—357",
+      "access_date": "2026-10-25",
+      "limits": "首次打开超时，重试成功；不能把混合级别岗位整体当初级",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ005",
+      "category": "S2",
+      "title": "ERP实施顾问",
+      "publisher": "正航软件官网",
+      "url": "https://www.chixm.com/job/",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "ERP实施顾问/行194—205",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ006",
+      "category": "S2",
+      "title": "软件实施工程师-驻场",
+      "publisher": "江苏金智教育",
+      "url": "https://www.zhaopin.com/jobdetail/CC243869610J40896012213.htm",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "工作职责及要求/行43—57",
+      "access_date": "2026-10-25",
+      "limits": "登录后内容未访问，只使用公开可见部分",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ007",
+      "category": "S2",
+      "title": "实施工程师",
+      "publisher": "超图软件官网",
+      "url": "https://www.supermap.com/zh-cn/a/job/14_5254.html",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": "2026-09-09",
+      "locator": "校园招聘/职责及要求/行324—354",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ008",
+      "category": "S2",
+      "title": "ERP实施工程师",
+      "publisher": "晋江福兴拉链有限公司",
+      "url": "https://m.597.com/job/4cc4d25817108.html",
+      "status": "继承：页面不可访问或正文缺失",
+      "version": "2026-09-16",
+      "locator": "搜索摘要；原页打开超时/503",
+      "access_date": "2026-10-25",
+      "limits": "摘要称岗位已关闭；原页未核对",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ009",
+      "category": "S2",
+      "title": "数据库运维工程师",
+      "publisher": "上海蒙帕智能科技股份有限公司",
+      "url": "https://www.zhaopin.com/jobdetail/CC383412180J41030447104.htm",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "职位概要及职责/行27—48",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ010",
+      "category": "S2",
+      "title": "数据库工程师",
+      "publisher": "北京中电普华信息技术有限公司／南开就业网",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/118925.html",
+      "status": "继承：二次发布页可见文本已核对",
+      "version": "2026-09-16",
+      "locator": "岗位信息/行78—104",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ011",
+      "category": "S2",
+      "title": "金仓达梦通用数据库运维工程师",
+      "publisher": "东方融尚（北京）科技有限公司",
+      "url": "https://m.yupao.com/zhaogong/360552396.html",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": "2026-10-07 15:03",
+      "locator": "岗位职责行29—33；要求行36—43",
+      "access_date": "2026-10-25",
+      "limits": "搜索摘要日期为10月17日，打开正文为10月7日，保留正文日期并待审；SQL优化限基础协助，权限不能改写成职责；摘录省略号表示非连续短片段，不是完整原句",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ012",
+      "category": "S2",
+      "title": "运维工程师",
+      "publisher": "广州盖德信息科技有限公司／广州软件学院就业网",
+      "url": "https://job.gzus.edu.cn/detail/job?id=2666519",
+      "status": "继承：二次发布页可见文本已核对",
+      "version": "2026-04-14",
+      "locator": "职位描述/行75—81",
+      "access_date": "2026-10-25",
+      "limits": "职责栏实为技能要求；单位名称盖德而简介泰克，不能确认企业直发；仅辅助证据",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ013",
+      "category": "S2",
+      "title": "数据处理专员",
+      "publisher": "北京智齿优服技术服务有限公司保定分公司",
+      "url": "https://www.zhaopin.com/jobdetail/CCL1482475620J40821736311.htm",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "职责/行42—53",
+      "access_date": "2026-10-25",
+      "limits": "仅公开正文；数据库导出是研究解释，不等于岗位明确数据库操作",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ014",
+      "category": "S2",
+      "title": "系统实施助理/实习生",
+      "publisher": "上海麦舍健康科技集团有限公司",
+      "url": "https://www.zhaopin.com/jobdetail/CCL1269634080J40970544202.htm",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "职责3/行58；要求64—66",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ015",
+      "category": "S2",
+      "title": "驻场工程师",
+      "publisher": "sun-way.net 人才招聘页（主体待核对）",
+      "url": "https://www.sun-way.net/jobs",
+      "status": "继承：页面不可访问或正文缺失",
+      "version": null,
+      "locator": "搜索摘要；两次open均超时",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ016",
+      "category": "S2",
+      "title": "数据库工程师(J11723)",
+      "publisher": "ahccs.zhiye.com 校招门户（单位待核对）",
+      "url": "https://ahccs.zhiye.com/campus/detail?jobAdId=9b047ad7-95b1-49b1-9722-1847eb26faea",
+      "status": "继承：页面不可访问或正文缺失",
+      "version": "2026-09-02",
+      "locator": "搜索摘要；open不可访问",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ017",
+      "category": "S2",
+      "title": "数据库管理员",
+      "publisher": "学信网招聘页",
+      "url": "https://www.chsi.com.cn/zhaopin/",
+      "status": "继承：页面不可访问或正文缺失",
+      "version": null,
+      "locator": "搜索摘要；打开正文缺失",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ018",
+      "category": "S2",
+      "title": "数据开发技术员/社保",
+      "publisher": "江西同人人力资源有限公司",
+      "url": "https://www.zhaopin.com/jobdetail/CCL1506359670J40875350007.htm",
+      "status": "继承：页面不可访问或正文缺失",
+      "version": null,
+      "locator": "搜索摘要；open404",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ019",
+      "category": "S2",
+      "title": "数据分析",
+      "publisher": "天津市彼岸东方培训学校有限公司／南开就业网",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/117292.html",
+      "status": "继承：二次发布页可见文本已核对",
+      "version": "2026-09-01",
+      "locator": "职责92—98；要求101—105",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ020",
+      "category": "S2",
+      "title": "大数据助理",
+      "publisher": "成都软麦科技有限公司",
+      "url": "https://www.zhaopin.com/jobdetail/CCL1521543260J40876960907.htm",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "职责42—46；要求48—52",
+      "access_date": "2026-10-25",
+      "limits": "关系型数据库是课程侧限定，招聘未指定SQL引擎；不得把Hive等当关系型数据库证据",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ021",
+      "category": "S2",
+      "title": "数据分析专员",
+      "publisher": "江苏澄星磷化工股份有限公司",
+      "url": "https://www.cxpcchina.com/cn/careers.html",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": "2026-09-30",
+      "locator": "数据分析专员/行634—658",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-VJ022",
+      "category": "S2",
+      "title": "后端开发工程师（SQL方向）",
+      "publisher": "北京果汁科技有限公司",
+      "url": "https://www.zhaopin.com/jobdetail/CC545768580J40949556608.htm",
+      "status": "继承：原始发布页可见文本已核对",
+      "version": null,
+      "locator": "职责43—47；要求49—53",
+      "access_date": "2026-10-25",
+      "limits": "仅核对公开页面可见文本；未联系单位核实，未确认仍在招聘；摘要为研究转述",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "S2-TOURISM",
+      "category": "S2",
+      "title": "既有旅游50候选岗位及48任务",
+      "publisher": "仓库历史研究资料",
+      "url": "旅游行业招聘岗位样本库_50条候选_待核验.xlsx",
+      "status": "继承摘要；招聘原文未核验",
+      "version": "PR #13基线",
+      "locator": "research_revision/database_competencies_v1/output/02_典型工作任务修订与归纳表.xlsx",
+      "access_date": "本轮未重访招聘页面",
+      "limits": "仅旅游应用情境，不当新增跨行业样本",
+      "review": "待审"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "FR001",
+      "source_id": "S1-001",
+      "excerpt": "数据完整性、准确性、时效性亟待提升",
+      "locator": "一（三）3",
+      "technical_action": "检查数据基本质量",
+      "goal": "改善业务数据质量",
+      "expected_product": "质量问题记录（研究拟定）",
+      "level": "不适用",
+      "decision": "部分纳入",
+      "excluded_content": "大数据平台建设、跨地域大规模治理",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [
+        "V2C007"
+      ],
+      "review": "待研究者审查",
+      "category": "S1",
+      "verification_status": "公开正文已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR002",
+      "source_id": "S1-001",
+      "excerpt": "积极运用云计算、区块链、人工智能等技术",
+      "locator": "二（二）创新驱动",
+      "technical_action": "云计算/AI等技术应用",
+      "goal": "数字化转型",
+      "expected_product": "不作为本课程成果",
+      "level": "不适用",
+      "decision": "排除",
+      "excluded_content": "云计算、AI、区块链",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [],
+      "review": "待研究者审查",
+      "category": "S1",
+      "verification_status": "公开正文已核对",
+      "adaptation_reason": "涉及明确排除的高级技术，不能进入候选能力关系"
+    },
+    {
+      "id": "FR003",
+      "source_id": "S4-001",
+      "excerpt": "安装数据库软件",
+      "locator": "6.2表1初级/1.1.2；PDF实际第8页",
+      "technical_action": "按指导书安装关系数据库",
+      "goal": "建立单机数据库环境",
+      "expected_product": "安装与连接检查记录",
+      "level": "初级",
+      "decision": "纳入",
+      "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [
+        "V2C001"
+      ],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR004",
+      "source_id": "S4-001",
+      "excerpt": "创建数据库实例",
+      "locator": "6.2表1初级/1.2.2；PDF实际第8页",
+      "technical_action": "按指导书创建实例",
+      "goal": "形成可用实例",
+      "expected_product": "实例及配置记录",
+      "level": "初级",
+      "decision": "纳入",
+      "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [
+        "V2C001"
+      ],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR005",
+      "source_id": "S4-001",
+      "excerpt": "表定义语句",
+      "locator": "6.2表1初级/2.1.2；PDF实际第9页",
+      "technical_action": "按客户要求编写DDL",
+      "goal": "实现指定表结构",
+      "expected_product": "DDL和数据表",
+      "level": "初级",
+      "decision": "纳入",
+      "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [
+        "V2C012"
+      ],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR006",
+      "source_id": "S4-001",
+      "excerpt": "视图定义语句",
+      "locator": "6.2表1初级/2.1.3；PDF实际第9页",
+      "technical_action": "按需求定义视图",
+      "goal": "形成可复用查询表达",
+      "expected_product": "视图定义与结果",
+      "level": "初级",
+      "decision": "纳入",
+      "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [
+        "V2C013"
+      ],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR007",
+      "source_id": "S4-001",
+      "excerpt": "规划索引",
+      "locator": "6.2表1初级/2.1.4；PDF实际第9页",
+      "technical_action": "在给定需求下规划基础索引",
+      "goal": "支持数据访问",
+      "expected_product": "索引建议与验证记录",
+      "level": "初级",
+      "decision": "纳入",
+      "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [
+        "V2C003"
+      ],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR008",
+      "source_id": "S4-001",
+      "excerpt": "插入 […] 更新 […] 删除",
+      "locator": "6.2表1初级/2.2.2—2.2.4；PDF实际第9页",
+      "technical_action": "按指导书执行记录变更",
+      "goal": "维护业务记录",
+      "expected_product": "变更语句及核查结果",
+      "level": "初级",
+      "decision": "纳入",
+      "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [
+        "V2C010"
+      ],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR009",
+      "source_id": "S4-001",
+      "excerpt": "安全权限管理",
+      "locator": "6.2表1初级/3.2—3.3；PDF实际第9—10页",
+      "technical_action": "创建用户、修改密码，编写授权与回收语句",
+      "goal": "控制限定数据访问",
+      "expected_product": "用户与授权语句及验证结果",
+      "level": "初级",
+      "decision": "纳入",
+      "excluded_content": "不扩为复杂安全架构",
+      "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+      "candidate_capabilities": [],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR010",
+      "source_id": "S4-001",
+      "excerpt": "",
+      "locator": "6.1高级描述；PDF实际第8页",
+      "technical_action": "数据库架构策略与线上SQL质量治理",
+      "goal": "生产环境架构与治理",
+      "expected_product": "不纳入本课程候选成果",
+      "level": "高级",
+      "decision": "排除",
+      "excluded_content": "高级架构策略、线上低效SQL治理",
+      "evidence_nature": "正文转述；不复制长段落",
+      "candidate_capabilities": [],
+      "review": "待研究者审查",
+      "category": "S4",
+      "verification_status": "版本正文已核对；公开托管副本",
+      "adaptation_reason": "涉及明确排除的高级技术，不能进入候选能力关系"
+    },
+    {
+      "id": "FR-S2-VT001-1",
+      "source_id": "S2-VJ011",
+      "excerpt": "日常部署、安装、配置、巡检 […] 查询慢、死锁 […] 数据库备份、恢复策略",
+      "locator": "职责1；岗位职责行29—33；要求行36—43",
+      "technical_action": "部署安装配置数据库并协助稳定运行",
+      "goal": "使数据库可供业务系统连接",
+      "expected_product": "可连接的数据库环境与配置记录",
+      "level": "大专；1—3年优先，也接受基础扎实应届生；基础权限分配仅列技能要求。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；明确数据库技术行动；部署验收记录为研究拟定",
+      "candidate_capabilities": [
+        "V2C001"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT001-2",
+      "source_id": "S2-VJ012",
+      "excerpt": "包括备份恢复等操作",
+      "locator": "职责栏技能要求；职位描述/行75—81",
+      "technical_action": "掌握数据库安装配置基本维护",
+      "goal": "使数据库可供业务系统连接",
+      "expected_product": "可连接的数据库环境与配置记录",
+      "level": "大专；可接受应届或实习，同时写1—3年经验及HCIP证书。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；不是已发生任务；从技术要求解释为部署任务，条件证据",
+      "candidate_capabilities": [
+        "V2C001"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：二次发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT002-1",
+      "source_id": "S2-VJ011",
+      "excerpt": "日常部署、安装、配置、巡检 […] 查询慢、死锁 […] 数据库备份、恢复策略",
+      "locator": "职责1—3；岗位职责行29—33；要求行36—43",
+      "technical_action": "执行巡检和基础运维并协助处理常见问题",
+      "goal": "发现异常并提供维护依据",
+      "expected_product": "巡检记录与问题处理说明",
+      "level": "大专；1—3年优先，也接受基础扎实应届生；基础权限分配仅列技能要求。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；只涉及基础协助，不支持独立复杂根因诊断",
+      "candidate_capabilities": [
+        "V2C002"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT003-1",
+      "source_id": "S2-VJ011",
+      "excerpt": "日常部署、安装、配置、巡检 […] 查询慢、死锁 […] 数据库备份、恢复策略",
+      "locator": "职责2；岗位职责行29—33；要求行36—43",
+      "technical_action": "协助基础优化，学习SQL和索引调整",
+      "goal": "改善慢查询等问题",
+      "expected_product": "调整方案与前后比较记录",
+      "level": "大专；1—3年优先，也接受基础扎实应届生；基础权限分配仅列技能要求。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；原文明示协助与学习，不是独立深度调优要求",
+      "candidate_capabilities": [
+        "V2C003"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT004-1",
+      "source_id": "S2-VJ011",
+      "excerpt": "日常部署、安装、配置、巡检 […] 查询慢、死锁 […] 数据库备份、恢复策略",
+      "locator": "职责3；岗位职责行29—33；要求行36—43",
+      "technical_action": "配合执行备份策略并参与校验",
+      "goal": "保留可供恢复的数据",
+      "expected_product": "备份副本及检查记录",
+      "level": "大专；1—3年优先，也接受基础扎实应届生；基础权限分配仅列技能要求。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；从同一备份恢复职责拆出备份成果；不另计岗位",
+      "candidate_capabilities": [
+        "V2C004"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT004-2",
+      "source_id": "S2-VJ012",
+      "excerpt": "包括备份恢复等操作",
+      "locator": "职责栏技能要求；职位描述/行75—81",
+      "technical_action": "基本维护包含备份操作",
+      "goal": "保留可供恢复的数据",
+      "expected_product": "备份副本及检查记录",
+      "level": "大专；可接受应届或实习，同时写1—3年经验及HCIP证书。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；仅辅助技能证据，未规定备份计划或提交物",
+      "candidate_capabilities": [
+        "V2C004"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：二次发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT005-1",
+      "source_id": "S2-VJ011",
+      "excerpt": "日常部署、安装、配置、巡检 […] 查询慢、死锁 […] 数据库备份、恢复策略",
+      "locator": "职责3；岗位职责行29—33；要求行36—43",
+      "technical_action": "配合执行恢复策略、协助处理损坏故障",
+      "goal": "恢复可用数据",
+      "expected_product": "恢复结果和核查说明",
+      "level": "大专；1—3年优先，也接受基础扎实应届生；基础权限分配仅列技能要求。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；与备份同源但目标和成果不同；不等于独立灾难恢复",
+      "candidate_capabilities": [
+        "V2C005"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT005-2",
+      "source_id": "S2-VJ012",
+      "excerpt": "包括备份恢复等操作",
+      "locator": "职责栏技能要求；职位描述/行75—81",
+      "technical_action": "基本维护包含恢复操作",
+      "goal": "恢复可用数据",
+      "expected_product": "恢复结果和核查说明",
+      "level": "大专；可接受应届或实习，同时写1—3年经验及HCIP证书。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；技能支持；任务成果为研究解释",
+      "candidate_capabilities": [
+        "V2C005"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：二次发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT006-1",
+      "source_id": "S2-VJ003",
+      "excerpt": "负责数据迁移、数据清洗",
+      "locator": "职责1、3；职位描述/职责1、3及任职要求1—2；行42",
+      "technical_action": "初始化及迁移数据以完成系统交付",
+      "goal": "支持系统上线或数据链路运行",
+      "expected_product": "目标系统数据及核对记录",
+      "level": "接受应届生；数据库基础与简单SQL，另有服务器和业务沟通要求。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位B类；数据库技术上下文存在但迁移工具方法不明确",
+      "candidate_capabilities": [
+        "V2C006"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT006-2",
+      "source_id": "S2-VJ020",
+      "excerpt": "常规数据提取、统计报表制作",
+      "locator": "职责1；职责42—46；要求48—52",
+      "technical_action": "协助转换与加载数据",
+      "goal": "支持系统上线或数据链路运行",
+      "expected_product": "目标系统数据及核对记录",
+      "level": "经验不限；正文大专，顶部本科；基础SQL和脚本，大数据组件仅了解。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位B类；SQL上下文，具体可能为大数据工具；关系型实现待审",
+      "candidate_capabilities": [
+        "V2C006"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT007-1",
+      "source_id": "S2-VJ003",
+      "excerpt": "负责数据迁移、数据清洗",
+      "locator": "职责3；职位描述/职责1、3及任职要求1—2；行42",
+      "technical_action": "清洗迁移数据以保障准确完整",
+      "goal": "改善准确性完整性",
+      "expected_product": "清洗结果和问题台账",
+      "level": "接受应届生；数据库基础与简单SQL，另有服务器和业务沟通要求。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位B类；关系型SQL实施方法未明，不把清洗等同某命令",
+      "candidate_capabilities": [
+        "V2C007"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT007-2",
+      "source_id": "S2-VJ020",
+      "excerpt": "常规数据提取、统计报表制作",
+      "locator": "职责1、3；职责42—46；要求48—52",
+      "technical_action": "参与质量巡检并整理问题台账",
+      "goal": "改善准确性完整性",
+      "expected_product": "清洗结果和问题台账",
+      "level": "经验不限；正文大专，顶部本科；基础SQL和脚本，大数据组件仅了解。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位B类；技术栈未限定关系型；仅提炼基础处理部分",
+      "candidate_capabilities": [
+        "V2C007"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT007-3",
+      "source_id": "S2-VJ021",
+      "excerpt": "会 SQL、Python、BI 可视化工具者优先",
+      "locator": "任职要求2、5；数据分析专员/行634—658",
+      "technical_action": "清洗整理采购数据并发现异常",
+      "goal": "改善准确性完整性",
+      "expected_product": "清洗结果和问题台账",
+      "level": "本科应届；Excel必需，SQL/Python/BI优先。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位C类；SQL只是可选工具；关系型实现为研究推断",
+      "candidate_capabilities": [
+        "V2C007"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT008-1",
+      "source_id": "S2-VJ019",
+      "excerpt": "能够完成基础的数据提取与处理工作",
+      "locator": "职责1、4及任职要求3；职责92—98；要求101—105",
+      "technical_action": "支持业务统计并完成基础取数处理",
+      "goal": "交付基础数据或统计信息",
+      "expected_product": "查询结果与统计数据表",
+      "level": "本科应届；SQL/MySQL基础，能提取处理数据；Hive等为优先项。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；SQL/MySQL明确；具体JOIN/聚合实现仍为研究解释",
+      "candidate_capabilities": [
+        "V2C008",
+        "V2C009"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：二次发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT008-2",
+      "source_id": "S2-VJ020",
+      "excerpt": "常规数据提取、统计报表制作",
+      "locator": "职责2及任职要求2；职责42—46；要求48—52",
+      "technical_action": "完成常规取数、统计报表和SQL查询统计",
+      "goal": "交付基础数据或统计信息",
+      "expected_product": "查询结果与统计数据表",
+      "level": "经验不限；正文大专，顶部本科；基础SQL和脚本，大数据组件仅了解。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位A类；SQL明确但引擎未指明；关系型范围由课程限定",
+      "candidate_capabilities": [
+        "V2C008",
+        "V2C009"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT008-3",
+      "source_id": "S2-VJ021",
+      "excerpt": "会 SQL、Python、BI 可视化工具者优先",
+      "locator": "职责1及任职要求2—3；数据分析专员/行634—658",
+      "technical_action": "开展采购指标统计并输出分析材料",
+      "goal": "交付基础数据或统计信息",
+      "expected_product": "查询结果与统计数据表",
+      "level": "本科应届；Excel必需，SQL/Python/BI优先。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位C类；工具多选，不能声称企业必需SQL",
+      "candidate_capabilities": [
+        "V2C008",
+        "V2C009"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT009-1",
+      "source_id": "S2-VJ014",
+      "excerpt": "完成系统基础数据录入",
+      "locator": "职责3；职责3/行58；要求64—66",
+      "technical_action": "收集业务资料并录入系统基础数据",
+      "goal": "补全系统初始化信息",
+      "expected_product": "系统记录",
+      "level": "大专；重视细致、学习与沟通。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位C类；可能经界面完成；不可直接当INSERT要求",
+      "candidate_capabilities": [
+        "V2C010"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    },
+    {
+      "id": "FR-S2-VT010-1",
+      "source_id": "S2-VJ013",
+      "excerpt": "负责系统导出数据",
+      "locator": "职责1；职责/行42—53",
+      "technical_action": "系统数据导出及整理计算",
+      "goal": "提供可继续加工的数据",
+      "expected_product": "导出数据及处理结果",
+      "level": "Excel及办公软件为主要要求；统计经验优先。",
+      "decision": "部分纳入",
+      "excluded_content": "不继承岗位全部技术：大数据生态、复杂集群、深度调优等超范围活动排除；SQL实现未明者保留ABC解释",
+      "evidence_nature": "继承岗位C类；主要Excel要求；数据库导出仅候选实现",
+      "candidate_capabilities": [
+        "V2C006"
+      ],
+      "review": "待研究者审查",
+      "category": "S2",
+      "verification_status": "继承：原始发布页可见文本已核对",
+      "adaptation_reason": "限关系数据库基础、单机/普通教学环境；成果及评价形式为研究拟定；待人工确认"
+    }
+  ],
+  "relations": [
+    {
+      "id": "FE001",
+      "capability_id": "V2C007",
+      "requirement_id": "FR001",
+      "source_id": "S1-001",
+      "category": "S1",
+      "support_scope": "检查数据基本质量",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE002",
+      "capability_id": "V2C001",
+      "requirement_id": "FR003",
+      "source_id": "S4-001",
+      "category": "S4",
+      "support_scope": "按指导书安装关系数据库",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE003",
+      "capability_id": "V2C001",
+      "requirement_id": "FR004",
+      "source_id": "S4-001",
+      "category": "S4",
+      "support_scope": "按指导书创建实例",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE004",
+      "capability_id": "V2C012",
+      "requirement_id": "FR005",
+      "source_id": "S4-001",
+      "category": "S4",
+      "support_scope": "按客户要求编写DDL",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE005",
+      "capability_id": "V2C013",
+      "requirement_id": "FR006",
+      "source_id": "S4-001",
+      "category": "S4",
+      "support_scope": "按需求定义视图",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE006",
+      "capability_id": "V2C003",
+      "requirement_id": "FR007",
+      "source_id": "S4-001",
+      "category": "S4",
+      "support_scope": "在给定需求下规划基础索引",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE007",
+      "capability_id": "V2C010",
+      "requirement_id": "FR008",
+      "source_id": "S4-001",
+      "category": "S4",
+      "support_scope": "按指导书执行记录变更",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE008",
+      "capability_id": "V2C001",
+      "requirement_id": "FR-S2-VT001-1",
+      "source_id": "S2-VJ011",
+      "category": "S2",
+      "support_scope": "部署安装配置数据库并协助稳定运行",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE009",
+      "capability_id": "V2C001",
+      "requirement_id": "FR-S2-VT001-2",
+      "source_id": "S2-VJ012",
+      "category": "S2",
+      "support_scope": "掌握数据库安装配置基本维护",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE010",
+      "capability_id": "V2C002",
+      "requirement_id": "FR-S2-VT002-1",
+      "source_id": "S2-VJ011",
+      "category": "S2",
+      "support_scope": "执行巡检和基础运维并协助处理常见问题",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE011",
+      "capability_id": "V2C003",
+      "requirement_id": "FR-S2-VT003-1",
+      "source_id": "S2-VJ011",
+      "category": "S2",
+      "support_scope": "协助基础优化，学习SQL和索引调整",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE012",
+      "capability_id": "V2C004",
+      "requirement_id": "FR-S2-VT004-1",
+      "source_id": "S2-VJ011",
+      "category": "S2",
+      "support_scope": "配合执行备份策略并参与校验",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE013",
+      "capability_id": "V2C004",
+      "requirement_id": "FR-S2-VT004-2",
+      "source_id": "S2-VJ012",
+      "category": "S2",
+      "support_scope": "基本维护包含备份操作",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE014",
+      "capability_id": "V2C005",
+      "requirement_id": "FR-S2-VT005-1",
+      "source_id": "S2-VJ011",
+      "category": "S2",
+      "support_scope": "配合执行恢复策略、协助处理损坏故障",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE015",
+      "capability_id": "V2C005",
+      "requirement_id": "FR-S2-VT005-2",
+      "source_id": "S2-VJ012",
+      "category": "S2",
+      "support_scope": "基本维护包含恢复操作",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE016",
+      "capability_id": "V2C006",
+      "requirement_id": "FR-S2-VT006-1",
+      "source_id": "S2-VJ003",
+      "category": "S2",
+      "support_scope": "初始化及迁移数据以完成系统交付",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE017",
+      "capability_id": "V2C006",
+      "requirement_id": "FR-S2-VT006-2",
+      "source_id": "S2-VJ020",
+      "category": "S2",
+      "support_scope": "协助转换与加载数据",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE018",
+      "capability_id": "V2C007",
+      "requirement_id": "FR-S2-VT007-1",
+      "source_id": "S2-VJ003",
+      "category": "S2",
+      "support_scope": "清洗迁移数据以保障准确完整",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE019",
+      "capability_id": "V2C007",
+      "requirement_id": "FR-S2-VT007-2",
+      "source_id": "S2-VJ020",
+      "category": "S2",
+      "support_scope": "参与质量巡检并整理问题台账",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE020",
+      "capability_id": "V2C007",
+      "requirement_id": "FR-S2-VT007-3",
+      "source_id": "S2-VJ021",
+      "category": "S2",
+      "support_scope": "清洗整理采购数据并发现异常",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE021",
+      "capability_id": "V2C008",
+      "requirement_id": "FR-S2-VT008-1",
+      "source_id": "S2-VJ019",
+      "category": "S2",
+      "support_scope": "支持业务统计并完成基础取数处理",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE022",
+      "capability_id": "V2C009",
+      "requirement_id": "FR-S2-VT008-1",
+      "source_id": "S2-VJ019",
+      "category": "S2",
+      "support_scope": "支持业务统计并完成基础取数处理",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE023",
+      "capability_id": "V2C008",
+      "requirement_id": "FR-S2-VT008-2",
+      "source_id": "S2-VJ020",
+      "category": "S2",
+      "support_scope": "完成常规取数、统计报表和SQL查询统计",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE024",
+      "capability_id": "V2C009",
+      "requirement_id": "FR-S2-VT008-2",
+      "source_id": "S2-VJ020",
+      "category": "S2",
+      "support_scope": "完成常规取数、统计报表和SQL查询统计",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE025",
+      "capability_id": "V2C008",
+      "requirement_id": "FR-S2-VT008-3",
+      "source_id": "S2-VJ021",
+      "category": "S2",
+      "support_scope": "开展采购指标统计并输出分析材料",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE026",
+      "capability_id": "V2C009",
+      "requirement_id": "FR-S2-VT008-3",
+      "source_id": "S2-VJ021",
+      "category": "S2",
+      "support_scope": "开展采购指标统计并输出分析材料",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE027",
+      "capability_id": "V2C010",
+      "requirement_id": "FR-S2-VT009-1",
+      "source_id": "S2-VJ014",
+      "category": "S2",
+      "support_scope": "收集业务资料并录入系统基础数据",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    },
+    {
+      "id": "FE028",
+      "capability_id": "V2C006",
+      "requirement_id": "FR-S2-VT010-1",
+      "source_id": "S2-VJ013",
+      "category": "S2",
+      "support_scope": "系统数据导出及整理计算",
+      "nature": "研究比对候选；不证明完整能力所有行为",
+      "review": "待研究者审查"
+    }
+  ],
+  "matrix": [
+    {
+      "capability_id": "V2C001",
+      "name": "关系数据库环境部署与连接",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT001-1",
+        "FR-S2-VT001-2"
+      ],
+      "S3": [],
+      "S4": [
+        "FR003",
+        "FR004"
+      ],
+      "independent_job_records": 2,
+      "independent_employers": 2,
+      "employers": [
+        "东方融尚（北京）科技有限公司",
+        "广州盖德信息科技有限公司／广州软件学院就业网"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C002",
+      "name": "数据库基础巡检与异常处置",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT002-1"
+      ],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 1,
+      "independent_employers": 1,
+      "employers": [
+        "东方融尚（北京）科技有限公司"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C003",
+      "name": "SQL与索引基础优化",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT003-1"
+      ],
+      "S3": [],
+      "S4": [
+        "FR007"
+      ],
+      "independent_job_records": 1,
+      "independent_employers": 1,
+      "employers": [
+        "东方融尚（北京）科技有限公司"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C004",
+      "name": "数据库备份与副本校验",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT004-1",
+        "FR-S2-VT004-2"
+      ],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 2,
+      "independent_employers": 2,
+      "employers": [
+        "东方融尚（北京）科技有限公司",
+        "广州盖德信息科技有限公司／广州软件学院就业网"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C005",
+      "name": "数据库恢复与结果核查",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT005-1",
+        "FR-S2-VT005-2"
+      ],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 2,
+      "independent_employers": 2,
+      "employers": [
+        "东方融尚（北京）科技有限公司",
+        "广州盖德信息科技有限公司／广州软件学院就业网"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C006",
+      "name": "关系数据库数据迁入迁出与核对",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT006-1",
+        "FR-S2-VT006-2",
+        "FR-S2-VT010-1"
+      ],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 3,
+      "independent_employers": 3,
+      "employers": [
+        "上海博馨通科技有限公司",
+        "北京智齿优服技术服务有限公司保定分公司",
+        "成都软麦科技有限公司"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C007",
+      "name": "规则驱动的数据清洗与质量核查",
+      "S1": [
+        "FR001"
+      ],
+      "S2": [
+        "FR-S2-VT007-1",
+        "FR-S2-VT007-2",
+        "FR-S2-VT007-3"
+      ],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 3,
+      "independent_employers": 3,
+      "employers": [
+        "上海博馨通科技有限公司",
+        "成都软麦科技有限公司",
+        "江苏澄星磷化工股份有限公司"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C008",
+      "name": "业务数据查询与提取",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT008-1",
+        "FR-S2-VT008-2",
+        "FR-S2-VT008-3"
+      ],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 3,
+      "independent_employers": 3,
+      "employers": [
+        "天津市彼岸东方培训学校有限公司／南开就业网",
+        "成都软麦科技有限公司",
+        "江苏澄星磷化工股份有限公司"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C009",
+      "name": "业务口径统计与数据汇总",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT008-1",
+        "FR-S2-VT008-2",
+        "FR-S2-VT008-3"
+      ],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 3,
+      "independent_employers": 3,
+      "employers": [
+        "天津市彼岸东方培训学校有限公司／南开就业网",
+        "成都软麦科技有限公司",
+        "江苏澄星磷化工股份有限公司"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C010",
+      "name": "业务数据记录维护",
+      "S1": [],
+      "S2": [
+        "FR-S2-VT009-1"
+      ],
+      "S3": [],
+      "S4": [
+        "FR008"
+      ],
+      "independent_job_records": 1,
+      "independent_employers": 1,
+      "employers": [
+        "上海麦舍健康科技集团有限公司"
+      ],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C011",
+      "name": "业务关系数据模型设计",
+      "S1": [],
+      "S2": [],
+      "S3": [],
+      "S4": [],
+      "independent_job_records": 0,
+      "independent_employers": 0,
+      "employers": [],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C012",
+      "name": "数据表结构与完整性实现",
+      "S1": [],
+      "S2": [],
+      "S3": [],
+      "S4": [
+        "FR005"
+      ],
+      "independent_job_records": 0,
+      "independent_employers": 0,
+      "employers": [],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    },
+    {
+      "capability_id": "V2C013",
+      "name": "可复用查询视图构建与维护",
+      "S1": [],
+      "S2": [],
+      "S3": [],
+      "S4": [
+        "FR006"
+      ],
+      "independent_job_records": 0,
+      "independent_employers": 0,
+      "employers": [],
+      "source_independence": "同一标准多个条款只算1份标准；同雇主岗位不重复计雇主；S1非岗位证据",
+      "gaps": "S3正文未核验；S4公开副本现行状态待确认；单一来源不代表行业频率",
+      "review": "待研究者审查"
+    }
+  ],
+  "revisions": [
+    {
+      "capability_id": "V2C001",
+      "name": "关系数据库环境部署与连接",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "补充S4初级条款候选依据；不改写成企业岗位明示",
+      "source_requirements": [
+        "FR003",
+        "FR004",
+        "FR-S2-VT001-1",
+        "FR-S2-VT001-2"
+      ],
+      "boundary": "岗位覆盖国产数据库等；课程只提供MySQL方法，产品迁移需要另学",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C002",
+      "name": "数据库基础巡检与异常处置",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [
+        "FR-S2-VT002-1"
+      ],
+      "boundary": "不承诺复杂根因分析；课程安装错误排查仅条件性支撑，不能替代运行故障训练",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C003",
+      "name": "SQL与索引基础优化",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "补充S4初级条款候选依据；不改写成企业岗位明示",
+      "source_requirements": [
+        "FR007",
+        "FR-S2-VT003-1"
+      ],
+      "boundary": "只限基础协助性优化；不纳入集群、大规模并发、复杂死锁调优",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C004",
+      "name": "数据库备份与副本校验",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [
+        "FR-S2-VT004-1",
+        "FR-S2-VT004-2"
+      ],
+      "boundary": "校验细则为研究拟定；课程仅提供基本流程，不证明企业级策略设计",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C005",
+      "name": "数据库恢复与结果核查",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [
+        "FR-S2-VT005-1",
+        "FR-S2-VT005-2"
+      ],
+      "boundary": "不等于独立容灾架构与应急恢复；不凭同一备份恢复知识扩大课程安排",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C006",
+      "name": "关系数据库数据迁入迁出与核对",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [
+        "FR-S2-VT006-1",
+        "FR-S2-VT006-2",
+        "FR-S2-VT010-1"
+      ],
+      "boundary": "任务未指定数据库工具；SQL INSERT不是完整导入导出方法；不纳入分布式ETL",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C007",
+      "name": "规则驱动的数据清洗与质量核查",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [
+        "FR001",
+        "FR-S2-VT007-1",
+        "FR-S2-VT007-2",
+        "FR-S2-VT007-3"
+      ],
+      "boundary": "SQL实现是研究解释；WHERE只能筛选，不能独立证明完整质量核查",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C008",
+      "name": "业务数据查询与提取",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [
+        "FR-S2-VT008-1",
+        "FR-S2-VT008-2",
+        "FR-S2-VT008-3"
+      ],
+      "boundary": "多表连接等为课程提供的方法，不声称每个源岗位明示JOIN；一般取数与统计成果分开",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C009",
+      "name": "业务口径统计与数据汇总",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [
+        "FR-S2-VT008-1",
+        "FR-S2-VT008-2",
+        "FR-S2-VT008-3"
+      ],
+      "boundary": "不扩为统计建模或经营决策能力；不同于仅交付明细数据的取数目标",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C010",
+      "name": "业务数据记录维护",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "补充S4初级条款候选依据；不改写成企业岗位明示",
+      "source_requirements": [
+        "FR008",
+        "FR-S2-VT009-1"
+      ],
+      "boundary": "岗位只明确界面数据录入；SQL更新删除及事务是课程扩展，不能计为岗位明示",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C011",
+      "name": "业务关系数据模型设计",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "保留现有来源属性与证据缺口",
+      "source_requirements": [],
+      "boundary": "以成果定义能力，不把规范化章节逐个升级；不能借被排除的高级岗位补证",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C012",
+      "name": "数据表结构与完整性实现",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "补充S4初级条款候选依据；不改写成企业岗位明示",
+      "source_requirements": [
+        "FR005"
+      ],
+      "boundary": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据",
+      "review": "待审建议，未自动采纳"
+    },
+    {
+      "capability_id": "V2C013",
+      "name": "可复用查询视图构建与维护",
+      "actual_change": "未修改基线定义与编号",
+      "suggestion": "补充S4初级条款候选依据；不改写成企业岗位明示",
+      "source_requirements": [
+        "FR006"
+      ],
+      "boundary": "不是独立岗位要求；不等于数据库权限配置；是否独立能力仍需研究者审查",
+      "review": "待审建议，未自动采纳"
+    }
+  ],
+  "issues": [
+    {
+      "id": "FQ01",
+      "problem": "S3正文未核验",
+      "resolution": "保留官方线索，不产生条款或S3能力关系"
+    },
+    {
+      "id": "FQ02",
+      "problem": "S4发布机构官网直链及现行状态待确认",
+      "resolution": "已核对版本正文，使用公开托管副本；不可宣称现行有效认证"
+    },
+    {
+      "id": "FQ03",
+      "problem": "FR009基础用户权限暂未对应现有13项",
+      "resolution": "保留未关联条目，建议后续审查是否建立独立候选，不能强行补线"
+    },
+    {
+      "id": "FQ04",
+      "problem": "企业证据小规模且运维集中",
+      "resolution": "不因新增标准条款自动消除采样限制"
+    },
+    {
+      "id": "FQ05",
+      "problem": "S4表定义及视图可补充外部规范依据",
+      "resolution": "不将标准条款视为已核验企业需求；模型设计与完整性验证仍缺明确条款"
+    },
+    {
+      "id": "FQ06",
+      "problem": "S1只为背景",
+      "resolution": "不得将政务大数据体系要求改称企业关系数据库技能要求"
+    }
+  ]
+}
