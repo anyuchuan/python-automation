@@ -1,0 +1,14 @@
+test_classification (test_four.FourTests.test_classification) ... ok
+test_excel_json (test_four.FourTests.test_excel_json) ... ok
+test_matrix_independence (test_four.FourTests.test_matrix_independence) ... ok
+test_no_duplicate_relations (test_four.FourTests.test_no_duplicate_relations) ... ok
+test_no_unverified_standard_clauses (test_four.FourTests.test_no_unverified_standard_clauses) ... ok
+test_protected_baseline (test_four.FourTests.test_protected_baseline) ... ok
+test_references_and_exclusions (test_four.FourTests.test_references_and_exclusions) ... ok
+test_reproducible (test_four.FourTests.test_reproducible) ... ok
+test_s4_level_and_scope (test_four.FourTests.test_s4_level_and_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.117s
+
+OK

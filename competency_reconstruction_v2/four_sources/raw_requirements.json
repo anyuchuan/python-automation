@@ -1,0 +1,166 @@
+[
+  {
+    "id": "FR001",
+    "source_id": "S1-001",
+    "excerpt": "数据完整性、准确性、时效性亟待提升",
+    "locator": "一（三）3",
+    "technical_action": "检查数据基本质量",
+    "goal": "改善业务数据质量",
+    "expected_product": "质量问题记录（研究拟定）",
+    "level": "不适用",
+    "decision": "部分纳入",
+    "excluded_content": "大数据平台建设、跨地域大规模治理",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [
+      "V2C007"
+    ],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR002",
+    "source_id": "S1-001",
+    "excerpt": "积极运用云计算、区块链、人工智能等技术",
+    "locator": "二（二）创新驱动",
+    "technical_action": "云计算/AI等技术应用",
+    "goal": "数字化转型",
+    "expected_product": "不作为本课程成果",
+    "level": "不适用",
+    "decision": "排除",
+    "excluded_content": "云计算、AI、区块链",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR003",
+    "source_id": "S4-001",
+    "excerpt": "安装数据库软件",
+    "locator": "6.2表1初级/1.1.2；PDF实际第8页",
+    "technical_action": "按指导书安装关系数据库",
+    "goal": "建立单机数据库环境",
+    "expected_product": "安装与连接检查记录",
+    "level": "初级",
+    "decision": "纳入",
+    "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [
+      "V2C001"
+    ],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR004",
+    "source_id": "S4-001",
+    "excerpt": "创建数据库实例",
+    "locator": "6.2表1初级/1.2.2；PDF实际第8页",
+    "technical_action": "按指导书创建实例",
+    "goal": "形成可用实例",
+    "expected_product": "实例及配置记录",
+    "level": "初级",
+    "decision": "纳入",
+    "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [
+      "V2C001"
+    ],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR005",
+    "source_id": "S4-001",
+    "excerpt": "表定义语句",
+    "locator": "6.2表1初级/2.1.2；PDF实际第9页",
+    "technical_action": "按客户要求编写DDL",
+    "goal": "实现指定表结构",
+    "expected_product": "DDL和数据表",
+    "level": "初级",
+    "decision": "纳入",
+    "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [
+      "V2C012"
+    ],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR006",
+    "source_id": "S4-001",
+    "excerpt": "视图定义语句",
+    "locator": "6.2表1初级/2.1.3；PDF实际第9页",
+    "technical_action": "按需求定义视图",
+    "goal": "形成可复用查询表达",
+    "expected_product": "视图定义与结果",
+    "level": "初级",
+    "decision": "纳入",
+    "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [
+      "V2C013"
+    ],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR007",
+    "source_id": "S4-001",
+    "excerpt": "规划索引",
+    "locator": "6.2表1初级/2.1.4；PDF实际第9页",
+    "technical_action": "在给定需求下规划基础索引",
+    "goal": "支持数据访问",
+    "expected_product": "索引建议与验证记录",
+    "level": "初级",
+    "decision": "纳入",
+    "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [
+      "V2C003"
+    ],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR008",
+    "source_id": "S4-001",
+    "excerpt": "插入 […] 更新 […] 删除",
+    "locator": "6.2表1初级/2.2.2—2.2.4；PDF实际第9页",
+    "technical_action": "按指导书执行记录变更",
+    "goal": "维护业务记录",
+    "expected_product": "变更语句及核查结果",
+    "level": "初级",
+    "decision": "纳入",
+    "excluded_content": "限单机、明确需求与指导书，不扩为复杂架构",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [
+      "V2C010"
+    ],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR009",
+    "source_id": "S4-001",
+    "excerpt": "安全权限管理",
+    "locator": "6.2表1初级/3.2—3.3；PDF实际第9—10页",
+    "technical_action": "创建用户、修改密码，编写授权与回收语句",
+    "goal": "控制限定数据访问",
+    "expected_product": "用户与授权语句及验证结果",
+    "level": "初级",
+    "decision": "纳入",
+    "excluded_content": "不扩为复杂安全架构",
+    "evidence_nature": "原文事实；目标成果及与能力的联系为研究解释",
+    "candidate_capabilities": [],
+    "review": "待研究者审查"
+  },
+  {
+    "id": "FR010",
+    "source_id": "S4-001",
+    "excerpt": "",
+    "locator": "6.1高级描述；PDF实际第8页",
+    "technical_action": "数据库架构策略与线上SQL质量治理",
+    "goal": "生产环境架构与治理",
+    "expected_product": "不纳入本课程候选成果",
+    "level": "高级",
+    "decision": "排除",
+    "excluded_content": "高级架构策略、线上低效SQL治理",
+    "evidence_nature": "正文转述；不复制长段落",
+    "candidate_capabilities": [],
+    "review": "待研究者审查"
+  }
+]
