@@ -35,7 +35,7 @@ class CandidateGraphTests(unittest.TestCase):
    with self.assertRaises(GraphDataError):GraphStore(t)
  def test_page_smoke(self):
   from streamlit.testing.v1 import AppTest
-  at=AppTest.from_file(str(ROOT/'app/main.py'),default_timeout=30).run();at.radio(key='platform_entry').set_value('专业能力图谱').run();self.assertFalse(at.exception)
+  at=AppTest.from_file(str(ROOT/'app/main.py'),default_timeout=30).run();at.radio(key='platform_entry').set_value('研究审查图谱').run();self.assertFalse(at.exception)
   at.radio(key='cg_view').set_value('知识技能反向查询').run();self.assertFalse(at.exception)
   at.radio(key='cg_view').set_value('教学关联路径').run();self.assertFalse(at.exception)
   at.radio(key='cg_view').set_value('局部关系网络').run();self.assertFalse(at.exception)

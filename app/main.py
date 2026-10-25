@@ -37,8 +37,12 @@ def load():
     except (DataError,FileNotFoundError) as exc:st.error('未能加载修订版数据：'+str(exc));st.stop()
 
 from app.competency_page import render as render_competency
-entry=st.sidebar.radio('平台入口',['历史研究平台','专业能力图谱'],key='platform_entry')
+entry=st.sidebar.radio('平台入口',['历史研究平台','专业能力图谱','研究审查图谱'],key='platform_entry')
 if entry=='专业能力图谱':
+    from app.explorer_page import render as render_explorer
+    render_explorer(ROOT)
+    st.stop()
+if entry=='研究审查图谱':
     if st.session_state.get('cg_pending'):
         st.session_state.cg_cap=st.session_state.pop('cg_pending')
     if st.session_state.get('cg_pending_view'):
