@@ -36,6 +36,15 @@ def load():
         return cached_bundle(tuple((str(p),p.stat().st_mtime_ns,p.stat().st_size) for p in paths))
     except (DataError,FileNotFoundError) as exc:st.error('未能加载修订版数据：'+str(exc));st.stop()
 
+from app.competency_page import render as render_competency
+entry=st.sidebar.radio('平台入口',['历史研究平台','专业能力图谱'],key='platform_entry')
+if entry=='专业能力图谱':
+    if st.session_state.get('cg_pending'):
+        st.session_state.cg_cap=st.session_state.pop('cg_pending')
+    if st.session_state.get('cg_pending_view'):
+        st.session_state.cg_view=st.session_state.pop('cg_pending_view')
+    render_competency(ROOT)
+    st.stop()
 bundle=load();tree=hierarchy(bundle);counts=global_counts(bundle)
 for key,value in {'module':MODULES[0],'selected_cap':'N1','tree_expanded':[],'locate':False,'graph_view':'树状层级','net_center':'N1','net_selected':'N1','selected_project':'P01','selected_edge':None}.items():
     if key not in st.session_state:st.session_state[key]=value
