@@ -7,6 +7,7 @@ from app.competency_store import GraphDataError
 from app.explorer_model import overview,topic,curriculum,highlight
 from app.competency_display import NODE_LABELS,REL_LABELS,directed,relation_fields
 from app.visuals import visual
+from app.radial_layout import radial_layout
 COLORS={'COMPETENCY_L1':'#9ccbb1','COMPETENCY_L2':'#c2ddcb','COMPETENCY_L3':'#b8d8eb','WORK_TASK':'#ead3b6','COURSE_KS':'#b7ddd9','TEACHING_PROJECT':'#d4cee9'}
 def render(root):
  try:
@@ -24,7 +25,7 @@ def render(root):
   counts=Counter(n['node_type'] for n in g.nodes);cols=st.columns(3)
   for col,t,label in zip(cols,['COMPETENCY_L1','COMPETENCY_L2','COMPETENCY_L3'],['一级候选能力','二级候选能力','三级候选能力']):col.metric(label,counts[t])
   if st.button('完整课程知识体系'):go('课程体系')
-  nodes,edges=overview(g);layout='hierarchy';center=None
+  nodes,edges=overview(g);view=st.radio('布局视图',['径向图','层级树'],horizontal=True,key='ex_layout');layout='ability_radial' if view=='径向图' else 'hierarchy';center=None
  elif space=='专题':
   if st.button('返回能力总览'):go('总览')
   cap=st.session_state.ex_cap;n=g.by_id[cap];st.subheader(n['original_id']+' · '+n['name']);st.caption(n.get('description') or '暂无明确说明')
@@ -40,7 +41,8 @@ def render(root):
   nodes,edges=curriculum(g,st.session_state.ex_project);center=st.session_state.ex_project;layout='radial' if center else 'projects'
  selected=st.session_state.ex_node;active=highlight(g,selected,nodes,edges) if selected in {n['node_id'] for n in nodes} else set()
  payload={'nodes':[{'id':n['node_id'],'code':n['original_id'],'name':n['name'],'type':n['node_type'],'color':COLORS.get(n['node_type'],'#d0d8df')} for n in nodes],'edges':[{'id':e['edge_id'],'from':e['source'],'to':e['target'],'label':e['support_function_or_subtype'] if e['relation_code'] in ['R02','R03'] else REL_LABELS[e['relation_code']],'directed':directed(e),'dash':bool(e['research_inference'])} for e in edges]}
- event=visual(mode='explorer',graph=payload,layout=layout,center=center,selected=selected,highlight=list(active),selected_edge=st.session_state.ex_edge,key='explorer_'+space)
+ coords=radial_layout(nodes,edges) if layout=='ability_radial' else None
+ event=visual(mode='explorer',radial_coordinates=coords,graph=payload,layout=layout,center=center,selected=selected,highlight=list(active),selected_edge=st.session_state.ex_edge,key='explorer_'+space)
  if event and event.get('nonce')!=st.session_state.get('ex_nonce'):
   st.session_state.ex_nonce=event['nonce'];id=event.get('id');action=event.get('action')
   if action=='select' and id in {n['node_id'] for n in nodes}:st.session_state.ex_node=id;st.session_state.ex_edge=None;st.session_state.ex_drawer=False
