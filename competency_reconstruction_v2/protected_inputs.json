@@ -1,0 +1,17 @@
+{
+  "旅游行业招聘岗位样本库_50条候选_待核验.xlsx": "de32990c34c50e481945c30bfe6fc8f944d302f9259173284783ca345c80d866",
+  "research_revision/database_competencies_v1/output/02_典型工作任务修订与归纳表.xlsx": "cb3d9107770572f2d7f4d16cea8ed1b267b60e5db9a1797c8cd45e0cb361192a",
+  "research_revision/database_competencies_v1/stage3_final_review/output/01_第三阶段规范化三级候选能力体系.xlsx": "a019945120f5eab80ac1f898872fc13a6a10a7d0844bdca4b49b9b944d836b90",
+  "stage4_course_extraction/output/课程教学要素数据库.json": "81bcb01d133e7c9d68f0309bcffe791515a9f9de999c19b0dda6a69a922d900e",
+  "stage4_competency_graph/output/graph_nodes.json": "497e0c09ae91ceae429c8f45066b6d872e209e28f8fce70adb8c05a82d925bc5",
+  "课标0913.pdf": "bd41483e3a6d45a75aca9c5b1e53edab96992add27a84cccabd526c0eadff852",
+  "stage4_competency_graph/output/graph_edges.json": "c58d53a6b7a28c183ae3d0df6d206fc240cebfb0cbb6c2a0a544e2fa97b58083",
+  "stage4_competency_graph/output/graph_evidence.json": "e1681f11871f52528a9de0af13828a5b61a52e3965c88ea6a6d22baa5547b946",
+  "stage4_competency_graph/output/graph_review_items.json": "57d81c84d6a2b009b49ddb1bb9e68b87bda6769d936e0e3d8477e9e01e3fe731",
+  "stage4_competency_graph/output/graph_paths.json": "f987e02b42e81f8a779f9173469fcfdaa52ce3b4708f0d8537393c5b323ef0ab",
+  "app/main.py": "c1a7ffad14115d54b4f3f611073d3ee917ba4cba248ac4461894f88cf0ec1eaf",
+  "app/competency_store.py": "bd0d3515b30dc9e9be0934c721e44f7bc042501bc98a022e8685692bc0483410",
+  "app/competency_display.py": "da2b077a837e5092814f34fff5108fe45f35e48bfd911fb263ca67fe5edc1159",
+  "app/data.py": "9a18339ed633f7210e3d886a44dffc313c3d362d9ebc0c9c8b7c651b708ba456",
+  "research_revision/database_competencies_v1/stage3_final_review/output/03_任务能力ABC证据关联复核.xlsx": "cb1451aa8cee77a1a549f37d7efff9761c9d69fb9eebe82aa9fa29e6601e08f1"
+}

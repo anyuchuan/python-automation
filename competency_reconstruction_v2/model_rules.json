@@ -1,0 +1,889 @@
+{
+  "tasks": [
+    {
+      "id": "VT001",
+      "name": "部署并检查数据库基础环境",
+      "object": "关系数据库实例",
+      "goal": "使数据库可供业务系统连接",
+      "action": "按环境要求安装配置并检查可用性",
+      "result": "可连接的数据库环境与配置记录",
+      "quality": "能连接且基础配置与要求一致",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ011",
+          "abc": "A",
+          "fragment": "部署安装配置数据库并协助稳定运行",
+          "location": "职责1",
+          "interpretation": "明确数据库技术行动；部署验收记录为研究拟定"
+        },
+        {
+          "job_id": "VJ012",
+          "abc": "A",
+          "fragment": "掌握数据库安装配置基本维护",
+          "location": "职责栏技能要求",
+          "interpretation": "不是已发生任务；从技术要求解释为部署任务，条件证据"
+        }
+      ]
+    },
+    {
+      "id": "VT002",
+      "name": "巡检数据库并协助排查常见问题",
+      "object": "数据库运行状态",
+      "goal": "发现异常并提供维护依据",
+      "action": "巡检、观察状态、记录问题并协助处理",
+      "result": "巡检记录与问题处理说明",
+      "quality": "区分观察事实、推测原因和需升级问题",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ011",
+          "abc": "A",
+          "fragment": "执行巡检和基础运维并协助处理常见问题",
+          "location": "职责1—3",
+          "interpretation": "只涉及基础协助，不支持独立复杂根因诊断"
+        }
+      ]
+    },
+    {
+      "id": "VT003",
+      "name": "协助改善常见查询性能问题",
+      "object": "SQL查询与索引",
+      "goal": "改善慢查询等问题",
+      "action": "监控分析、调整基础SQL或索引并比较效果",
+      "result": "调整方案与前后比较记录",
+      "quality": "结果语义保持；不能用仅创建索引证明完整优化效果",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ011",
+          "abc": "A",
+          "fragment": "协助基础优化，学习SQL和索引调整",
+          "location": "职责2",
+          "interpretation": "原文明示协助与学习，不是独立深度调优要求"
+        }
+      ]
+    },
+    {
+      "id": "VT004",
+      "name": "执行数据库备份并校验",
+      "object": "数据库与备份副本",
+      "goal": "保留可供恢复的数据",
+      "action": "按既定策略执行备份与校验",
+      "result": "备份副本及检查记录",
+      "quality": "备份对象和结果可识别；不推定具体RPO指标",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ011",
+          "abc": "A",
+          "fragment": "配合执行备份策略并参与校验",
+          "location": "职责3",
+          "interpretation": "从同一备份恢复职责拆出备份成果；不另计岗位"
+        },
+        {
+          "job_id": "VJ012",
+          "abc": "A",
+          "fragment": "基本维护包含备份操作",
+          "location": "职责栏技能要求",
+          "interpretation": "仅辅助技能证据，未规定备份计划或提交物"
+        }
+      ]
+    },
+    {
+      "id": "VT005",
+      "name": "执行数据库恢复并检查结果",
+      "object": "备份与目标数据库",
+      "goal": "恢复可用数据",
+      "action": "按既定方案恢复并核查目标数据",
+      "result": "恢复结果和核查说明",
+      "quality": "恢复对象、结果和异常可复核",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ011",
+          "abc": "A",
+          "fragment": "配合执行恢复策略、协助处理损坏故障",
+          "location": "职责3",
+          "interpretation": "与备份同源但目标和成果不同；不等于独立灾难恢复"
+        },
+        {
+          "job_id": "VJ012",
+          "abc": "A",
+          "fragment": "基本维护包含恢复操作",
+          "location": "职责栏技能要求",
+          "interpretation": "技能支持；任务成果为研究解释"
+        }
+      ]
+    },
+    {
+      "id": "VT006",
+      "name": "迁移或加载业务系统数据",
+      "object": "系统基础数据",
+      "goal": "支持系统上线或数据链路运行",
+      "action": "迁移、转换加载并核对结果",
+      "result": "目标系统数据及核对记录",
+      "quality": "迁移前后数量和关键字段一致性为研究拟定",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ003",
+          "abc": "B",
+          "fragment": "初始化及迁移数据以完成系统交付",
+          "location": "职责1、3",
+          "interpretation": "数据库技术上下文存在但迁移工具方法不明确"
+        },
+        {
+          "job_id": "VJ020",
+          "abc": "B",
+          "fragment": "协助转换与加载数据",
+          "location": "职责1",
+          "interpretation": "SQL上下文，具体可能为大数据工具；关系型实现待审"
+        }
+      ]
+    },
+    {
+      "id": "VT007",
+      "name": "清洗业务数据并核查异常",
+      "object": "业务数据及质量问题",
+      "goal": "改善准确性完整性",
+      "action": "依据规则清洗，巡检质量，整理异常",
+      "result": "清洗结果和问题台账",
+      "quality": "区分规则已知与待确认；保留未解决异常",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ003",
+          "abc": "B",
+          "fragment": "清洗迁移数据以保障准确完整",
+          "location": "职责3",
+          "interpretation": "关系型SQL实施方法未明，不把清洗等同某命令"
+        },
+        {
+          "job_id": "VJ020",
+          "abc": "B",
+          "fragment": "参与质量巡检并整理问题台账",
+          "location": "职责1、3",
+          "interpretation": "技术栈未限定关系型；仅提炼基础处理部分"
+        },
+        {
+          "job_id": "VJ021",
+          "abc": "C",
+          "fragment": "清洗整理采购数据并发现异常",
+          "location": "任职要求2、5",
+          "interpretation": "SQL只是可选工具；关系型实现为研究推断"
+        }
+      ]
+    },
+    {
+      "id": "VT008",
+      "name": "按业务需求提取数据并编制统计结果",
+      "object": "业务数据与指标需求",
+      "goal": "交付基础数据或统计信息",
+      "action": "确认口径、提取处理数据并汇总",
+      "result": "查询结果与统计数据表",
+      "quality": "结果范围和统计口径正确为研究拟定",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ019",
+          "abc": "A",
+          "fragment": "支持业务统计并完成基础取数处理",
+          "location": "职责1、4及任职要求3",
+          "interpretation": "SQL/MySQL明确；具体JOIN/聚合实现仍为研究解释"
+        },
+        {
+          "job_id": "VJ020",
+          "abc": "A",
+          "fragment": "完成常规取数、统计报表和SQL查询统计",
+          "location": "职责2及任职要求2",
+          "interpretation": "SQL明确但引擎未指明；关系型范围由课程限定"
+        },
+        {
+          "job_id": "VJ021",
+          "abc": "C",
+          "fragment": "开展采购指标统计并输出分析材料",
+          "location": "职责1及任职要求2—3",
+          "interpretation": "工具多选，不能声称企业必需SQL"
+        }
+      ]
+    },
+    {
+      "id": "VT009",
+      "name": "录入系统基础业务数据",
+      "object": "业务资料",
+      "goal": "补全系统初始化信息",
+      "action": "整理资料并录入基础数据",
+      "result": "系统记录",
+      "quality": "完整准确为研究拟定，招聘未提供验收标准",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ014",
+          "abc": "C",
+          "fragment": "收集业务资料并录入系统基础数据",
+          "location": "职责3",
+          "interpretation": "可能经界面完成；不可直接当INSERT要求"
+        }
+      ]
+    },
+    {
+      "id": "VT010",
+      "name": "导出系统数据用于后续处理",
+      "object": "业务系统数据",
+      "goal": "提供可继续加工的数据",
+      "action": "从系统导出并整理计算",
+      "result": "导出数据及处理结果",
+      "quality": "格式、字段和完整性检查为研究拟定",
+      "result_nature": "成果与质量要求为研究分析，除来源明确措辞外不是招聘规定的提交物",
+      "evidence": [
+        {
+          "job_id": "VJ013",
+          "abc": "C",
+          "fragment": "系统数据导出及整理计算",
+          "location": "职责1",
+          "interpretation": "主要Excel要求；数据库导出仅候选实现"
+        }
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "V2C001",
+      "name": "关系数据库环境部署与连接",
+      "domain": "数据库环境与运行保障",
+      "category": "环境配置",
+      "definition": "能够按配置要求建立并检查可连接的数据库环境。",
+      "goal": "建立可用环境",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "安装配置；连接检查；记录配置异常",
+      "knowledge_skills": "数据库系统组成、安装配置与连接",
+      "expected_product": "可连接实例、配置记录",
+      "evaluation_basis": "能复现连接；能指出配置错误与处理方法",
+      "task_ids": [
+        "VT001"
+      ],
+      "origin": "跨行业任务支持",
+      "inference": "岗位覆盖国产数据库等；课程只提供MySQL方法，产品迁移需要另学",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C002",
+      "name": "数据库基础巡检与异常处置",
+      "domain": "数据库环境与运行保障",
+      "category": "运行保障",
+      "definition": "能够按既定检查项识别运行异常，记录并协助处理常见问题。",
+      "goal": "发现并反馈运行问题",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "执行检查；记录事实；按流程处理或升级",
+      "knowledge_skills": "基础连接、配置与运行状态知识",
+      "expected_product": "巡检与问题处理记录",
+      "evaluation_basis": "异常定位依据明确，超出权限或能力时升级",
+      "task_ids": [
+        "VT002"
+      ],
+      "origin": "跨行业任务支持",
+      "inference": "不承诺复杂根因分析；课程安装错误排查仅条件性支撑，不能替代运行故障训练",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C003",
+      "name": "SQL与索引基础优化",
+      "domain": "数据查询与应用",
+      "category": "查询改进",
+      "definition": "能够针对给定查询，比较并调整SQL或索引方案。",
+      "goal": "改善限定查询效率",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "观察问题；提出调整；验证结果与效果",
+      "knowledge_skills": "索引原理、创建维护和效果比较",
+      "expected_product": "调整前后SQL、索引及比较记录",
+      "evaluation_basis": "语义不变，能说明改善依据与适用边界",
+      "task_ids": [
+        "VT003"
+      ],
+      "origin": "跨行业任务支持",
+      "inference": "只限基础协助性优化；不纳入集群、大规模并发、复杂死锁调优",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C004",
+      "name": "数据库备份与副本校验",
+      "domain": "数据库环境与运行保障",
+      "category": "运行保障",
+      "definition": "能够按给定策略备份数据库并检查副本状态。",
+      "goal": "形成可供恢复的数据副本",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "明确对象；执行备份；核查记录",
+      "knowledge_skills": "备份原理与工具流程",
+      "expected_product": "备份副本和校验记录",
+      "evaluation_basis": "对象范围明确，过程和结果可追溯",
+      "task_ids": [
+        "VT004"
+      ],
+      "origin": "跨行业任务支持",
+      "inference": "校验细则为研究拟定；课程仅提供基本流程，不证明企业级策略设计",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C005",
+      "name": "数据库恢复与结果核查",
+      "domain": "数据库环境与运行保障",
+      "category": "运行保障",
+      "definition": "能够按给定方案恢复数据库，并检查恢复结果。",
+      "goal": "恢复可用数据",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "选择正确副本；执行恢复；核查关键数据",
+      "knowledge_skills": "恢复原理与基本流程",
+      "expected_product": "恢复后的数据库和核查记录",
+      "evaluation_basis": "结果符合给定范围，异常得到记录",
+      "task_ids": [
+        "VT005"
+      ],
+      "origin": "跨行业任务支持",
+      "inference": "不等于独立容灾架构与应急恢复；不凭同一备份恢复知识扩大课程安排",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C006",
+      "name": "关系数据库数据迁入迁出与核对",
+      "domain": "业务数据维护与质量",
+      "category": "数据流转",
+      "definition": "能够按给定字段映射将业务数据迁入或迁出数据库，并核对结果。",
+      "goal": "实现有限范围的数据交接",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "确认映射；执行迁入迁出；检查异常和结果",
+      "knowledge_skills": "数据类型、记录操作与查询；具体导入导出工具需补充",
+      "expected_product": "迁移数据、字段映射与核对记录",
+      "evaluation_basis": "字段和记录可核对，异常可定位",
+      "task_ids": [
+        "VT006",
+        "VT010"
+      ],
+      "origin": "任务支持的关系型技术解释",
+      "inference": "任务未指定数据库工具；SQL INSERT不是完整导入导出方法；不纳入分布式ETL",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C007",
+      "name": "规则驱动的数据清洗与质量核查",
+      "domain": "业务数据维护与质量",
+      "category": "数据质量",
+      "definition": "能够在给定规则下用关系数据库方法筛查和处理数据问题。",
+      "goal": "获得可检查的清洗结果",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "澄清规则；筛选疑点；处理并复核；保留台账",
+      "knowledge_skills": "条件查询、记录修改、完整性概念",
+      "expected_product": "清洗结果、核查SQL和异常台账",
+      "evaluation_basis": "条件、修改范围和遗留问题可追溯",
+      "task_ids": [
+        "VT007"
+      ],
+      "origin": "任务支持的关系型技术解释",
+      "inference": "SQL实现是研究解释；WHERE只能筛选，不能独立证明完整质量核查",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C008",
+      "name": "业务数据查询与提取",
+      "domain": "数据查询与应用",
+      "category": "数据检索与汇总",
+      "definition": "能够将明确业务取数要求转成SQL并核查结果。",
+      "goal": "获得符合范围的数据",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "确认字段条件；按需连接或子查询；检查结果",
+      "knowledge_skills": "SELECT、过滤、多表查询、子查询、排序",
+      "expected_product": "查询SQL与结果集",
+      "evaluation_basis": "字段范围正确，连接不造成未解释的重复或遗漏",
+      "task_ids": [
+        "VT008"
+      ],
+      "origin": "跨行业任务支持",
+      "inference": "多表连接等为课程提供的方法，不声称每个源岗位明示JOIN；一般取数与统计成果分开",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C009",
+      "name": "业务口径统计与数据汇总",
+      "domain": "数据查询与应用",
+      "category": "数据检索与汇总",
+      "definition": "能够按既定指标口径汇总数据，并解释统计范围。",
+      "goal": "交付基础统计结果",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "确认口径；分组聚合；核查汇总结果",
+      "knowledge_skills": "聚合、GROUP BY、HAVING",
+      "expected_product": "统计SQL、结果表及口径说明",
+      "evaluation_basis": "分组粒度和指标计算可复核",
+      "task_ids": [
+        "VT008"
+      ],
+      "origin": "跨行业任务支持",
+      "inference": "不扩为统计建模或经营决策能力；不同于仅交付明细数据的取数目标",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C010",
+      "name": "业务数据记录维护",
+      "domain": "业务数据维护与质量",
+      "category": "数据质量",
+      "definition": "能够在明确授权和业务规则下录入、修改或清理数据库记录。",
+      "goal": "维护业务记录",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "控制作用范围；执行变更；核对；必要时回滚",
+      "knowledge_skills": "INSERT、UPDATE、DELETE、WHERE、事务控制",
+      "expected_product": "变更SQL、数据结果与核对说明",
+      "evaluation_basis": "变更范围正确，未误改无关记录",
+      "task_ids": [
+        "VT009"
+      ],
+      "origin": "业务任务推断并结合课程补充",
+      "inference": "岗位只明确界面数据录入；SQL更新删除及事务是课程扩展，不能计为岗位明示",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C011",
+      "name": "业务关系数据模型设计",
+      "domain": "数据结构设计与实现",
+      "category": "关系模型设计",
+      "definition": "能够从给定业务说明识别实体联系并形成可解释的关系模式。",
+      "goal": "表达业务数据结构",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "识别实体属性联系；绘制模型；转换关系；检视规范化",
+      "knowledge_skills": "概念模型、关系转换、规范化",
+      "expected_product": "E-R图、关系模式及设计说明",
+      "evaluation_basis": "能解释联系和规范化取舍，模式与业务要求相符",
+      "task_ids": [],
+      "origin": "课程依据支持；暂无有效跨行业任务证据",
+      "inference": "以成果定义能力，不把规范化章节逐个升级；不能借被排除的高级岗位补证",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C012",
+      "name": "数据表结构与完整性实现",
+      "domain": "数据结构设计与实现",
+      "category": "结构实施",
+      "definition": "能够将给定关系模式实现为带必要约束的数据表，并验证结构变更。",
+      "goal": "使结构和数据规则可执行",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "选择类型；创建修改表；配置约束；用合法和非法数据验证",
+      "knowledge_skills": "表创建修改、主外键唯一检查约束",
+      "expected_product": "DDL、数据表和验证记录",
+      "evaluation_basis": "结构与模式一致，约束按给定规则生效",
+      "task_ids": [],
+      "origin": "课程依据支持；暂无有效跨行业任务证据",
+      "inference": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    },
+    {
+      "id": "V2C013",
+      "name": "可复用查询视图构建与维护",
+      "domain": "数据查询与应用",
+      "category": "查询接口组织",
+      "definition": "能够按给定取数需求构建维护视图并说明其查询和更新限制。",
+      "goal": "提供可复用的数据访问表达",
+      "context": "在授权、限定数据规模和明确业务规则下的关系数据库基础应用",
+      "behaviors": "定义视图；验证结果；调整定义；说明更新限制",
+      "knowledge_skills": "视图定义、查询与更新限制",
+      "expected_product": "视图定义及验证结果",
+      "evaluation_basis": "结果与需求一致，能说明基表和视图关系",
+      "task_ids": [],
+      "origin": "课程依据支持；暂无有效跨行业任务证据",
+      "inference": "不是独立岗位要求；不等于数据库权限配置；是否独立能力仍需研究者审查",
+      "adaptation": "技术深度为研究判断；限单实例、教学规模、指导下操作，不承诺具备全部岗位任职资格",
+      "review_status": "候选；待研究者审查；未经专家验证"
+    }
+  ],
+  "course_links": [
+    {
+      "capability_id": "V2C001",
+      "ck_id": "CK001",
+      "support_type": "K1",
+      "reason": "提供理解该能力技术对象的基础知识",
+      "boundary": "岗位覆盖国产数据库等；课程只提供MySQL方法，产品迁移需要另学"
+    },
+    {
+      "capability_id": "V2C001",
+      "ck_id": "CK004",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "岗位覆盖国产数据库等；课程只提供MySQL方法，产品迁移需要另学"
+    },
+    {
+      "capability_id": "V2C001",
+      "ck_id": "CK006",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "岗位覆盖国产数据库等；课程只提供MySQL方法，产品迁移需要另学"
+    },
+    {
+      "capability_id": "V2C002",
+      "ck_id": "CK004",
+      "support_type": "K4",
+      "reason": "只支持条件性子环节，不能单独证明完整工作行为",
+      "boundary": "不承诺复杂根因分析；课程安装错误排查仅条件性支撑，不能替代运行故障训练"
+    },
+    {
+      "capability_id": "V2C002",
+      "ck_id": "CK006",
+      "support_type": "K4",
+      "reason": "只支持条件性子环节，不能单独证明完整工作行为",
+      "boundary": "不承诺复杂根因分析；课程安装错误排查仅条件性支撑，不能替代运行故障训练"
+    },
+    {
+      "capability_id": "V2C003",
+      "ck_id": "CK052",
+      "support_type": "K1",
+      "reason": "提供理解该能力技术对象的基础知识",
+      "boundary": "只限基础协助性优化；不纳入集群、大规模并发、复杂死锁调优"
+    },
+    {
+      "capability_id": "V2C003",
+      "ck_id": "CK053",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "只限基础协助性优化；不纳入集群、大规模并发、复杂死锁调优"
+    },
+    {
+      "capability_id": "V2C003",
+      "ck_id": "CK055",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "只限基础协助性优化；不纳入集群、大规模并发、复杂死锁调优"
+    },
+    {
+      "capability_id": "V2C003",
+      "ck_id": "CK056",
+      "support_type": "K3",
+      "reason": "以查询效果比较支撑方案检验，限原文对比活动",
+      "boundary": "只限基础协助性优化；不纳入集群、大规模并发、复杂死锁调优"
+    },
+    {
+      "capability_id": "V2C004",
+      "ck_id": "CK057",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "校验细则为研究拟定；课程仅提供基本流程，不证明企业级策略设计"
+    },
+    {
+      "capability_id": "V2C005",
+      "ck_id": "CK057",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "不等于独立容灾架构与应急恢复；不凭同一备份恢复知识扩大课程安排"
+    },
+    {
+      "capability_id": "V2C006",
+      "ck_id": "CK025",
+      "support_type": "K4",
+      "reason": "只支持条件性子环节，不能单独证明完整工作行为",
+      "boundary": "任务未指定数据库工具；SQL INSERT不是完整导入导出方法；不纳入分布式ETL"
+    },
+    {
+      "capability_id": "V2C006",
+      "ck_id": "CK032",
+      "support_type": "K4",
+      "reason": "只支持条件性子环节，不能单独证明完整工作行为",
+      "boundary": "任务未指定数据库工具；SQL INSERT不是完整导入导出方法；不纳入分布式ETL"
+    },
+    {
+      "capability_id": "V2C007",
+      "ck_id": "CK018",
+      "support_type": "K1",
+      "reason": "提供理解该能力技术对象的基础知识",
+      "boundary": "SQL实现是研究解释；WHERE只能筛选，不能独立证明完整质量核查"
+    },
+    {
+      "capability_id": "V2C007",
+      "ck_id": "CK027",
+      "support_type": "K4",
+      "reason": "只支持条件性子环节，不能单独证明完整工作行为",
+      "boundary": "SQL实现是研究解释；WHERE只能筛选，不能独立证明完整质量核查"
+    },
+    {
+      "capability_id": "V2C007",
+      "ck_id": "CK026",
+      "support_type": "K4",
+      "reason": "只支持条件性子环节，不能单独证明完整工作行为",
+      "boundary": "SQL实现是研究解释；WHERE只能筛选，不能独立证明完整质量核查"
+    },
+    {
+      "capability_id": "V2C008",
+      "ck_id": "CK032",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "多表连接等为课程提供的方法，不声称每个源岗位明示JOIN；一般取数与统计成果分开"
+    },
+    {
+      "capability_id": "V2C008",
+      "ck_id": "CK035",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "多表连接等为课程提供的方法，不声称每个源岗位明示JOIN；一般取数与统计成果分开"
+    },
+    {
+      "capability_id": "V2C008",
+      "ck_id": "CK036",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "多表连接等为课程提供的方法，不声称每个源岗位明示JOIN；一般取数与统计成果分开"
+    },
+    {
+      "capability_id": "V2C008",
+      "ck_id": "CK040",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "多表连接等为课程提供的方法，不声称每个源岗位明示JOIN；一般取数与统计成果分开"
+    },
+    {
+      "capability_id": "V2C009",
+      "ck_id": "CK037",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "不扩为统计建模或经营决策能力；不同于仅交付明细数据的取数目标"
+    },
+    {
+      "capability_id": "V2C009",
+      "ck_id": "CK038",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "不扩为统计建模或经营决策能力；不同于仅交付明细数据的取数目标"
+    },
+    {
+      "capability_id": "V2C009",
+      "ck_id": "CK039",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "不扩为统计建模或经营决策能力；不同于仅交付明细数据的取数目标"
+    },
+    {
+      "capability_id": "V2C010",
+      "ck_id": "CK025",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "岗位只明确界面数据录入；SQL更新删除及事务是课程扩展，不能计为岗位明示"
+    },
+    {
+      "capability_id": "V2C010",
+      "ck_id": "CK026",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "岗位只明确界面数据录入；SQL更新删除及事务是课程扩展，不能计为岗位明示"
+    },
+    {
+      "capability_id": "V2C010",
+      "ck_id": "CK027",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "岗位只明确界面数据录入；SQL更新删除及事务是课程扩展，不能计为岗位明示"
+    },
+    {
+      "capability_id": "V2C010",
+      "ck_id": "CK028",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "岗位只明确界面数据录入；SQL更新删除及事务是课程扩展，不能计为岗位明示"
+    },
+    {
+      "capability_id": "V2C010",
+      "ck_id": "CK059",
+      "support_type": "K4",
+      "reason": "只支持条件性子环节，不能单独证明完整工作行为",
+      "boundary": "岗位只明确界面数据录入；SQL更新删除及事务是课程扩展，不能计为岗位明示"
+    },
+    {
+      "capability_id": "V2C011",
+      "ck_id": "CK008",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "以成果定义能力，不把规范化章节逐个升级；不能借被排除的高级岗位补证"
+    },
+    {
+      "capability_id": "V2C011",
+      "ck_id": "CK009",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "以成果定义能力，不把规范化章节逐个升级；不能借被排除的高级岗位补证"
+    },
+    {
+      "capability_id": "V2C011",
+      "ck_id": "CK010",
+      "support_type": "K1",
+      "reason": "提供理解该能力技术对象的基础知识",
+      "boundary": "以成果定义能力，不把规范化章节逐个升级；不能借被排除的高级岗位补证"
+    },
+    {
+      "capability_id": "V2C011",
+      "ck_id": "CK012",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "以成果定义能力，不把规范化章节逐个升级；不能借被排除的高级岗位补证"
+    },
+    {
+      "capability_id": "V2C012",
+      "ck_id": "CK015",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据"
+    },
+    {
+      "capability_id": "V2C012",
+      "ck_id": "CK016",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据"
+    },
+    {
+      "capability_id": "V2C012",
+      "ck_id": "CK019",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据"
+    },
+    {
+      "capability_id": "V2C012",
+      "ck_id": "CK020",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据"
+    },
+    {
+      "capability_id": "V2C012",
+      "ck_id": "CK021",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据"
+    },
+    {
+      "capability_id": "V2C012",
+      "ck_id": "CK022",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "同一实现目标的命令合为行为，不按命令设能力；不把数据库数据更新当DDL证据"
+    },
+    {
+      "capability_id": "V2C013",
+      "ck_id": "CK046",
+      "support_type": "K1",
+      "reason": "提供理解该能力技术对象的基础知识",
+      "boundary": "不是独立岗位要求；不等于数据库权限配置；是否独立能力仍需研究者审查"
+    },
+    {
+      "capability_id": "V2C013",
+      "ck_id": "CK047",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "不是独立岗位要求；不等于数据库权限配置；是否独立能力仍需研究者审查"
+    },
+    {
+      "capability_id": "V2C013",
+      "ck_id": "CK049",
+      "support_type": "K1",
+      "reason": "提供理解该能力技术对象的基础知识",
+      "boundary": "不是独立岗位要求；不等于数据库权限配置；是否独立能力仍需研究者审查"
+    },
+    {
+      "capability_id": "V2C013",
+      "ck_id": "CK050",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "不是独立岗位要求；不等于数据库权限配置；是否独立能力仍需研究者审查"
+    },
+    {
+      "capability_id": "V2C013",
+      "ck_id": "CK051",
+      "support_type": "K2",
+      "reason": "提供该能力中的具体技术操作方法，非完整能力培养证明",
+      "boundary": "不是独立岗位要求；不等于数据库权限配置；是否独立能力仍需研究者审查"
+    }
+  ],
+  "tourism_links": [
+    {
+      "task_id": "TT004",
+      "capability_id": "V2C008",
+      "abc": "A",
+      "reason": "摘要明确SQL取数；具体连接方法不明",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT043",
+      "capability_id": "V2C009",
+      "abc": "C",
+      "reason": "业务统计可用SQL实现，但工具未明确",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT005",
+      "capability_id": "V2C007",
+      "abc": "A",
+      "reason": "摘要明确SQL清洗；规则与方法未明",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT033",
+      "capability_id": "V2C007",
+      "abc": "C",
+      "reason": "质量核对不等于数据库约束",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT017",
+      "capability_id": "V2C004",
+      "abc": "A",
+      "reason": "数据库备份对象明确，方法未细化",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT018",
+      "capability_id": "V2C005",
+      "abc": "A",
+      "reason": "数据库恢复对象明确，方法未细化",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT016",
+      "capability_id": "V2C002",
+      "abc": "B",
+      "reason": "数据库运维明确，巡检项和排查细节是解释",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT020",
+      "capability_id": "V2C003",
+      "abc": "A",
+      "reason": "查询性能目标明确，索引技术未明确",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT019",
+      "capability_id": "V2C010",
+      "abc": "B",
+      "reason": "数据库更新未区分记录与结构；只作记录维护候选",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT028",
+      "capability_id": "V2C006",
+      "abc": "C",
+      "reason": "接入同步不明技术，关系型迁入迁出为可能实现",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    },
+    {
+      "task_id": "TT037",
+      "capability_id": "V2C011",
+      "abc": "C",
+      "reason": "模型类型未明，关系模型是待审教学解释",
+      "nature": "摘要支持的应用候选；数据库具体实施及成果为研究推断，非招聘原文核验"
+    }
+  ]
+}
