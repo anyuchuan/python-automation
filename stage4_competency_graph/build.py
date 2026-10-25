@@ -77,7 +77,7 @@ def run(out=None):
   ck=ks[r['knowledge']];cap=capby[r['capability']];contexts=(["P04"] if r['capability']=='DB006' and r['knowledge']=='CK027' else ["P05"] if r['capability'] in ['DB001','DB013'] and r['knowledge']=='CK027' else ck['对应项目ID'].split(';'));refs=';'.join(x['证据ID'] for x in c['occurrences'] if x['知识点ID']==r['knowledge'] and x['项目ID'] in contexts);attrs={'knowledge_id':r['knowledge'],'competency_id':r['capability'],'knowledge_name':ck['规范化名称'],'competency_name':cap['三级能力名称'],'competency_behavior':cap['可观察行为（研究拟定）'],'interface_id':r.get('interface',''),'technical_behavior':r['behavior'],'course_context':';'.join(contexts)}
   if r.get('interface'):
    it=next(x for x in c['technical_behavior_interfaces'] if x['接口ID']==r['interface']);refs+=';'+it['证据ID'];attrs['interface_source']=it
-  edge(f'R03:{i:03}','R03',nid('COURSE_KS',r['knowledge']),hid[r['capability']],r['reason'],refs,origin='RESEARCH_INFERENCE',sub=r['function'],uncertainty=r['limit'],attrs=attrs)
+  edge(r['relation_id'],'R03',nid('COURSE_KS',r['knowledge']),hid[r['capability']],r['reason'],refs,origin='RESEARCH_INFERENCE',sub=r['function'],uncertainty=r['limit'],attrs=attrs)
  support=[r for r in edges if r['relation_code']=='R03']
  # 每步保留边ID；路径末端包含实训、检查和产物，但不转为直接培养边。
  for s in support:
@@ -106,6 +106,8 @@ def run(out=None):
  out=Path(out or HERE/'output').resolve()
  if out.is_relative_to(ROOT) and not out.is_relative_to(HERE):raise ValueError('禁止覆盖历史目录')
  out.mkdir(parents=True,exist_ok=True)
+ from feedback_review import apply
+ apply(HERE,out,helper,support,reviews,c)
  tables={'01_能力图谱节点总表.xlsx':{'节点':nodes,'输入清单':inventory},'02_能力图谱关系总表.xlsx':{'全部关系记录':edges,'默认候选边':[e for e in edges if e['default_visible']],'默认隐藏':[e for e in edges if not e['default_visible']]},'03_三级能力与课程知识技能支撑关系.xlsx':{'候选支撑':support},'04_能力与教学项目活动关联路径.xlsx':{'多跳候选路径':paths},'05_课程知识技能点覆盖与未关联分析.xlsx':{'知识点关联概览':coverage},'06_三级能力课程支撑概览.xlsx':{'能力概览非等级评价':overview},'07_图谱关系证据索引.xlsx':{'证据':evidence,'关系证据引用':[{'关系ID':e['edge_id'],'证据ID':id} for e in edges for id in e['evidence_ids']]},'08_图谱关系人工审查清单.xlsx':{'人工审查':reviews},'12_能力图谱候选关系边界案例.xlsx':{'边界案例':bounds}}
  for name,sheets in tables.items():helper.write_book(out/name,sheets)
  summary={'main':snap['main_commit'],'nodes':len(nodes),'node_types':dict(Counter(n['node_type'] for n in nodes)),'edge_records':len(edges),'edge_types':dict(Counter(r['relation_code'] for r in edges)),'default_edges':sum(e['default_visible'] for e in edges),'support_edges':len(support),'linked_competencies':sum(bool(r['支撑候选关系ID']) for r in overview),'linked_knowledge':sum(bool(r['关系ID']) for r in coverage),'unlinked_knowledge':[r['知识点ID'] for r in coverage if not r['关系ID']],'evidence':len(evidence),'reviews':len(reviews),'paths':len(paths),'hours':c['summary']['学时']}

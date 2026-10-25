@@ -5,7 +5,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "SELECT结构对应执行查询与提取结果",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:001",
+    "handling_suggestion": "建议保留；SELECT结构对应执行查询与提取结果；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:001",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:002",
@@ -13,7 +19,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "字段别名与表达式对应取数结果表达",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:002",
+    "handling_suggestion": "建议保留；字段别名与表达式对应取数结果表达；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:002",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:003",
@@ -21,7 +33,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "P05 WHERE条件过滤对应取数筛选",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:003",
+    "handling_suggestion": "建议保留；P05 WHERE条件过滤对应取数筛选；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:003",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:004",
@@ -29,7 +47,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "排序可组织查询输出",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:004",
+    "handling_suggestion": "建议保留；排序可组织查询输出；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:004",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:005",
@@ -37,23 +61,41 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "LIMIT控制返回数据范围",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:005",
+    "handling_suggestion": "建议保留；LIMIT控制返回数据范围；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:005",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:006",
     "object_id": "R03:006",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "仅当清洗规则涉及记录值修正时UPDATE提供实现方法",
-    "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "只在问题记录和修正规则已给定时支持UPDATE实施；不涵盖问题识别、清洗规则设计及清洗结果验证。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:006",
+    "handling_suggestion": "建议调整关系说明或适用边界；仅当清洗规则涉及记录值修正时UPDATE提供实现方法；只在问题记录和修正规则已给定时支持UPDATE实施；不涵盖问题识别、清洗规则设计及清洗结果验证。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:006",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:007",
     "object_id": "R03:007",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "WHERE可表达筛选条件，但业务清洗规则本身不由语法给出",
-    "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "只支持给定清洗条件的记录定位；不证明完整清洗流程、异常判断及前后质量验证已安排。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:007",
+    "handling_suggestion": "建议调整关系说明或适用边界；WHERE可表达筛选条件，但业务清洗规则本身不由语法给出；只支持给定清洗条件的记录定位；不证明完整清洗流程、异常判断及前后质量验证已安排。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:007",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:008",
@@ -61,7 +103,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "使用CTB001独立备份实验接口，对应备份操作目标",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。同一组合句分别标行为，不合并能力，不推导教学先修。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:008",
+    "handling_suggestion": "建议保留；使用CTB001独立备份实验接口，对应备份操作目标；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。同一组合句分别标行为，不合并能力，不推导教学先修。",
+    "impact_scope": "R03:008",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:009",
@@ -69,7 +117,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "使用CTB002独立恢复实验接口，对应恢复操作目标",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。同一组合句分别标行为，不合并能力，不推导教学先修。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:009",
+    "handling_suggestion": "建议保留；使用CTB002独立恢复实验接口，对应恢复操作目标；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。同一组合句分别标行为，不合并能力，不推导教学先修。",
+    "impact_scope": "R03:009",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:010",
@@ -77,7 +131,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "索引类型只支持优化中的索引路线，不涵盖全部性能问题",
     "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:010",
+    "handling_suggestion": "建议保留；索引类型只支持优化中的索引路线，不涵盖全部性能问题；只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:010",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:011",
@@ -85,7 +145,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "有无索引效果比较可为局部性能改进提供观察依据",
     "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:011",
+    "handling_suggestion": "建议保留；有无索引效果比较可为局部性能改进提供观察依据；只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:011",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:012",
@@ -93,7 +159,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "UPDATE作用对象是记录值，不是表结构",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:012",
+    "handling_suggestion": "建议保留；UPDATE作用对象是记录值，不是表结构；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:012",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:013",
@@ -101,7 +173,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "P04 WHERE与UPDATE组合支持精确更新",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:013",
+    "handling_suggestion": "建议保留；P04 WHERE与UPDATE组合支持精确更新；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:013",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:014",
@@ -109,7 +187,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "概念模型帮助把业务需求表达为结构设计输入",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:014",
+    "handling_suggestion": "建议保留；概念模型帮助把业务需求表达为结构设计输入；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:014",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:015",
@@ -117,7 +201,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "关系模式转换直接服务表及关联结构设计",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:015",
+    "handling_suggestion": "建议保留；关系模式转换直接服务表及关联结构设计；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:015",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:016",
@@ -125,7 +215,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "范式知识为结构合理性分析提供理论依据",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:016",
+    "handling_suggestion": "建议保留；范式知识为结构合理性分析提供理论依据；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:016",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:017",
@@ -133,23 +229,41 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "对象属性联系是表字段及关联设计的基础",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:017",
+    "handling_suggestion": "建议保留；对象属性联系是表字段及关联设计的基础；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:017",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:018",
     "object_id": "R03:018",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "主键在需要唯一标识时支撑表结构表达",
-    "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "第5页明确主键作用及语法；仅在关系表标识方案已确定时支持实现表达，不能把约束SQL实现等同完整模式设计。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:018",
+    "handling_suggestion": "建议调整关系说明或适用边界；主键在需要唯一标识时支撑表结构表达；第5页明确主键作用及语法；仅在关系表标识方案已确定时支持实现表达，不能把约束SQL实现等同完整模式设计。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:018",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:019",
     "object_id": "R03:019",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "外键在参照关系方案中支持关联结构",
-    "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "第5页明确外键作用及语法；仅在参照关系方案已确定时支持实现，不替代实体关系识别与完整结构设计。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:019",
+    "handling_suggestion": "建议调整关系说明或适用边界；外键在参照关系方案中支持关联结构；第5页明确外键作用及语法；仅在参照关系方案已确定时支持实现，不替代实体关系识别与完整结构设计。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:019",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:020",
@@ -157,7 +271,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "INSERT语法直接对应向指定表写入新增记录",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:020",
+    "handling_suggestion": "建议保留；INSERT语法直接对应向指定表写入新增记录；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:020",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:021",
@@ -165,47 +285,83 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "类型及适用场景帮助选择索引",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:021",
+    "handling_suggestion": "建议保留；类型及适用场景帮助选择索引；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:021",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:022",
     "object_id": "R03:022",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "CREATE INDEX为选定索引方案提供操作方法",
-    "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "只支持选定索引方案的创建实施，不证明能根据查询需求选择索引或验证调整收益。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:022",
+    "handling_suggestion": "建议调整关系说明或适用边界；CREATE INDEX为选定索引方案提供操作方法；只支持选定索引方案的创建实施，不证明能根据查询需求选择索引或验证调整收益。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:022",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:023",
     "object_id": "R03:023",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "该操作用于索引调整方案的实施",
-    "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "只支持既定方案的索引添加实施；索引选择、负面影响分析及迭代调整仍需其他依据。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:023",
+    "handling_suggestion": "建议调整关系说明或适用边界；该操作用于索引调整方案的实施；只支持既定方案的索引添加实施；索引选择、负面影响分析及迭代调整仍需其他依据。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:023",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:024",
     "object_id": "R03:024",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "仅在建表方案中通过约束或索引定义实施索引设计",
-    "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "只在建表时定义索引的方案下成立，不代表能调整已有库索引，也不证明完整选择与调整能力。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:024",
+    "handling_suggestion": "建议调整关系说明或适用边界；仅在建表方案中通过约束或索引定义实施索引设计；只在建表时定义索引的方案下成立，不代表能调整已有库索引，也不证明完整选择与调整能力。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:024",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:025",
     "object_id": "R03:025",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "删除维护可实施调整，但还需判断依据",
-    "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "删除/维护索引操作不等于诊断索引问题；具体变更理由与效果核查仍未由本知识单独覆盖。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:025",
+    "handling_suggestion": "建议调整关系说明或适用边界；删除维护可实施调整，但还需判断依据；删除/维护索引操作不等于诊断索引问题；具体变更理由与效果核查仍未由本知识单独覆盖。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:025",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:026",
     "object_id": "R03:026",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "效果对比与选择调整结合，形成结果核对线索",
-    "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "第11页仅明示有无索引查询效果对比；K3指与其他索引知识组合的观察线索，不证明完整方案选择及迭代调整闭环。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:026",
+    "handling_suggestion": "建议调整关系说明或适用边界；效果对比与选择调整结合，形成结果核对线索；第11页仅明示有无索引查询效果对比；K3指与其他索引知识组合的观察线索，不证明完整方案选择及迭代调整闭环。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:026",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:027",
@@ -213,7 +369,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "聚合函数对应数据统计计算",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:027",
+    "handling_suggestion": "建议保留；聚合函数对应数据统计计算；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:027",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:028",
@@ -221,7 +383,13 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "GROUP BY直接对应分组聚合的分组行为",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:028",
+    "handling_suggestion": "建议保留；GROUP BY直接对应分组聚合的分组行为；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:028",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:029",
@@ -229,15 +397,27 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "HAVING与分组聚合组合处理汇总结果",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:029",
+    "handling_suggestion": "建议保留；HAVING与分组聚合组合处理汇总结果；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:029",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:030",
     "object_id": "R03:030",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "WHERE可表达已给定质量条件；未证明课程有完整数据质量核查任务",
-    "restriction": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "在已有质量检查条件的前提下，支持筛选待核查记录；不涵盖质量维度定义、规则制定、异常原因判断和完整核查结果验证。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:030",
+    "handling_suggestion": "建议调整关系说明或适用边界；WHERE可表达已给定质量条件；未证明课程有完整数据质量核查任务；在已有质量检查条件的前提下，支持筛选待核查记录；不涵盖质量维度定义、规则制定、异常原因判断和完整核查结果验证。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:030",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:031",
@@ -245,31 +425,55 @@
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "ALTER TABLE技术对象是表结构，区别于UPDATE记录值",
     "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:031",
+    "handling_suggestion": "建议保留；ALTER TABLE技术对象是表结构，区别于UPDATE记录值；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "impact_scope": "R03:031",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:032",
     "object_id": "R03:032",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "内外连接原理与语法直接对应多表连接查询",
-    "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "仅对应内外连接语法及关联条件；完整业务语义、重复行及结果正确性仍需任务情境核查。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:032",
+    "handling_suggestion": "建议调整关系说明或适用边界；内外连接原理与语法直接对应多表连接查询；仅对应内外连接语法及关联条件；完整业务语义、重复行及结果正确性仍需任务情境核查。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:032",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:033",
     "object_id": "R03:033",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
     "basis": "SELECT为连接查询提供表达框架，但一般SELECT不能完整覆盖JOIN",
-    "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "restriction": "一般SELECT只提供表达框架，不自动支持连接条件设计或多表结果核验。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:033",
+    "handling_suggestion": "建议调整关系说明或适用边界；SELECT为连接查询提供表达框架，但一般SELECT不能完整覆盖JOIN；一般SELECT只提供表达框架，不自动支持连接条件设计或多表结果核验。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:033",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:R03:034",
     "object_id": "R03:034",
     "issue": "核对知识粒度与完整能力行为，审查支撑功能及条件",
-    "basis": "外键知识帮助理解关联字段；连接并不要求存在外键约束",
-    "restriction": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
-    "state": "待研究者审查"
+    "basis": "第5页外键约束知识仅在参照关系解释场景中帮助理解关联字段；JOIN本身不依赖外键定义，因此采用条件性K4而非一般基础前提。",
+    "restriction": "外键知识仅在解释既有参照关系时提供条件性理解线索；SQL JOIN不要求已定义外键约束，不是必要前提。 本条仍为跨体系研究推断，待人工确认。",
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:R03:034",
+    "handling_suggestion": "建议调整支撑类型；第5页外键约束知识仅在参照关系解释场景中帮助理解关联字段；JOIN本身不依赖外键定义，因此采用条件性K4而非一般基础前提。；外键知识仅在解释既有参照关系时提供条件性理解线索；SQL JOIN不要求已定义外键约束，不是必要前提。 本条仍为跨体系研究推断，待人工确认。",
+    "impact_scope": "R03:034",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:FR-L006",
@@ -277,7 +481,13 @@
     "issue": "待审",
     "basis": "TT019更新对象尚不明确，暂不作为默认启用关系",
     "restriction": "不进入默认有效候选边",
-    "state": "待研究者审查，未经专家确认"
+    "state": "待研究者审查，未经专家确认",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "Q:FR-L006",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "R09:FR-L006",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:FR-L007",
@@ -285,7 +495,13 @@
     "issue": "不保留",
     "basis": "不能从目标—方法联系推导教学先修，亦不与反向支撑边混为循环",
     "restriction": "不进入默认有效候选边",
-    "state": "待研究者审查，未经专家确认"
+    "state": "待研究者审查，未经专家确认",
+    "review_category": "C",
+    "classification_reason": "关系类型、方向及默认边集判定",
+    "original_review_id": "Q:FR-L007",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "R09:FR-L007",
+    "human_confirmation_required": true
   },
   {
     "review_id": "Q:FR-L008",
@@ -293,7 +509,13 @@
     "issue": "不保留",
     "basis": "技术依赖另列，禁止以流程顺序替代教学依据",
     "restriction": "不进入默认有效候选边",
-    "state": "待研究者审查，未经专家确认"
+    "state": "待研究者审查，未经专家确认",
+    "review_category": "C",
+    "classification_reason": "关系类型、方向及默认边集判定",
+    "original_review_id": "Q:FR-L008",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "R09:FR-L008",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ001",
@@ -301,7 +523,13 @@
     "issue": "文本层实训与考核标题在页面渲染中不可见，不能作为已确认正向实践/考核证据",
     "basis": "保留文本层与研究者确认学时分层；请求可读版本或研究者确认具体任务原文",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ001",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "PDF第13页",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ002",
@@ -309,7 +537,13 @@
     "issue": "精确逐项学时对应未明示",
     "basis": "仅内容相关线索，不分摊学时",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ002",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "PT01—PT03与P01—P08",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ003",
@@ -317,7 +551,13 @@
     "issue": "INERT INTO疑似拼写错误",
     "basis": "原文保留，规范建议INSERT INTO另列",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ003",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "PT02",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ004",
@@ -325,7 +565,13 @@
     "issue": "末尾只有不可见标题，未提供可读评分细则或比例",
     "basis": "不编造评分或成绩",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ004",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "课程考核",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ005",
@@ -333,7 +579,13 @@
     "issue": "权限管理/DCL在总体目标，P08技术实践正文主要备份恢复及事务",
     "basis": "不由目标或思政提及认定已安排独立权限配置实训",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ005",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "目标与项目",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ006",
@@ -341,7 +593,13 @@
     "issue": "替代键/唯一键术语对照需审查",
     "basis": "保留两种原文措辞，不擅自认为术语完全同义",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "术语及课程知识技术边界",
+    "original_review_id": "COURSE:CQ006",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "P03",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ007",
@@ -349,7 +607,13 @@
     "issue": "分组聚会疑似分组聚合笔误",
     "basis": "原文保留，不作为新知识点",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ007",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "P05",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ008",
@@ -357,7 +621,13 @@
     "issue": "索引分类与作疑似缺字",
     "basis": "原文保留，规范化名称依上下文标注",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ008",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "P07",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ009",
@@ -365,7 +635,13 @@
     "issue": "DELETE可回滚与TRUNCATE不可逆表述缺少存储引擎/事务条件",
     "basis": "原文保留；教学解释条件待审，不添加教材论断作课程原文",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "术语及课程知识技术边界",
+    "original_review_id": "COURSE:CQ009",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "P04",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ010",
@@ -373,7 +649,13 @@
     "issue": "多数仅要求完成操作，未规定交付文件形式",
     "basis": "潜在SQL脚本/备份文件/对比记录均标研究推断，非提交要求",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ010",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "学习成果",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ011",
@@ -381,7 +663,13 @@
     "issue": "CREATE TABLE在P03库表与P07建表索引语境、WHERE在操作和查询语境出现",
     "basis": "审查新增CK060边界及行为接口；不关闭其他11项问题",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "术语及课程知识技术边界",
+    "original_review_id": "COURSE:CQ011",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "知识规范化",
+    "human_confirmation_required": true
   },
   {
     "review_id": "COURSE:CQ012",
@@ -389,7 +677,13 @@
     "issue": "部分标题编码异常，P02教室需求疑似教师需求",
     "basis": "保留提取原文，按可见章节及上下文组织，不静默替换",
     "restriction": "继承课程第一轮限制，不自动关闭",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "D",
+    "classification_reason": "课程原始文本或任务安排限制",
+    "original_review_id": "COURSE:CQ012",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "课程定位/页眉",
+    "human_confirmation_required": true
   },
   {
     "review_id": "NO:DB009",
@@ -397,7 +691,13 @@
     "issue": "未建立课程知识支撑候选",
     "basis": "一般环境部署不等于数据库运行检查/异常诊断；INSERT不等于数据导入；目标提及权限不等于具体配置技能",
     "restriction": "可后续审查目标层证据，但不强制连线",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "NO:DB009",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB009",
+    "human_confirmation_required": true
   },
   {
     "review_id": "NO:DB010",
@@ -405,7 +705,13 @@
     "issue": "未建立课程知识支撑候选",
     "basis": "一般环境部署不等于数据库运行检查/异常诊断；INSERT不等于数据导入；目标提及权限不等于具体配置技能",
     "restriction": "可后续审查目标层证据，但不强制连线",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "NO:DB010",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB010",
+    "human_confirmation_required": true
   },
   {
     "review_id": "NO:DB014",
@@ -413,7 +719,13 @@
     "issue": "未建立课程知识支撑候选",
     "basis": "一般环境部署不等于数据库运行检查/异常诊断；INSERT不等于数据导入；目标提及权限不等于具体配置技能",
     "restriction": "可后续审查目标层证据，但不强制连线",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "NO:DB014",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB014",
+    "human_confirmation_required": true
   },
   {
     "review_id": "NO:DB015",
@@ -421,7 +733,13 @@
     "issue": "未建立课程知识支撑候选",
     "basis": "一般环境部署不等于数据库运行检查/异常诊断；INSERT不等于数据导入；目标提及权限不等于具体配置技能",
     "restriction": "可后续审查目标层证据，但不强制连线",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "A",
+    "classification_reason": "涉及技术行为与完整能力边界",
+    "original_review_id": "NO:DB015",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB015",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q001",
@@ -429,7 +747,13 @@
     "issue": "原摘要查询、取数是否同义；数据库查询的具体实现方式未全部明示，不扩展为复杂查询语法。；A类不等于已核验原文，新增B/C关联不提升其证据。；基础、范围较广的SQL查询与取数，评价取数对象、条件及结果；不预设JOIN。与DB017并存，不重复解释为独立岗位需求。",
     "basis": "ABC-R0001;ABC-R0002;ABC-R0003;ABC-R0004;ABC-R0005;ABC-R0006;ABC-R0012;ABC-R0013;ABC-R0014;ABC-R0015;ABC-R0016;ABC-R0017",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q001",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB001",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q002",
@@ -437,7 +761,13 @@
     "issue": "JOB012只明示SQL语境复杂提取，没有JOIN或跨表对象；这是低充分性B类备选路线，单表同样可能完成。；跨关系表关联场景下的查询，评价关联依据和关联结果。当前仅B类：复杂取数并不必然要求JOIN；内、外、自连接仅作方法或行为点。",
     "basis": "ABC-R0061",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q002",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB017",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q003",
@@ -445,7 +775,13 @@
     "issue": "仅JOB050摘要明确性能优化；具体优化机制缺失，需审查该粒度是否适合候选专业能力指标。；A类不等于已核验原文，新增B/C关联不提升其证据。；优化目标与结果层面，比较查询结果一致性和性能记录；不限定索引方法。",
     "basis": "ABC-R0011",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q003",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB005",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q004",
@@ -453,7 +789,13 @@
     "issue": "JOB050仅明示查询性能优化，没有明示索引；需确认瓶颈与索引相关，不把所有优化都解释成索引需求。；仅在索引适用时选择调整索引；是DB005的一种技术手段，当前仅B类，不能继承DB005的A类。",
     "basis": "ABC-R0042",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q004",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB011",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q005",
@@ -461,7 +803,13 @@
     "issue": "数据库更新可能是版本、结构或记录更新；只有记录语义被确认时采用，不能与DB016同时当作两个明示需求。；解释分支一：更新记录值。TT019没有确定更新对象，不代表岗位已明确要求UPDATE。",
     "basis": "ABC-R0027",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q005",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB006",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q006",
@@ -469,7 +817,13 @@
     "issue": "JOB039更新对象不明；与DB006是条件分支，未审查前不得按两项确定岗位需求叠加计数。；解释分支二：调整表结构。与DB006互为备选解释，数据库更新也可能指版本升级，不代表两项明确需求。",
     "basis": "ABC-R0060",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q006",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB016",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q007",
@@ -477,7 +831,13 @@
     "issue": "应用开发未必承担模式设计，数据模型也可能是分析模型；先确认持久化对象、模型类型与开发职责。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0028;ABC-R0029;ABC-R0030;ABC-R0031;ABC-R0032",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q007",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB007",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q008",
@@ -485,7 +845,13 @@
     "issue": "需确认岗位有新增记录写入职责、且以SQL而非仅通过API完成；不是自动补齐CRUD。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0033;ABC-R0034;ABC-R0035",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q008",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB008",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q009",
@@ -493,7 +859,13 @@
     "issue": "需确认数据库类型和实际维护职责，不因未写MySQL等产品名排除；也不默认具体监控工具。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0036;ABC-R0037;ABC-R0038;ABC-R0039;ABC-R0062;ABC-R0063;ABC-R0064;ABC-R0065",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q009",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB009",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q010",
@@ -501,7 +873,13 @@
     "issue": "数据库运维仅说明职责方向，诊断是备选子活动；需确认故障归属和权限，不能从系统故障标签直接升级。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0040;ABC-R0041",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q010",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB010",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q011",
@@ -509,7 +887,13 @@
     "issue": "SQL统计工具不等于分组语法明示；Excel/BI亦可能实现同一业务统计，需确认关系型实现是否合适。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0043;ABC-R0044;ABC-R0045;ABC-R0046;ABC-R0047;ABC-R0048;ABC-R0049;ABC-R0050;ABC-R0051;ABC-R0052;ABC-R0053",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q011",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB012",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q012",
@@ -517,7 +901,13 @@
     "issue": "管理数据质量可能是治理协作而非执行SQL；核查与清洗分开，不把一般核对升级为约束设置。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0054;ABC-R0055",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q012",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB013",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q013",
@@ -525,7 +915,13 @@
     "issue": "数据接入/同步也可能是接口对接或文件传输；未明确前保持C类，不称为招聘数据库导入要求。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0056;ABC-R0057",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q013",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB014",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q014",
@@ -533,7 +929,13 @@
     "issue": "系统权限可能仅为应用账号，数据库管理也未必含授权职责；B与C依据分别保留，不冒充明确DCL要求。；限于定义所列关系型数据库技术对象与活动；行为细节是研究拟定，不是岗位逐项明示要求。",
     "basis": "ABC-R0058;ABC-R0059",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q014",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "DB015",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q015",
@@ -541,7 +943,13 @@
     "issue": "审查8条关系判断：5条保留候选、1条待审、2条不保留；保留候选也未经确认，教学先修本轮不确立",
     "basis": "05工作簿逐条解释；没有学习诊断或专家审核结论",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "C",
+    "classification_reason": "关系类型、方向及默认边集判定",
+    "original_review_id": "STAGE3:FR-Q015",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "全部非层级关系",
+    "human_confirmation_required": true
   },
   {
     "review_id": "STAGE3:FR-Q016",
@@ -549,6 +957,12 @@
     "issue": "第二轮181片段=原179+同一JOB012摘要补提两维度；是否认可补提的活动维度划分",
     "basis": "EX2-JOB012-R01/R02；本轮原样复用，不改第二阶段",
     "restriction": "继承第三阶段未决问题",
-    "state": "待研究者审查"
+    "state": "待研究者审查",
+    "review_category": "B",
+    "classification_reason": "继承岗位摘要明确程度、职责对象及证据来源限制",
+    "original_review_id": "STAGE3:FR-Q016",
+    "handling_suggestion": "保留问题，结合原依据逐项人工确认；测试通过不关闭研究问题",
+    "impact_scope": "任务片段口径",
+    "human_confirmation_required": true
   }
 ]

@@ -1,4 +1,4 @@
-命令：python -m unittest discover -s stage4_competency_graph -p test_graph.py -v
+python -m unittest discover -s stage4_competency_graph -p test_graph.py -v
 test_01_ability_hierarchy_ids (test_graph.GraphTests.test_01_ability_hierarchy_ids) ... ok
 test_02_all_source_job_evidence_preserved (test_graph.GraphTests.test_02_all_source_job_evidence_preserved) ... ok
 test_03_hierarchy_original (test_graph.GraphTests.test_03_hierarchy_original) ... ok
@@ -16,10 +16,13 @@ test_14_json_excel_consistency (test_graph.GraphTests.test_14_json_excel_consist
 test_15_paths_valid_and_no_direct_attainment (test_graph.GraphTests.test_15_paths_valid_and_no_direct_attainment) ... ok
 test_16_hidden_practice_not_positive (test_graph.GraphTests.test_16_hidden_practice_not_positive) ... ok
 test_17_repeatable (test_graph.GraphTests.test_17_repeatable) ... ok
+test_18_feedback_traceability_and_counts (test_graph.GraphTests.test_18_feedback_traceability_and_counts) ... ok
+test_19_review_ids_categories_preserved (test_graph.GraphTests.test_19_review_ids_categories_preserved) ... ok
+test_20_feedback_excel_matches_json (test_graph.GraphTests.test_20_feedback_excel_matches_json) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests in 1.018s
+Ran 20 tests in 1.011s
 
 OK
 
-17通过，0失败，0错误。
+20通过，0失败，0错误。

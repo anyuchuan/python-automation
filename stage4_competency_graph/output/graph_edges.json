@@ -9854,7 +9854,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "只在问题记录和修正规则已给定时支持UPDATE实施；不涵盖问题识别、清洗规则设计及清洗结果验证。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK026",
@@ -9890,7 +9890,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "只支持给定清洗条件的记录定位；不证明完整清洗流程、异常判断及前后质量验证已安排。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK027",
@@ -10306,7 +10306,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "第5页明确主键作用及语法；仅在关系表标识方案已确定时支持实现表达，不能把约束SQL实现等同完整模式设计。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK019",
@@ -10340,7 +10340,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "第5页明确外键作用及语法；仅在参照关系方案已确定时支持实现，不替代实体关系识别与完整结构设计。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK021",
@@ -10442,7 +10442,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "只支持选定索引方案的创建实施，不证明能根据查询需求选择索引或验证调整收益。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK053",
@@ -10476,7 +10476,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "只支持既定方案的索引添加实施；索引选择、负面影响分析及迭代调整仍需其他依据。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK054",
@@ -10510,7 +10510,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "只在建表时定义索引的方案下成立，不代表能调整已有库索引，也不证明完整选择与调整能力。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK060",
@@ -10544,7 +10544,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "删除/维护索引操作不等于诊断索引问题；具体变更理由与效果核查仍未由本知识单独覆盖。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK055",
@@ -10578,7 +10578,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "第11页仅明示有无索引查询效果对比；K3指与其他索引知识组合的观察线索，不证明完整方案选择及迭代调整闭环。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK056",
@@ -10714,7 +10714,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "只在所述技术方案或规则已确定时适用；仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "在已有质量检查条件的前提下，支持筛选待核查记录；不涵盖质量维度定义、规则制定、异常原因判断和完整核查结果验证。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK027",
@@ -10782,7 +10782,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "仅对应内外连接语法及关联条件；完整业务语义、重复行及结果正确性仍需任务情境核查。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK035",
@@ -10816,7 +10816,7 @@
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "一般SELECT只提供表达框架，不自动支持连接条件设计或多表结果核验。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK032",
@@ -10836,7 +10836,7 @@
     "target": "COMPETENCY_L3:DB017",
     "relation_type": "SUPPORTS_COMPETENCY_CANDIDATE",
     "relation_code": "R03",
-    "support_function_or_subtype": "K1",
+    "support_function_or_subtype": "K4",
     "source_stage": "第四阶段第二轮",
     "source_file": "stage4_course_extraction/output/课程教学要素数据库.json",
     "evidence_ids": [
@@ -10846,11 +10846,11 @@
       5
     ],
     "quote_reference": "COURSE:CE05-be29f7a0e3",
-    "reason": "外键知识帮助理解关联字段；连接并不要求存在外键约束",
+    "reason": "第5页外键约束知识仅在参照关系解释场景中帮助理解关联字段；JOIN本身不依赖外键定义，因此采用条件性K4而非一般基础前提。",
     "source_nature": "RESEARCH_INFERENCE",
     "research_inference": true,
     "review_status": "候选、待人工审查",
-    "uncertainty": "仅为具体技术行为支撑候选；未证明完整岗位能力已培养、学生达标或已有正式考核。",
+    "uncertainty": "外键知识仅在解释既有参照关系时提供条件性理解线索；SQL JOIN不要求已定义外键约束，不是必要前提。 本条仍为跨体系研究推断，待人工确认。",
     "default_visible": true,
     "source_attributes": {
       "knowledge_id": "CK021",

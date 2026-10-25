@@ -68,4 +68,25 @@ class GraphTests(unittest.TestCase):
  def test_17_repeatable(self):
   other=Path(self.tmp.name)/'b';b.run(other)
   for name in ['graph_nodes','graph_edges','graph_evidence','graph_review_items','summary']:self.assertEqual(json.loads((self.out/(name+'.json')).read_text()),json.loads((other/(name+'.json')).read_text()))
+ def test_18_feedback_traceability_and_counts(self):
+  base=json.loads((b.HERE/'feedback_baseline.json').read_text());r=json.loads((self.out/'support_review_comparison.json').read_text());cs=r['comparisons']
+  self.assertEqual({x['原关系ID'] for x in cs},{x['edge_id'] for x in base['support']});self.assertEqual(len(cs),34)
+  old={x['edge_id']:x for x in base['support']}
+  for x in cs:
+   self.assertEqual(x['原判断说明'],old[x['原关系ID']]['reason']);self.assertEqual(x['原支撑类型'],old[x['原关系ID']]['support_function_or_subtype']);self.assertTrue(x['修改原因']);self.assertTrue(x['证据引用']);self.assertIn('待研究者确认',x['当前审查状态'])
+  self.assertEqual(sum(x['是否实际修改']=='是' for x in cs),13)
+  self.assertEqual(r['recommendation_counts'],{'建议保留':21,'建议调整关系说明或适用边界':12,'建议调整支撑类型':1})
+  self.assertEqual(len(r['unlinked_review']),4)
+ def test_19_review_ids_categories_preserved(self):
+  baseline=json.loads((b.HERE/'feedback_baseline.json').read_text())
+  self.assertEqual({q['review_id'] for q in self.q},{q['review_id'] for q in baseline['reviews']});self.assertEqual(len(self.q),69)
+  for q in self.q:self.assertIn(q['review_category'],'ABCDE');self.assertTrue(q['human_confirmation_required']);self.assertTrue(q['classification_reason']);self.assertTrue(q['handling_suggestion'])
+ def test_20_feedback_excel_matches_json(self):
+  data=json.loads((self.out/'support_review_comparison.json').read_text());rows=b.read(self.out/'13_第四阶段第二轮候选关系审查修订对照.xlsx','34关系逐条对照')
+  for a,z in zip(rows,data['comparisons']):
+   for k,v in z.items():self.assertEqual(a[k],json.dumps(v,ensure_ascii=False) if isinstance(v,list) else v)
+  self.assertEqual(len(rows),len(data['comparisons']))
+  support=[e for e in self.e if e['relation_code']=='R03'];self.assertEqual(len(support),34)
+  fk=next(e for e in support if e['edge_id']=='R03:034');self.assertEqual(fk['support_function_or_subtype'],'K4');self.assertIn('不要求',fk['uncertainty'])
+
 if __name__=='__main__':unittest.main()
