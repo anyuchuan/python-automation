@@ -39,4 +39,16 @@ class CandidateGraphTests(unittest.TestCase):
   at.radio(key='cg_view').set_value('知识技能反向查询').run();self.assertFalse(at.exception)
   at.radio(key='cg_view').set_value('教学关联路径').run();self.assertFalse(at.exception)
   at.radio(key='cg_view').set_value('局部关系网络').run();self.assertFalse(at.exception)
+ def test_acceptance_paths_and_presentation(self):
+  from app.competency_display import directed,relation_fields,NODE_LABELS,REL_LABELS
+  g=self.g;center='COMPETENCY_L3:DB001'
+  for id in ['DB005','DB017']:
+   chain=g.path_to(center,'COMPETENCY_L3:'+id,g.filtered());self.assertTrue(chain)
+   self.assertTrue(all(g.edge_by_id[x]['relation_code']!='R01' for x in chain))
+  for e in g.edges:
+   fields=relation_fields(g,e);self.assertIn(g.by_id[e['source']]['name'],fields['起点']);self.assertIn(g.by_id[e['target']]['name'],fields['终点']);self.assertIn(e['relation_code'],REL_LABELS)
+   if e['relation_code']=='R09' and e['support_function_or_subtype']=='组合关系':self.assertFalse(directed(e))
+  self.assertEqual(set(NODE_LABELS),{n['node_type'] for n in g.nodes})
+  self.assertEqual(g.subgraph(center,g.filtered(),[],1),([],[]))
+
 if __name__=='__main__':unittest.main()

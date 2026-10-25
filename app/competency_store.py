@@ -46,10 +46,21 @@ class GraphStore:
    for e in edges:
     if e['source'] in frontier or e['target'] in frontier:
      a,b=self.by_id[e['source']],self.by_id[e['target']]
-     if types and (a['node_type'] not in types or b['node_type'] not in types):continue
+     if types is not None and (a['node_type'] not in types or b['node_type'] not in types):continue
      selected[e['edge_id']]=e;ids.update([e['source'],e['target']])
-  return [n for n in self.nodes if n['node_id'] in ids],list(selected.values())
+  return [n for n in self.nodes if n['node_id'] in ids and (types is None or n['node_type'] in types)],list(selected.values())
  def teaching_paths(self,id,explore=False):return [p for p in self.paths if p['competency_id']==id and (explore or p['default_visible'])]
  def review_for(self,id):
   original=self.by_id[id]['original_id'];edges={e['edge_id'] for e in self.edges if id in [e['source'],e['target']]}
   return [q for q in self.reviews if q['object_id'] in edges or original in str(q['object_id'])]
+ def path_to(self,center,target,edges):
+  """无向遍历仅用于解释邻接，保留每条实际有向边，不推断层级。"""
+  from collections import deque
+  queue=deque([(center,[])]);seen={center}
+  while queue:
+   id,path=queue.popleft()
+   if id==target:return path
+   for e in edges:
+    other=e['target'] if e['source']==id else e['source'] if e['target']==id else None
+    if other and other not in seen:seen.add(other);queue.append((other,path+[e['edge_id']]))
+  return None

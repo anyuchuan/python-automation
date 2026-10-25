@@ -1,11 +1,12 @@
+test_acceptance_paths_and_presentation (test_competency_store.CandidateGraphTests.test_acceptance_paths_and_presentation) ... ok
 test_all_evidence_and_endpoints (test_competency_store.CandidateGraphTests.test_all_evidence_and_endpoints) ... ok
 test_boundaries (test_competency_store.CandidateGraphTests.test_boundaries) ... ok
 test_default_and_exploration (test_competency_store.CandidateGraphTests.test_default_and_exploration) ... ok
 test_filter_local_paths_and_unlinked (test_competency_store.CandidateGraphTests.test_filter_local_paths_and_unlinked) ... ok
 test_inherited_data (test_competency_store.CandidateGraphTests.test_inherited_data) ... ok
-test_page_smoke (test_competency_store.CandidateGraphTests.test_page_smoke) ... 2026-10-25 06:50:23.828 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
-2026-10-25 06:50:24.151 Course graph: loading existing Excel on Python 3.12.14; no research pipeline
-2026-10-25 06:50:24.379 Course graph data ready: 314 nodes, 864 candidate edges, 60 isolated edges in 0.228s
+test_page_smoke (test_competency_store.CandidateGraphTests.test_page_smoke) ... 2026-10-25 07:14:40.534 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-25 07:14:40.871 Course graph: loading existing Excel on Python 3.12.14; no research pipeline
+2026-10-25 07:14:41.091 Course graph data ready: 314 nodes, 864 candidate edges, 60 isolated edges in 0.221s
 ok
 test_read_only_and_bad_data (test_competency_store.CandidateGraphTests.test_read_only_and_bad_data) ... ok
 test_source_counts_and_queries (test_competency_store.CandidateGraphTests.test_source_counts_and_queries) ... ok
@@ -21,7 +22,7 @@ test_reject_old_five_direct_version (test_data.ResearchDataTests.test_reject_old
 test_search_project_and_empty (test_data.ResearchDataTests.test_search_project_and_empty) ... ok
 test_source_counts_and_revised_version (test_data.ResearchDataTests.test_source_counts_and_revised_version) ... ok
 test_unique_ids_and_valid_endpoints (test_data.ResearchDataTests.test_unique_ids_and_valid_endpoints) ... ok
-test_cached_load_runs_once_across_ui_rerun (test_deployment.DeploymentTests.test_cached_load_runs_once_across_ui_rerun) ... 2026-10-25 06:50:24.718 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_cached_load_runs_once_across_ui_rerun (test_deployment.DeploymentTests.test_cached_load_runs_once_across_ui_rerun) ... 2026-10-25 07:14:41.438 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
 test_diagnostic_from_external_working_directory (test_deployment.DeploymentTests.test_diagnostic_from_external_working_directory) ... ok
 test_loader_works_without_repository_working_directory (test_deployment.DeploymentTests.test_loader_works_without_repository_working_directory) ... ok
@@ -36,16 +37,16 @@ test_matrix_272_cells_and_scoped_evidence (test_platform.PlatformTests.test_matr
 test_network_filters_before_neighborhood_and_limit (test_platform.PlatformTests.test_network_filters_before_neighborhood_and_limit) ... ok
 test_optimization_traceability_and_readonly (test_platform.PlatformTests.test_optimization_traceability_and_readonly) ... ok
 test_partial_missing_and_status_not_invented (test_platform.PlatformTests.test_partial_missing_and_status_not_invented) ... ok
-test_default_tree_and_all_six_modules (test_ui.PageTests.test_default_tree_and_all_six_modules) ... 2026-10-25 06:50:25.668 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_default_tree_and_all_six_modules (test_ui.PageTests.test_default_tree_and_all_six_modules) ... 2026-10-25 07:14:42.433 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_matrix_and_evaluation_denominators (test_ui.PageTests.test_matrix_and_evaluation_denominators) ... 2026-10-25 06:50:25.897 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_matrix_and_evaluation_denominators (test_ui.PageTests.test_matrix_and_evaluation_denominators) ... 2026-10-25 07:14:42.667 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_search_locate_switch_and_risk_gate (test_ui.PageTests.test_search_locate_switch_and_risk_gate) ... 2026-10-25 06:50:26.087 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_search_locate_switch_and_risk_gate (test_ui.PageTests.test_search_locate_switch_and_risk_gate) ... 2026-10-25 07:14:42.855 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_shortcuts_preserve_ability_and_empty_search (test_ui.PageTests.test_shortcuts_preserve_ability_and_empty_search) ... 2026-10-25 06:50:26.365 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_shortcuts_preserve_ability_and_empty_search (test_ui.PageTests.test_shortcuts_preserve_ability_and_empty_search) ... 2026-10-25 07:14:43.063 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
 
 ----------------------------------------------------------------------
-Ran 38 tests in 2.754s
+Ran 39 tests in 2.786s
 
 OK
